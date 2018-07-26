@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar>
+    <div item-left>
+      <ion-buttons start>
+          <button ion-button (click)="GoBack()" icon-only>
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>Apply Leave</ion-title>
+      </div>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page4">
+  <div id="applyLeave-container2">
+    <form id="applyLeave-form7">
+      <ion-item id="applyLeave-input8">
+        <ion-label></ion-label>
+        <ion-input type="text" placeholder="Leave Type"></ion-input>
+      </ion-item>
+    </form>
+  </div>
+  <div id="applyLeave-container3">
+    <form id="applyLeave-form9">
+      <ion-item id="applyLeave-select2">
+        <ion-label>
+          Type
+        </ion-label>
+        <ion-select name="">
+          <ion-option>
+            Vacation
+          </ion-option>
+          <ion-option>
+            Sick
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <h5 id="applyLeave-heading3" style="color:#000000;">
+        Choose one of the following periods or add it manual
+      </h5>
+    </form>
+  </div>
+  <div id="applyLeave-container4">
+    <form id="applyLeave-form10">
+      <ion-item id="applyLeave-toggle8">
+        <ion-label>
+          Full Day
+        </ion-label>
+        <ion-toggle color="positive" checked="false"></ion-toggle>
+      </ion-item>
+    </form>
+  </div>
+  <form id="applyLeave-form11">
+    <ion-item id="applyLeave-toggle9">
+      <ion-label>
+        1st Half Day
+      </ion-label>
+      <ion-toggle color="positive" checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item id="applyLeave-toggle10">
+      <ion-label>
+        2nd Half Day
+      </ion-label>
+      <ion-toggle color="positive" checked="false"></ion-toggle>
+    </ion-item>
+  </form>
+  <div id="applyLeave-container5">
+    <form id="applyLeave-form12">
+      <ion-item id="applyLeave-input9">
+        <ion-label>
+          From
+        </ion-label>
+        <ion-input type="date" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="applyLeave-input10">
+        <ion-label>
+          To
+        </ion-label>
+        <ion-input type="date" placeholder=""></ion-input>
+      </ion-item>
+    </form>
+  </div>
+</ion-content>
