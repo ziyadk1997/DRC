@@ -10,7 +10,13 @@ export class WelcomePage {
   constructor(public navCtrl: NavController) {
     
   }
-  YourFancyButton(){
+  GoBack(){
+
+    this.navCtrl.pop();
+  }
+  
+  GoForward(){
+
     this.navCtrl.push(ApplyLeavePage);
   }
   

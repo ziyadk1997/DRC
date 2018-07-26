@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton>
     <ion-title>
       Welcome!
     </ion-title>
@@ -11,7 +11,7 @@
       Welcome ... to three2one HR application for small and meduim bussinesses
     </h5>
   </div>
-  <button id="welcome-button1"  ion-button (click)="YourFancyButton()" color="stable" block large icon-left style="font-weight:600;font-style:italic;border-radius:5px 5px 5px 5px;">
+  <button id="welcome-button1"  ion-button (click)="GoForward()" color="stable" block large icon-left style="font-weight:600;font-style:italic;border-radius:5px 5px 5px 5px;">
     <ion-icon name="alert"></ion-icon>
     Leave Tracker
   </button>
@@ -27,7 +27,7 @@
     <ion-icon name="body"></ion-icon>
     Your Profile
   </button>
-  <button id="welcome-button5" ion-button color="assertive" block icon-left style="border-radius:20px 0px 20px 0px;">
+  <button id="welcome-button5" ion-button (click)="GoBack()" color="assertive" block icon-left style="border-radius:20px 0px 20px 0px;">
     <ion-icon name="close-circle"></ion-icon>
     Logout
   </button>
