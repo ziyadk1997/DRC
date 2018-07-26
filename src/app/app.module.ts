@@ -13,6 +13,12 @@ import { PagePage } from '../pages/page/page';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ViewProfilePage } from '../pages/view-profile/view-profile';
+import { ViewProfile2Page } from '../pages/view-profile2/view-profile2';
+import { ViewProfile3Page} from '../pages/view-profile3/view-profile3';
+import { ViewProfile4Page } from '../pages/view-profile4/view-profile4';
+import { ViewProfile5Page } from '../pages/view-profile5/view-profile5';
+import { ViewProfile6Page } from '../pages/view-profile6/view-profile6';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,12 @@ import { ViewProfilePage } from '../pages/view-profile/view-profile';
     NewProfilePage,
     PagePage,
     LoginPage,
-    ViewProfilePage
+    ViewProfilePage,
+    ViewProfile2Page,
+    ViewProfile3Page,
+    ViewProfile4Page,
+    ViewProfile5Page,
+    ViewProfile6Page
     
   ],
   imports: [
@@ -43,7 +54,15 @@ import { ViewProfilePage } from '../pages/view-profile/view-profile';
     NewProfilePage,
     PagePage,
     LoginPage,
-    ViewProfilePage
+    ViewProfilePage,
+    ViewProfile2Page,
+    ViewProfile3Page,
+    ViewProfile4Page,
+    ViewProfile5Page,
+    ViewProfile6Page
+   
+
+
   ],
   providers: [
     StatusBar,

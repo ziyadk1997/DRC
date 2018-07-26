@@ -30,20 +30,20 @@
       <ion-label>
         Choose
       </ion-label>
-      <ion-select name="">
-        <ion-option>
+      <ion-select [(ngModel)]="option" [ngModelOptions]="{standalone: true}" (ionChange)="test()">
+        <ion-option value="skills">
           Skills
         </ion-option>
-        <ion-option>
+        <ion-option value="workexperience">
           Work Experience
         </ion-option>
-        <ion-option>
+        <ion-option value="education">
           Education
         </ion-option>
-        <ion-option>
+        <ion-option value="language">
           language
         </ion-option>
-        <ion-option>
+        <ion-option value="attachment">
           Attachments
         </ion-option>
       </ion-select>
