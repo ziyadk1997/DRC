@@ -11,7 +11,7 @@ export class WelcomePage {
     
   }
   YourFancyButton(){
-    this.navCtrl.setRoot(ApplyLeavePage);
+    this.navCtrl.push(ApplyLeavePage);
   }
   
   
