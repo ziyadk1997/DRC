@@ -12,6 +12,7 @@ import { NewProfilePage } from '../pages/new-profile/new-profile';
 import { PagePage } from '../pages/page/page';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ViewProfilePage } from '../pages/view-profile/view-profile';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ApplyLeavePage,
     NewProfilePage,
     PagePage,
-    LoginPage
+    LoginPage,
+    ViewProfilePage
     
   ],
   imports: [
@@ -40,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ApplyLeavePage,
     NewProfilePage,
     PagePage,
-    LoginPage
+    LoginPage,
+    ViewProfilePage
   ],
   providers: [
     StatusBar,
