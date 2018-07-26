@@ -15,7 +15,7 @@ export class WelcomePage {
     this.navCtrl.pop();
   }
   
-  GoForward(){
+  GoToApplyLeavePage(){
 
     this.navCtrl.push(ApplyLeavePage);
   }
