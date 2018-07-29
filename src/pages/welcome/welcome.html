@@ -1,16 +1,22 @@
 <ion-header>
   <ion-navbar hideBackButton>
     <ion-title>
-      Welcome!
+     Three2one Company
     </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page1">
-  <div id="welcome-container1">
-    <h5 id="welcome-heading2" style="color:#6C6C7A;text-align:left;">
-      Welcome ... to three2one HR application for small and meduim bussinesses
-    </h5>
-  </div>
+    <div id="welcome-container1">
+        <h5 id="welcome-heading2" style="color:#6C6C7A;text-align:left;">
+          Welcome ... to three2one HR application for small and meduim bussinesses
+        </h5>
+      </div>
+    <div id="welcome-container1">
+        <form id="welcome-form15">
+          <ion-searchbar placeholder="Search for employees" name="" id="welcome-search1"></ion-searchbar>
+        </form>
+        </div>
+  
   <button id="welcome-button1"  ion-button (click)="GoToApplyLeavePage()" color="stable" block large icon-left style="font-weight:600;font-style:italic;border-radius:5px 5px 5px 5px;">
     <ion-icon name="alert"></ion-icon>
     Leave Tracker
@@ -20,9 +26,13 @@
     Work From Home
   </button>
   <button id="welcome-button3" ion-button color="stable" block large icon-left style="font-weight:600;font-style:italic;border-radius:5px 5px 5px 5px;">
-    <ion-icon name="briefcase"></ion-icon>
+    <ion-icon name="cash"></ion-icon>
     Financial
   </button>
+  <button id="welcome-button4" ion-button color="stable" block large icon-left style="font-weight:600;font-style:italic;border-radius:5px 5px 5px 5px;">
+      <ion-icon name="briefcase"></ion-icon>
+     View My Requests
+    </button>
   <div align = "center">
     <br/>
     <br/>
