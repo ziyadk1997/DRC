@@ -5,14 +5,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page4">
-  <div id="applyLeave-container2">
-    <form id="applyLeave-form7">
-      <ion-item id="applyLeave-input8">
-        <ion-label></ion-label>
-        <ion-input type="text" placeholder="Leave Cause"></ion-input>
-      </ion-item>
-    </form>
-  </div>
+  
   <div id="applyLeave-container3">
     <form id="applyLeave-form9">
       <ion-item id="applyLeave-select2">
@@ -28,9 +21,9 @@
           </ion-option>
         </ion-select>
       </ion-item>
-      <h5 id="applyLeave-heading3" style="color:#000000;">
+      <p id="applyLeave-heading3" style="color:#000000;">
         Choose one of the following periods or add it manual
-      </h5>
+      </p>
     </form>
   </div>
   <div id="applyLeave-container4">
@@ -57,20 +50,33 @@
       <ion-toggle color="positive" checked="false"></ion-toggle>
     </ion-item>
   </form>
+  <! from - to >
   <div id="applyLeave-container5">
+    <div>
     <form id="applyLeave-form12">
       <ion-item id="applyLeave-input9">
         <ion-label>
-          From
+        <ion-icon name="calendar" item-right ></ion-icon>
+          From:
         </ion-label>
-        <ion-input type="date" placeholder=""></ion-input>
+        <ion-input type="date" placeholder="" ></ion-input>
+        
       </ion-item>
       <ion-item id="applyLeave-input10">
         <ion-label>
           To
         </ion-label>
         <ion-input type="date" placeholder=""></ion-input>
-      </ion-item>
+      </ion-item >
     </form>
+   </div>
+    <div id="applyLeave-container2">
+      <form id="applyLeave-form7">
+        <ion-item id="applyLeave-input8">
+          <ion-label></ion-label>
+          <ion-input type="text" placeholder="Reason of leave"></ion-input>
+        </ion-item>
+      </form>
+    </div>
   </div>
 </ion-content>
