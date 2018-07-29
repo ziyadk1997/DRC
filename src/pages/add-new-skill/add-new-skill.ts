@@ -9,5 +9,8 @@ export class AddNewSkillPage {
 
   constructor(public navCtrl: NavController) {
   }
-  
+  AddSkill(){
+    this.navCtrl.push(AddNewSkillPage);
+  }
+
 }

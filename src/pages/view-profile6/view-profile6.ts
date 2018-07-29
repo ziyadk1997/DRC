@@ -9,5 +9,7 @@ export class ViewProfile6Page {
 
   constructor(public navCtrl: NavController) {
   }
-  
+  UploadFile(){
+    console.log("take file");
+  }
 }
