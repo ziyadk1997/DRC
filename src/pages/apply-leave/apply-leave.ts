@@ -9,7 +9,7 @@ import { WelcomePage } from '../../pages/welcome/welcome';
 export class ApplyLeavePage {
 
   constructor(public navCtrl: NavController) {
-    console.log(this.navCtrl);
+    
   }
   GoBack(){
 
