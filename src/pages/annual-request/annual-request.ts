@@ -21,5 +21,9 @@ export class AnnualRequestPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AnnualRequestPage');
   }
+  GoBack(){
+
+    this.navCtrl.pop();
+  }
 
 }
