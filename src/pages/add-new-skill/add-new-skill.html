@@ -5,7 +5,7 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page8">
+<ion-content  class="back" padding id="page8">
   <h5 id="addNewSkill-heading30" style="color:#000000;font-weight:600;">
     Skills
   </h5>
@@ -37,10 +37,10 @@
       <ion-input type="text" placeholder=""></ion-input>
     </ion-item>
   </form>
-  <button id="addNewSkill-button1" ion-button color="positive">
+  <button id="addNewSkill-button1" ion-button color="positive" round >
     Save
   </button>
-  <button id="addNewSkill-button2" ion-button color="stable">
+  <button id="addNewSkill-button2" (click)="AddSkill()" ion-button clear round  >
     Add Another
   </button>
 </ion-content>

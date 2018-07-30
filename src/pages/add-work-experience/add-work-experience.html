@@ -5,14 +5,14 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page9">
+<ion-content  class="back" padding id="page9">
   <h5 id="addWorkExperience-heading31" style="color:#000000;font-weight:600;">
     Work Experience
   </h5>
   <form id="addWorkExperience-form15">
     <ion-item id="addWorkExperience-input4">
       <ion-label>
-        Skill Name
+        Job Title
       </ion-label>
       <ion-input type="text" placeholder=""></ion-input>
     </ion-item>
@@ -36,7 +36,7 @@
     </ion-item>
     <ion-item id="addWorkExperience-toggle1">
       <ion-label>
-        I cuurently work there
+        I currently work there
       </ion-label>
       <ion-toggle color="positive" checked="false"></ion-toggle>
     </ion-item>
@@ -95,10 +95,10 @@
       </ion-label>
       <ion-select name=""></ion-select>
     </ion-item>
-    <button id="addWorkExperience-button3" ion-button color="positive">
+    <button id="addWorkExperience-button3" ion-button color="positive" round>
       Save
     </button>
-    <button id="addWorkExperience-button4" ion-button color="stable">
+    <button id="addWorkExperience-button4" ion-button (click)="AddNewWork()" clear round>
       Add Another
     </button>
   </form>

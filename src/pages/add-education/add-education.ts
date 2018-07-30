@@ -9,5 +9,7 @@ export class AddEducationPage {
 
   constructor(public navCtrl: NavController) {
   }
-  
+  AddEducation(){
+    // pushes data to backend and then clears the boxes
+  }
 }

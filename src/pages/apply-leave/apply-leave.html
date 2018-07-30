@@ -1,34 +1,26 @@
 <ion-header>
   <ion-navbar>
    
-      <ion-title>Apply Leave</ion-title>
+      <ion-title>Apply Leave Request</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page4">
+<ion-content class="back" padding id="page4">
+  <ion-list>
+    <ion-item>
+      <ion-label>Leave Type</ion-label>
+      <ion-select [(ngModel)]="Request">
+        <ion-option value="Sick">Sick</ion-option>
+        <ion-option value="Annual">Annual</ion-option>
+        <ion-option value="Casual">Casual</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
   
-  <div id="applyLeave-container3" style="margin: 20px">
-    <form id="applyLeave-form9">
-      <ion-item id="applyLeave-select2">
-        <ion-label >
-          Leave Type
-        </ion-label>
-        <ion-select name="leavetype" id="leaveTypeid" (ionChange)="onChange($event)">
-          <ion-option value="vacation">
-            Vacation
-          </ion-option>
-          <ion-option value="sick">
-            Sick
-          </ion-option>
-        </ion-select>
-      </ion-item>
-
-      <h5 id="applyLeave-heading3" style="color:#000000;">
-        Choose one of the following periods or add it manual
-      </h5>
-    </form>
-  </div>
-  <div style="margin: 20px">
+  <div style="margin: 20px"> 
   <div class="day">
+      <h5 id="applyLeave-heading3" style="color:#000000;">
+          Choose one of the following periods or add it manual
+      </h5>
       <ion-item id="applyLeave-toggle8">
         <ion-label>
           Full Day
@@ -54,8 +46,7 @@
       <ion-toggle color="positive" checked="false"></ion-toggle>
     </ion-item>
   </div>
-</div>
-  <! from - to >
+  </div>
   <div id="applyLeave-container5" style="margin: 20px">
     <form id="applyLeave-form12">
         <div class="datefrom">
@@ -89,5 +80,5 @@
       </form>
     </div>
   </div>
-  <button id="Apply-request" ion-button   color="DRC" block round  (click)="GoToAnnualRequest()"> Applay</button>
+  <button id="Apply-request" ion-button   color="DRC" block round  (click)="GoToAnnualRequest()">Apply Request</button>
 </ion-content>
