@@ -9,7 +9,6 @@ import { ListPage } from '../pages/list/list';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ApplyLeavePage } from '../pages/apply-leave/apply-leave';
 import { NewProfilePage } from '../pages/new-profile/new-profile';
-import { PagePage } from '../pages/page/page';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ViewProfilePage } from '../pages/view-profile/view-profile';
@@ -22,6 +21,7 @@ import { AddNewSkillPage } from '../pages/add-new-skill/add-new-skill';
 import { AddEducationPage } from '../pages/add-education/add-education';
 import { AddLanguagePage } from '../pages/add-language/add-language';
 import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-experience';
+import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
 
 
 
@@ -34,7 +34,6 @@ import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-exp
     WelcomePage,
     ApplyLeavePage,
     NewProfilePage,
-    PagePage,
     LoginPage,
     ViewProfilePage,
     ViewProfile2Page,
@@ -45,7 +44,8 @@ import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-exp
     AddNewSkillPage,
     AddEducationPage,
     AddLanguagePage,
-    AddWorkExperiencePage
+    AddWorkExperiencePage,
+    LeaveTrackerPage
     
   ],
   imports: [
@@ -61,7 +61,6 @@ import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-exp
     WelcomePage,
     ApplyLeavePage,
     NewProfilePage,
-    PagePage,
     LoginPage,
     ViewProfilePage,
     ViewProfile2Page,
@@ -72,7 +71,8 @@ import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-exp
     AddNewSkillPage,
     AddEducationPage,
     AddLanguagePage,
-    AddWorkExperiencePage
+    AddWorkExperiencePage,
+    LeaveTrackerPage
   ],
   providers: [
     StatusBar,
