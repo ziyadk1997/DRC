@@ -6,10 +6,10 @@
   </ion-navbar>
 </ion-header>
 <ion-content class="back" padding id="page4">
-  <ion-list>
-    <ion-item style=" background-color: transparent;">
-      <ion-label >Leave Type</ion-label>
-      <ion-select [(ngModel)]="Request"> 
+  <ion-list class="List">
+    <ion-item>
+      <ion-label style="color: #afafaf ; ">Leave Type</ion-label>
+      <ion-select [(ngModel)]="Request" style="color: #afafaf;">
         <ion-option value="Sick">Sick</ion-option>
         <ion-option value="Annual">Annual</ion-option>
         <ion-option value="Casual">Casual</ion-option>
@@ -19,7 +19,11 @@
   
   <div style="margin: 18px" > 
   <div class="day">
+
       <h5 id="applyLeave-heading3" style="color:#d1d1d1;">
+
+      <h5 id="applyLeave-heading3" style="color:#afafaf; background-color:transparent;">
+
           Choose one of the following periods or add it manual
       </h5>
       <ion-item id="applyLeave-toggle8" style=" background-color: transparent;">

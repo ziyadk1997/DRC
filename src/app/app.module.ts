@@ -9,7 +9,6 @@ import { ListPage } from '../pages/list/list';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ApplyLeavePage } from '../pages/apply-leave/apply-leave';
 import { NewProfilePage } from '../pages/new-profile/new-profile';
-import { PagePage } from '../pages/page/page';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ViewProfilePage } from '../pages/view-profile/view-profile';
@@ -18,10 +17,14 @@ import { ViewProfile3Page} from '../pages/view-profile3/view-profile3';
 import { ViewProfile4Page } from '../pages/view-profile4/view-profile4';
 import { ViewProfile5Page } from '../pages/view-profile5/view-profile5';
 import { ViewProfile6Page } from '../pages/view-profile6/view-profile6';
+import { HttpRequest, HttpResponse, HttpInterceptor, HttpHandler, HttpEvent , HttpClient } from '@angular/common/http'
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AddNewSkillPage } from '../pages/add-new-skill/add-new-skill';
 import { AddEducationPage } from '../pages/add-education/add-education';
 import { AddLanguagePage } from '../pages/add-language/add-language';
 import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-experience';
+import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
 
 
 
@@ -34,7 +37,6 @@ import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-exp
     WelcomePage,
     ApplyLeavePage,
     NewProfilePage,
-    PagePage,
     LoginPage,
     ViewProfilePage,
     ViewProfile2Page,
@@ -45,11 +47,14 @@ import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-exp
     AddNewSkillPage,
     AddEducationPage,
     AddLanguagePage,
-    AddWorkExperiencePage
+    AddWorkExperiencePage,
+    LeaveTrackerPage
     
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -61,7 +66,6 @@ import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-exp
     WelcomePage,
     ApplyLeavePage,
     NewProfilePage,
-    PagePage,
     LoginPage,
     ViewProfilePage,
     ViewProfile2Page,
@@ -72,11 +76,13 @@ import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-exp
     AddNewSkillPage,
     AddEducationPage,
     AddLanguagePage,
-    AddWorkExperiencePage
+    AddWorkExperiencePage,
+    LeaveTrackerPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    HttpClient,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
