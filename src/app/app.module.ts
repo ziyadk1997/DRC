@@ -18,8 +18,9 @@ import { ViewProfile3Page} from '../pages/view-profile3/view-profile3';
 import { ViewProfile4Page } from '../pages/view-profile4/view-profile4';
 import { ViewProfile5Page } from '../pages/view-profile5/view-profile5';
 import { ViewProfile6Page } from '../pages/view-profile6/view-profile6';
-
-
+import { HttpRequest, HttpResponse, HttpInterceptor, HttpHandler, HttpEvent , HttpClient } from '@angular/common/http'
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     MyApp,
@@ -41,6 +42,8 @@ import { ViewProfile6Page } from '../pages/view-profile6/view-profile6';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -67,6 +70,7 @@ import { ViewProfile6Page } from '../pages/view-profile6/view-profile6';
   providers: [
     StatusBar,
     SplashScreen,
+    HttpClient,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
