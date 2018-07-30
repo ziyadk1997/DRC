@@ -17,6 +17,9 @@ import { ViewProfile3Page} from '../pages/view-profile3/view-profile3';
 import { ViewProfile4Page } from '../pages/view-profile4/view-profile4';
 import { ViewProfile5Page } from '../pages/view-profile5/view-profile5';
 import { ViewProfile6Page } from '../pages/view-profile6/view-profile6';
+import { HttpRequest, HttpResponse, HttpInterceptor, HttpHandler, HttpEvent , HttpClient } from '@angular/common/http'
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AddNewSkillPage } from '../pages/add-new-skill/add-new-skill';
 import { AddEducationPage } from '../pages/add-education/add-education';
 import { AddLanguagePage } from '../pages/add-language/add-language';
@@ -50,6 +53,8 @@ import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -77,6 +82,7 @@ import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
   providers: [
     StatusBar,
     SplashScreen,
+    HttpClient,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
