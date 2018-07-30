@@ -22,8 +22,7 @@ export class ApplyLeavePage {
   }
   GoToAnnualRequest(){
     if(this.Request == "Sick"){
-
-      this.navCtrl.push("AnnualRequestPage")
+      this.navCtrl.push(AnnualRequestPage)
     }
   }
  

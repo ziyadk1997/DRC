@@ -25,6 +25,9 @@ import { AddEducationPage } from '../pages/add-education/add-education';
 import { AddLanguagePage } from '../pages/add-language/add-language';
 import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-experience';
 import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
+import { AnnualRequestPage} from '../pages/annual-request/annual-request';
+
+
 
 
 
@@ -48,7 +51,8 @@ import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
     AddEducationPage,
     AddLanguagePage,
     AddWorkExperiencePage,
-    LeaveTrackerPage
+    LeaveTrackerPage,
+    AnnualRequestPage
     
   ],
   imports: [
@@ -77,7 +81,8 @@ import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
     AddEducationPage,
     AddLanguagePage,
     AddWorkExperiencePage,
-    LeaveTrackerPage
+    LeaveTrackerPage,
+    AnnualRequestPage
   ],
   providers: [
     StatusBar,
