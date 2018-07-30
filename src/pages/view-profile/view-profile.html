@@ -5,12 +5,16 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page2">
+
+<ion-content class="back" padding id="page2">
   <ion-list id="viewProfile-list5">
-    <ion-item color="none" id="viewProfile-list-item2">
-      <div align = "center">
+    <ion-item class="i1" id="viewProfile-list-item2" no-border>
+      <div  align = "center">
       <ion-avatar item-center>
-        <img src="assets/imgs/profile.png" />
+        <button  class = "i2" type = "file" no-border>
+          
+        <img src="assets/imgs/profile.png" (click) = "UploadImage()">
+        </button>
       </ion-avatar>
       <br/>
       <h2>
@@ -49,4 +53,5 @@
       </ion-select>
     </ion-item>
   </form>
+  
 </ion-content>

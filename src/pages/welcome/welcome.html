@@ -5,10 +5,10 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page1">
+<ion-content  class="back" padding id="page1">
     <div id="welcome-container1">
-        <h5 id="welcome-heading2" style="color:#6C6C7A;text-align:left;">
-          Welcome ... to three2one HR application for small and meduim bussinesses
+        <h5 id="welcome-heading2" style="color:rgb(156, 156, 156);text-align:left;">
+          <span style="color:rgb(84, 179, 243); ">Welcome</span> ... to Three2one HR application for small and meduim bussinesses
         </h5>
       </div>
     <div id="welcome-container1">
@@ -17,31 +17,31 @@
         </form>
         </div>
   
-  <button id="welcome-button1"  ion-button (click)="GoToApplyLeavePage()" color="stable" block large icon-left style="font-weight:600;font-style:italic;border-radius:5px 5px 5px 5px;">
-    <ion-icon name="alert"></ion-icon>
-    Leave Tracker
+  <button id="welcome-button1" class="Fn" ion-button (click)="GoToApplyLeavePage()"  block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
+      <ion-img width="50" align = left  height="50"  src="assets/imgs/Leaveearly.png"  ></ion-img>
+     Leave Tracker
   </button>
-  <button id="welcome-button2" ion-button color="stable" block large icon-left style="font-weight:600;font-style:italic;border-radius:5px 5px 5px 5px;">
-    <ion-icon name="home"></ion-icon>
-    Work From Home
+  <button id="welcome-button2" class="Fn" ion-button block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
+      <ion-img width="50" height="50"  src="assets/imgs/WorkFromHome.png" ></ion-img>
+    Work From Home Requests
   </button>
-  <button id="welcome-button3" ion-button color="stable" block large icon-left style="font-weight:600;font-style:italic;border-radius:5px 5px 5px 5px;">
-    <ion-icon name="cash"></ion-icon>
-    Financial
+  <button id="welcome-button3" class="Fn" ion-button  block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
+      <ion-img width="50" height="50" src="assets/imgs/Financial.png"></ion-img>
+    Financial Balance
   </button>
-  <button id="welcome-button4" ion-button color="stable" block large icon-left style="font-weight:600;font-style:italic;border-radius:5px 5px 5px 5px;">
-      <ion-icon name="briefcase"></ion-icon>
-     View My Requests
+  <button id="welcome-button4" class="Fn" ion-button  block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
+      <ion-img width="50" height="50" src="assets/imgs/leavetraker.png"></ion-img>
+     Vacation Requests
     </button>
   <div align = "center">
     <br/>
     <br/>
-  <button id="welcome-button4" ion-button  (click)="GoToProfilePage()"  color="yacouta" block icon-left style="border-radius:20px 0px 20px 0px;width:150px;">
-    <ion-icon name="body"></ion-icon>
+  <button id="welcome-button4" ion-button  (click)="GoToProfilePage()"  color="DRC" block round>
+    
     Your Profile
   </button>
-  <button id="welcome-button5" ion-button (click)="GoBack()" color="danger" block icon-left style="border-radius:20px 0px 20px 0px;width:150px;">
-    <ion-icon name="close-circle"></ion-icon>
+  <button id="welcome-button5" ion-button (click)="GoBack()" color="danger" round block >
+   
     Logout
   </button>
 </div>

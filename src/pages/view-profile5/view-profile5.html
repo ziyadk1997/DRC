@@ -5,9 +5,9 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page6">
+<ion-content class="back" padding id="page6">
   <ion-list id="viewProfile5-list10">
-      <ion-item color="none" id="viewProfile-list-item2">
+      <ion-item color="none"class="i1" id="viewProfile-list-item2">
           <div align = "center">
           <ion-avatar item-center>
             <img src="assets/imgs/profile.png" />
@@ -25,7 +25,7 @@
   <h5 id="viewProfile5-heading23" style="color:#000000;text-align:center;">
     #nameofcompany
   </h5>
-  <h4 id="viewProfile5-heading24" style="color:#000000;font-weight:600;">
+  <h4 id="viewProfile5-heading24" style="color:#ffffff;font-weight:600;">
     Languages
   </h4>
   <form id="viewProfile5-form12">
@@ -37,4 +37,6 @@
       </ion-range>
     </ion-item>
   </form>
+  <button id="Add-Language" ion-button (click)="AddNewLanguage()" color="stable" round block>Add New Language</button>
+
 </ion-content>

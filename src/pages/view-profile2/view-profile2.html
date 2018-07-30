@@ -5,9 +5,9 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page3">
+<ion-content class="back" padding id="page3">
   <ion-list id="viewProfile2-list6">
-      <ion-item color="none" id="viewProfile-list-item2">
+      <ion-item color="none" class="i1" id="viewProfile-list-item2">
           <div align = "center">
           <ion-avatar item-center>
             <img src="assets/imgs/profile.png" />
@@ -25,7 +25,7 @@
   <h5 id="viewProfile2-heading8" style="color:#000000;text-align:center;">
     #Company
   </h5>
-  <h4 id="viewProfile2-heading9" style="color:#000000;font-weight:600;">
+  <h4 id="viewProfile2-heading9" style="color:#ffffff;font-weight:600;">
     Skills
   </h4>
   <form id="viewProfile2-form10">
@@ -37,4 +37,5 @@
       </ion-range>
     </ion-item>
   </form>
+  <button id="Add-Skill" ion-button (click)="AddNewSkill()" color="stable" round block>Add New Skill </button>
 </ion-content>

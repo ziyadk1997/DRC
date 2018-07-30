@@ -35,6 +35,8 @@ export class ViewProfilePage {
       this.navCtrl.push(ViewProfile6Page);
     }
   }
-  
+  UploadImage(){
+    console.log("yala ya wad ya wel3a");
+  }
   
 }

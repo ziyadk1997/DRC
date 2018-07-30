@@ -5,9 +5,9 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page4">
+<ion-content padding class="back" id="page4">
   <ion-list id="viewProfile3-list8">
-      <ion-item color="none" id="viewProfile-list-item2">
+      <ion-item color="none" class="i1" id="viewProfile-list-item2">
           <div align = "center">
           <ion-avatar item-center>
             <img src="assets/imgs/profile.png" />
@@ -25,7 +25,7 @@
   <h5 id="viewProfile3-heading13" style="color:#000000;text-align:center;">
     #name of Company
   </h5>
-  <h4 id="viewProfile3-heading14" style="color:#000000;font-weight:600;">
+  <h4 id="viewProfile3-heading14" style="color:#ffffff;font-weight:600;">
     Work Experience
   </h4>
   <ion-list id="viewProfile3-list3">
@@ -37,4 +37,6 @@
       </div>
     </ion-item>
   </ion-list>
+  <button id="Add-Work" ion-button (click)="AddNewWork()" color="stable" round block>Add New Work Experience </button>
+
 </ion-content>

@@ -9,5 +9,7 @@ export class AddWorkExperiencePage {
 
   constructor(public navCtrl: NavController) {
   }
-  
+  AddNewWork(){
+    this.navCtrl.push(AddWorkExperiencePage);
+  }
 }

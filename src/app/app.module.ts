@@ -21,6 +21,13 @@ import { ViewProfile6Page } from '../pages/view-profile6/view-profile6';
 import { HttpRequest, HttpResponse, HttpInterceptor, HttpHandler, HttpEvent , HttpClient } from '@angular/common/http'
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { AddNewSkillPage } from '../pages/add-new-skill/add-new-skill';
+import { AddEducationPage } from '../pages/add-education/add-education';
+import { AddLanguagePage } from '../pages/add-language/add-language';
+import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-experience';
+
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -37,7 +44,11 @@ import { HttpClientModule } from '@angular/common/http';
     ViewProfile3Page,
     ViewProfile4Page,
     ViewProfile5Page,
-    ViewProfile6Page
+    ViewProfile6Page,
+    AddNewSkillPage,
+    AddEducationPage,
+    AddLanguagePage,
+    AddWorkExperiencePage
     
   ],
   imports: [
@@ -62,10 +73,11 @@ import { HttpClientModule } from '@angular/common/http';
     ViewProfile3Page,
     ViewProfile4Page,
     ViewProfile5Page,
-    ViewProfile6Page
-   
-
-
+    ViewProfile6Page,
+    AddNewSkillPage,
+    AddEducationPage,
+    AddLanguagePage,
+    AddWorkExperiencePage
   ],
   providers: [
     StatusBar,

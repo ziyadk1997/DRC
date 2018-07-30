@@ -9,5 +9,7 @@ export class AddLanguagePage {
 
   constructor(public navCtrl: NavController) {
   }
-  
+  AddLanguage(){
+    this.navCtrl.push(AddLanguagePage);
+  }
 }

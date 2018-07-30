@@ -5,9 +5,9 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page5">
+<ion-content class="back" padding id="page5">
   <ion-list id="viewProfile4-list9">
-      <ion-item color="none" id="viewProfile-list-item2">
+      <ion-item color="none" class="i1" id="viewProfile-list-item2">
           <div align = "center">
           <ion-avatar item-center>
             <img src="assets/imgs/profile.png" />
@@ -25,7 +25,7 @@
   <h5 id="viewProfile4-heading18" style="color:#000000;text-align:center;">
     #nameofcompany
   </h5>
-  <h4 id="viewProfile4-heading19" style="color:#000000;font-weight:600;">
+  <h4 id="viewProfile4-heading19" style="color:#ffffff;font-weight:600;">
     Education
   </h4>
   <ion-list id="viewProfile4-list4">
@@ -37,4 +37,5 @@
       </div>
     </ion-item>
   </ion-list>
+  <button id="Add-Education" ion-button (click)="AddNewEducation()" color="stable" round block>Add New Education</button>
 </ion-content>
