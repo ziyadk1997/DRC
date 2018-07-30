@@ -7,7 +7,8 @@ import { AnnualRequestPage } from '../../pages/annual-request/annual-request';
   templateUrl: 'apply-leave.html'
 })
 export class ApplyLeavePage {
-  selcValue: String;
+ // selcValue: String;
+  Request:any;
   constructor(public navCtrl: NavController) {
     
   }
@@ -17,11 +18,10 @@ export class ApplyLeavePage {
   }
 
   onChange(selectedValue){
-    this.selcValue=selectedValue;
+    this.Request=selectedValue;
   }
   GoToAnnualRequest(){
-    if(this.selcValue == "sick"){
-
+    if(this.Request == "Sick"){
 
       this.navCtrl.push("AnnualRequestPage")
     }

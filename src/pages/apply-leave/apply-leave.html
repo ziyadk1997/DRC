@@ -1,14 +1,15 @@
-<ion-header>
-  <ion-navbar>
+<! aya >
+<ion-header >
+  <ion-navbar style=" background-color: transparent;" >
    
-      <ion-title>Apply Leave Request</ion-title>
+      <ion-title >Apply Leave Request</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content class="back" padding id="page4">
   <ion-list>
-    <ion-item>
-      <ion-label>Leave Type</ion-label>
-      <ion-select [(ngModel)]="Request">
+    <ion-item style=" background-color: transparent;">
+      <ion-label >Leave Type</ion-label>
+      <ion-select [(ngModel)]="Request"> 
         <ion-option value="Sick">Sick</ion-option>
         <ion-option value="Annual">Annual</ion-option>
         <ion-option value="Casual">Casual</ion-option>
@@ -16,13 +17,13 @@
     </ion-item>
   </ion-list>
   
-  <div style="margin: 20px"> 
+  <div style="margin: 18px" > 
   <div class="day">
-      <h5 id="applyLeave-heading3" style="color:#000000;">
+      <h5 id="applyLeave-heading3" style="color:#d1d1d1;">
           Choose one of the following periods or add it manual
       </h5>
-      <ion-item id="applyLeave-toggle8">
-        <ion-label>
+      <ion-item id="applyLeave-toggle8" style=" background-color: transparent;">
+        <ion-label style="color: #d1d1d1;">
           Full Day
         </ion-label>
         <ion-toggle color="positive" checked="false"></ion-toggle>
@@ -30,8 +31,8 @@
     </div>
   
     <div  class="day" >
-    <ion-item id="applyLeave-toggle9">
-      <ion-label>
+    <ion-item id="applyLeave-toggle9" style=" background-color: transparent;" >
+      <ion-label style="color: #d1d1d1;">
         1st Half Day
       </ion-label>
       <ion-toggle color="positive" checked="false"></ion-toggle>
@@ -39,46 +40,47 @@
   </div>
 
   <div class="day">
-    <ion-item id="applyLeave-toggle10">
-      <ion-label>
+    <ion-item id="applyLeave-toggle10"  style=" background-color: transparent;">
+      <ion-label style="color: #d1d1d1;">
         2nd Half Day
       </ion-label>
       <ion-toggle color="positive" checked="false"></ion-toggle>
     </ion-item>
   </div>
   </div>
-  <div id="applyLeave-container5" style="margin: 20px">
-    <form id="applyLeave-form12">
+  <div id="applyLeave-container5" style="margin: 18px">
+    <form id="applyLeave-form12" >
         <div class="datefrom">
-      <ion-item id="applyLeave-input9" >
+      <ion-item id="applyLeave-input9"  style=" background-color: transparent;" >
         <ion-label class="fromlabel">
           From:
         </ion-label>
         <ion-input type="date" placeholder=""  class="date-input"></ion-input>
-        <ion-icon name="calendar" item-right  ></ion-icon>
+        <ion-icon name="calendar" item-right style="color: #d1d1d1" ></ion-icon>
       </ion-item>
+      <br> <br> 
     </div>
     <div class="dateto">
-      <ion-item id="applyLeave-input10" >
+      <ion-item id="applyLeave-input10"   style=" background-color: transparent;">
         <ion-label class="fromlabel">
           To:
         </ion-label>
         <ion-input type="date" placeholder="" class="date-input"></ion-input>
-        <ion-icon name="calendar" item-right ></ion-icon>
+        <ion-icon name="calendar" item-right style="color: #d1d1d1" ></ion-icon>
       </ion-item >
-    
+      <br> <br> 
     </div>
     </form>
    
     <div id="applyLeave-container2" >
       <form id="applyLeave-form7">
-        <ion-item id="applyLeave-input8">
+        <ion-item id="applyLeave-input8"  style=" background-color: transparent;">
           <ion-label></ion-label>
-          <ion-input type="text" style="margin: 20px" placeholder="Reason of leave"></ion-input>
+          <ion-input type="text" placeholder="Reason of leave"></ion-input>
           <br>  <br>  <br> 
         </ion-item>
       </form>
     </div>
   </div>
-  <button id="Apply-request" ion-button   color="DRC" block round  (click)="GoToAnnualRequest()">Apply Request</button>
+  <button id="Apply-request" ion-button   color="DRC" block round  outline  (click)="GoToAnnualRequest()">Apply Request</button>
 </ion-content>
