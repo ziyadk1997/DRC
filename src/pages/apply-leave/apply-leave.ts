@@ -7,7 +7,8 @@ import { AnnualRequestPage } from '../../pages/annual-request/annual-request';
   templateUrl: 'apply-leave.html'
 })
 export class ApplyLeavePage {
- // selcValue: String;
+  MyDataFrom:any;
+  MyDataTo:any;
   Request:any;
   constructor(public navCtrl: NavController) {
     
@@ -24,6 +25,9 @@ export class ApplyLeavePage {
     if(this.Request == "Sick"){
       this.navCtrl.push(AnnualRequestPage)
     }
+  }
+  Glow(){
+    console.log("glowed");
   }
  
 }
