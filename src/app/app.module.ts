@@ -56,6 +56,7 @@ import { AnnualRequestPage} from '../pages/annual-request/annual-request';
     HttpModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [

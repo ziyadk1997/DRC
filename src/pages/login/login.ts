@@ -14,7 +14,7 @@ export class LoginPage {
   email:any;
   password:any;
   Login(){
-    this.navCtrl.push(WelcomePage)//setRoot(WelcomePage);
+    this.navCtrl.setRoot(WelcomePage)//setRoot(WelcomePage);
   //   var user = JSON.stringify
   //           ({
   //               "username": this.email,

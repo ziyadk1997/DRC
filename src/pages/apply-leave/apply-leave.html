@@ -1,81 +1,94 @@
-<ion-header >
-  <ion-navbar style=" background-color: transparent;" >
-   
-      <ion-title >Apply Leave</ion-title>
+<ion-header>
+  <ion-navbar >
+    <ion-buttons end>
+      <button (click)="openHomepage()" ios-home  style=" background-color: transparent;">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Apply Leave</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content class="back" padding id="page4" >
+<ion-content class="back" padding id="page4">
   <ion-list>
     <ion-item style="background-color: transparent; color:blueviolet">
       <ion-label class="leavet">Leave Type</ion-label>
-      <ion-select [(ngModel)]="Request"> 
+      <ion-select [(ngModel)]="Request">
         <ion-option value="Sick" (ionSelect)="Display()">Sick</ion-option>
-        <ion-option value="Annual"(ionSelect)="OnChange()">Annual</ion-option>
-        <ion-option value="Casual"(ionSelect)="OnChange()">Casual</ion-option>
+        <ion-option value="Annual" (ionSelect)="OnChange()">Annual</ion-option>
+        <ion-option value="Casual" (ionSelect)="OnChange()">Casual</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
-  
-   
-      <h5 id="applyLeave-heading3" style="color:grey; font-size:14px;">
-          Choose one of the following periods or add it manual
-      </h5>     
-      
-      <div class="cont" align="center" (click)="Glow()">
-          <br/>  
-        <ion-avatar  class="check"  item-center>
-              <img src="../assets/imgs/d1.png"  >
-          </ion-avatar>
-                <ion-label class="day" style="color:grey;">  Full day  </ion-label>
-      </div>
 
-      <div class="cont" align="center" (click)="Glow()">
-          <br/>  
-        <ion-avatar  class="check" item-center >
-              <img src="../assets/imgs/d1.png" >
-          </ion-avatar>      <ion-label class="day" style="color: grey;"> First half of day </ion-label>  
-      </div>
 
-      <div class="cont" align="center" (click)="Glow()">
-          <br/>
-        <ion-avatar  class="check" item-center >
-          <img src="../assets/imgs/d1.png" >
-      </ion-avatar>
-      <ion-label class="day" style="color:grey;"> Secont half day </ion-label> 
-      </div>
-     <br/>
-     <br/>
-<div id="applyLeave-container5" >
-    <form id="applyLeave-form12" >
-        <div class="datefrom">
-            <ion-item style=" background-color: transparent; color: grey;">
-                <ion-label>From</ion-label>
-                <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="MyDateFrom" [ngModelOptions]="{standalone: true}">
-                </ion-datetime>
-                <ion-icon name="calendar" item-right style="color: blue" ></ion-icon>
-              </ion-item> 
-    </div>
-    <div class="dateto">
+  <h5 id="applyLeave-heading3" style="color:grey; font-size:14px;">
+    Choose one of the following periods or add it manual
+  </h5>
+
+  <div class="cont" align="center" (click)="Glow()">
+    <br/>
+    <ion-avatar class="check" item-center>
+      <img src="../assets/imgs/d1.png">
+    </ion-avatar>
+    <ion-label class="day" style="color:grey;"> Full day </ion-label>
+  </div>
+
+  <div class="cont" align="center" (click)="Glow()">
+    <br/>
+    <ion-avatar class="check" item-center>
+      <img src="../assets/imgs/d1.png">
+    </ion-avatar>
+    <ion-label class="day" style="color: grey;"> First half of day </ion-label>
+  </div>
+
+  <div class="cont" align="center" (click)="Glow()">
+    <br/>
+    <ion-avatar class="check" item-center>
+      <img src="../assets/imgs/d1.png">
+    </ion-avatar>
+    <ion-label class="day" style="color:grey;"> Secont half day </ion-label>
+  </div>
+  <br/>
+  <br/>
+  <div id="applyLeave-container5">
+    <form id="applyLeave-form12">
+      <div class="datefrom">
         <ion-item style=" background-color: transparent; color: grey;">
-            <ion-label>To</ion-label>
-            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="MyDateTo" [ngModelOptions]="{standalone: true}">
-            </ion-datetime>
-            <ion-icon name="calendar" item-right style="color: blue" ></ion-icon>
-          </ion-item>
-    </div>
+          <ion-label>From</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="MyDateFrom" [ngModelOptions]="{standalone: true}">
+          </ion-datetime>
+          <ion-icon name="calendar" item-right style="color: blue"></ion-icon>
+        </ion-item>
+      </div>
+      <div class="dateto">
+        <ion-item style=" background-color: transparent; color: grey;">
+          <ion-label>To</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="MyDateTo" [ngModelOptions]="{standalone: true}">
+          </ion-datetime>
+          <ion-icon name="calendar" item-right style="color: blue"></ion-icon>
+        </ion-item>
+      </div>
     </form>
     <br/>
-    <div id="applyLeave-container2" >
+    <div id="applyLeave-container2">
       <form id="applyLeave-form7">
-        <ion-item id="applyLeave-input8"  style=" background-color: transparent;">
+        <ion-item id="applyLeave-input8" style=" background-color: transparent;">
           <ion-label></ion-label>
           <ion-input type="text" placeholder="Reason of leave"></ion-input>
-          <br>  <br>  <br> 
+          <br>
+          <br>
+          <br>
         </ion-item>
       </form>
     </div>
   </div>
   <br/>
   <br/>
-  <button *ngIf="HideFlag" id="Upload" ion-button   class="Up" block round  outline  (click)="GoToAnnualRequest()">Upload</button>
+<<<<<<< HEAD
+  <button *ngIf="HideFlag" id="Upload" ion-button  class="file-upload__label"  block round  outline  (click)="GoToAnnualRequest()">Upload</button>
   <button id="Apply-request" ion-button   class="Applyb" block round  outline  (click)="GoToAnnualRequest()">Apply</button>
+</ion-content>
+=======
+  <button *ngIf="HideFlag" id="Upload" ion-button class="Up" block round outline (click)="GoToAnnualRequest()">Upload</button>
+  <button id="Apply-request" ion-button class="Applyb" block round outline (click)="GoToAnnualRequest()">Apply</button>
+>>>>>>> d263ed3b93078bbdaad1cf291e4d21384008b222
