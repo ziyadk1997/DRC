@@ -1,4 +1,7 @@
 page-apply-leave {
+    .homeall{
+        color: blueviolet;
+    }
     .datefrom{
       display: inline-block!important;
       width: 49%;
@@ -10,7 +13,7 @@ page-apply-leave {
       color: #d1d1d1;
     }
     .leavet{
-        color:grey;
+        color:blueviolet;
     }
     input {
         border-style:none;
@@ -19,12 +22,13 @@ page-apply-leave {
     }
     .fromlabel{
         width: 100%;
-       color:grey;
+       color:blueviolet;
     }
     .date-input{
         width: 50%;
         color: #d1d1d1;
     }
+
     .day{
         width: 30%;
         display: inline-block;
@@ -58,7 +62,6 @@ page-apply-leave {
         margin: auto; 
         border: none ;
         vertical-align: top;
-       //background-image: url("../assets/imgs/d1.png");
         background-color: transparent; 
         display: inline-block;
     }

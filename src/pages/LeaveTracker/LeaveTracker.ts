@@ -16,4 +16,7 @@ export class LeaveTrackerPage {
 
     this.navCtrl.push(ApplyLeavePage);
   }
+  openHomepage(){
+    this.navCtrl.popToRoot();
+  }
 }

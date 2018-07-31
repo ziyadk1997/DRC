@@ -1,8 +1,8 @@
 <ion-header>
   <ion-navbar >
-    <ion-buttons end>
-      <button (click)="openHomepage()" ios-home  style=" background-color: transparent;">
-        <ion-icon name="home"></ion-icon>
+    <ion-buttons end class="homeall">
+      <button (click)="openHomepage()"   style=" background-color: transparent;">
+        <ion-icon name="home" style="font-size: 30px;"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>Apply Leave</ion-title>
@@ -28,7 +28,7 @@
   <div class="cont" align="center" (click)="Glow()">
     <br/>
     <ion-avatar class="check" item-center>
-      <img src="../assets/imgs/d1.png">
+      <img src="../assets/imgs/dn.png">
     </ion-avatar>
     <ion-label class="day" style="color:grey;"> Full day </ion-label>
   </div>
@@ -36,45 +36,44 @@
   <div class="cont" align="center" (click)="Glow()">
     <br/>
     <ion-avatar class="check" item-center>
-      <img src="../assets/imgs/d1.png">
+      <img src="../assets/imgs/d.png">
     </ion-avatar>
-    <ion-label class="day" style="color: grey;"> First half of day </ion-label>
+    <ion-label class="day" style="color: grey;"> 9:00AM - 1:00PM</ion-label>
   </div>
 
   <div class="cont" align="center" (click)="Glow()">
     <br/>
     <ion-avatar class="check" item-center>
-      <img src="../assets/imgs/d1.png">
+      <img src="../assets/imgs/n.png">
     </ion-avatar>
-    <ion-label class="day" style="color:grey;"> Secont half day </ion-label>
+    <ion-label class="day" style="color:grey;"> 1:00AM - 5:00PM </ion-label>
   </div>
   <br/>
   <br/>
   <div id="applyLeave-container5">
     <form id="applyLeave-form12">
       <div class="datefrom">
-        <ion-item style=" background-color: transparent; color: grey;">
+        <ion-item style=" background-color: transparent; color: blueviolet;">
           <ion-label>From</ion-label>
           <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="MyDateFrom" [ngModelOptions]="{standalone: true}">
           </ion-datetime>
-          <ion-icon name="calendar" item-right style="color: blue"></ion-icon>
+          <ion-icon name="calendar" item-right style="color: blueviolet"></ion-icon>
         </ion-item>
       </div>
       <div class="dateto">
-        <ion-item style=" background-color: transparent; color: grey;">
+        <ion-item style=" background-color: transparent; color: blueviolet;">
           <ion-label>To</ion-label>
           <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="MyDateTo" [ngModelOptions]="{standalone: true}">
           </ion-datetime>
-          <ion-icon name="calendar" item-right style="color: blue"></ion-icon>
+          <ion-icon name="calendar" item-right style="color: blueviolet"></ion-icon>
         </ion-item>
       </div>
     </form>
     <br/>
-    <div id="applyLeave-container2">
-      <form id="applyLeave-form7">
-        <ion-item id="applyLeave-input8" style=" background-color: transparent;">
-          <ion-label></ion-label>
-          <ion-input type="text" placeholder="Reason of leave"></ion-input>
+    <div id="applyLeave-container2" > 
+      <form id="applyLeave-form7" >
+        <ion-item id="applyLeave-input8" style=" background-color: transparent; ">
+          <ion-input type="text" class="place" placeholder="Add Justification" ></ion-input>
           <br>
           <br>
           <br>
@@ -84,11 +83,6 @@
   </div>
   <br/>
   <br/>
-<<<<<<< HEAD
   <button *ngIf="HideFlag" id="Upload" ion-button  class="file-upload__label"  block round  outline  (click)="GoToAnnualRequest()">Upload</button>
   <button id="Apply-request" ion-button   class="Applyb" block round  outline  (click)="GoToAnnualRequest()">Apply</button>
 </ion-content>
-=======
-  <button *ngIf="HideFlag" id="Upload" ion-button class="Up" block round outline (click)="GoToAnnualRequest()">Upload</button>
-  <button id="Apply-request" ion-button class="Applyb" block round outline (click)="GoToAnnualRequest()">Apply</button>
->>>>>>> d263ed3b93078bbdaad1cf291e4d21384008b222

@@ -1,5 +1,10 @@
 <ion-header>
-    <ion-navbar >
+    <ion-navbar hideBackButton >
+        <ion-buttons end class="homeall">
+            <button (click)="openHomepage()"   style=" background-color: transparent;">
+              <ion-icon name="home" style="font-size: 30px;"></ion-icon>
+            </button>
+          </ion-buttons>
       <ion-title>
        Leave Tracker
       </ion-title>

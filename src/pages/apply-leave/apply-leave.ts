@@ -35,9 +35,7 @@ export class ApplyLeavePage {
     console.log("glowed");
   }
   openHomepage(){
-    // this.navCtrl.push(WelcomePage);
     this.navCtrl.popToRoot();
-    // this.navCtrl.push(WelcomePage);
   }
   
  
