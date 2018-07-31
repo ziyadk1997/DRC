@@ -7,23 +7,52 @@ page-apply-leave {
         display: inline-block!important;
       width: 49%;
     }
+    .leavet{
+        color:grey;
+    }
     input {
         border-style:none;
        
     }
     .fromlabel{
-        width: 50%;
-       color: #d1d1d1;
+        width: 100%;
+       color:grey;
     }
     .date-input{
         width: 50%;
     }
-    .day{
-        width: 30%;
-        display: inline-block;
-    }
+  
     .back {
         background-image: url('../assets/imgs/b1.png');
     } 
+    .Applyb{
+        background: rgba(54, 54, 201,0.3);
+    }
+    .day{
+        width: 100%;
+        font-size:12px !important;
+        vertical-align: bottom;
+        display: inline-block;
+    
+    }
+    .cont{
+        width:32%;
+        border-color:blue;
+        border-radius : 15px;
+        display: inline-block;
+        border:1px solid rgb(255, 255, 255);
+        box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    }
+   
+    .check {
+        width:100% !important;  
+        height : 100% !important;
+        margin: auto; 
+        border: none ;
+        vertical-align: top;
+       //background-image: url("../assets/imgs/d1.png");
+        background-color: transparent; 
+        display: inline-block;
+    }
 }
  
