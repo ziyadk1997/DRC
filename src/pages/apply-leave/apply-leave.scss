@@ -1,22 +1,24 @@
 page-apply-leave {
     .datefrom{
       display: inline-block!important;
-      width: 49%;
+      width: 80%;
+      float: left;
     }
     .dateto{
         display: inline-block!important;
-      width: 49%;
+      width: 80%;
+      float: left;
     }
     input {
         border-style:none;
        
     }
     .fromlabel{
-        width: 50%;
+        width: 30%;
        color: #d1d1d1;
     }
     .date-input{
-        width: 50%;
+        width: 70%;
     }
     .day{
         width: 30%;
@@ -25,5 +27,6 @@ page-apply-leave {
     .back {
         background-image: url('../assets/imgs/b1.png');
     } 
+    
 }
  
