@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
+import { WelcomePage } from '../welcome/welcome';
 
 @Component({
   selector: 'page-apply-leave',
@@ -32,6 +33,11 @@ export class ApplyLeavePage {
   }
   Glow(){
     console.log("glowed");
+  }
+  openHomepage(){
+    // this.navCtrl.push(WelcomePage);
+    this.navCtrl.popToRoot();
+    // this.navCtrl.push(WelcomePage);
   }
   
  

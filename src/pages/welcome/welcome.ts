@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { ApplyLeavePage } from '../../pages/apply-leave/apply-leave';
 import { ViewProfilePage } from '../../pages/view-profile/view-profile';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
+import { LoginPage } from '../login/login';
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
@@ -15,6 +16,9 @@ export class WelcomePage {
   GoBack(){
 
     this.navCtrl.pop();
+  }
+  GoLoginPage(){
+    this.navCtrl.setRoot(LoginPage);
   }
   
   GoToleaveTrackerPage(){

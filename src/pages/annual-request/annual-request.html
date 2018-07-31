@@ -19,44 +19,59 @@
       <div class="img">
         <img src="assets/imgs/HzQWpI2mRcrLE75LePGG_933fc976-4840-4fa4-bc1e-00a73e5eca9e.png" >
       </div>
-      <form id="requestSummary-form" class="list">
-        <div>
-        <label class="item item-input date-labels" id="requestSummary-input2">
-          <span class="input-label">From: </span>
-          <input type="date" placeholder="">
-        </label>
-      
-        <label class="item item-input date-labels" id="requestSummary-input3">
-          <span class="input-label">To: </span>
-          <input type="date" placeholder="">
-        </label>
-      </div>
-      
-        <label class="item item-input" id="requestSummary-textarea2"  > 
-          <span class="input-label"> </span>   <! duration >
-           <textarea placeholder="04/Days" style= border-style:none></textarea></label>
-         
-           <div>
-          <span >Reason Of Leave </span> 
-          <br> <br> 
-          <textarea placeholder="Write your reason " ></textarea>
-       
-          <br> <br> 
+      <div id="applyLeave-container5"  class="list">
+          <form id="applyLeave-form12" >
+              <div class="datefrom">
+                  
+            <ion-item id="applyLeave-input9"  style=" background-color: transparent;" >
+              <ion-label class="fromlabel" >
+                  <div class="circle"></div>
+                From:
+              </ion-label>
+              <ion-input type="date" placeholder=""  class="date-input"></ion-input>
+              
+            </ion-item>
+            
+          </div>
+          <div class="dateto">
+            <ion-item id="applyLeave-input10"   style=" background-color: transparent;">
+              <ion-label class="fromlabel">
+                  <div class="circle1"></div>
+                To:
+              </ion-label>
+              <ion-input type="date" placeholder="" class="date-input"></ion-input>
+            </ion-item >
+            
+          </div>
+          </form>
+          <div id="applyLeave-container2" >
+              <form id="applyLeave-form7">
+                <ion-item id="applyLeave-input8"  style=" background-color: transparent;">
+                  <ion-label></ion-label>
+                  <ion-input type="text" placeholder="Reason of leave"></ion-input>
+                  <br> 
+                </ion-item>
+              </form>
+            </div>
+        <br> 
+        <div class="file-upload">
+            <button ion-button  block class="upload-button" > 
+            <label for="upload" class="file-upload__label">The Medical Report</label>
+            <input id="upload" class="file-upload__input" type="file" name="file-upload">
+          </button>
         </div>
-        </form>
-        
         <form id="requestSummary-form2" class="button" >
         <div>
-      <button ion-button  block round outline >Confirm Request</button>
+      <button ion-button  block round   class="b-confirm" > Confirm Request </button>
     </div>   
     <br>
       <div>
-        <button ion-button color="secondary" block round  outline >Edit Request</button>
+        <button ion-button  block round   class="b-edit" > Edit Request </button>
       </div> 
-<br>
+<br> 
       <div>
-      <button ion-button color="danger" block round outline >Cancel Request</button>
+      <button ion-button  block round class="b-cancel" > Cancel Request </button>
     </div> 
   </form>
 
-</ion-content>
+
