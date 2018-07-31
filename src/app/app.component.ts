@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform,Nav } from 'ionic-angular';
+import { Platform,Nav, MenuController } from 'ionic-angular';
 import { LoginPage } from '../pages/login/login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,12 +13,17 @@ export class MyApp {
 
   // make HelloIonicPage the root (or first) page
   rootPage = LoginPage;
+  pages: Array<{title: string, component: any}>;
   constructor(
     public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen
   ) {
     this.initializeApp();
+    this.pages = [
+      // { title: 'Hello Ionic', component: HelloIonicPage },
+      // { title: 'My First List', component: ListPage }
+    ];
   }
 
   initializeApp() {
