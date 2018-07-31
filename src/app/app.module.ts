@@ -3,9 +3,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ListPage } from '../pages/list/list';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ApplyLeavePage } from '../pages/apply-leave/apply-leave';
 import { NewProfilePage } from '../pages/new-profile/new-profile';
@@ -34,9 +32,7 @@ import { AnnualRequestPage} from '../pages/annual-request/annual-request';
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
     ItemDetailsPage,
-    ListPage, 
     WelcomePage,
     ApplyLeavePage,
     NewProfilePage,
@@ -64,9 +60,7 @@ import { AnnualRequestPage} from '../pages/annual-request/annual-request';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
     ItemDetailsPage,
-    ListPage, 
     WelcomePage,
     ApplyLeavePage,
     NewProfilePage,
