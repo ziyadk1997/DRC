@@ -6,5 +6,19 @@
     </ion-navbar>
   </ion-header>
 <ion-content  class="back">    
-    <button id="Apply" (click)="GoToApplyLeavePage()" ion-button round >Apply leave</button>
+    <button id="Apply" (click)="GoToApplyLeavePage()" ion-button round block outline color="DRC" >Apply leave</button>
+    <ion-list>
+      <ion-item class="list">
+        <button ion-button clear item-start style="color: rgb(172, 172, 172)">Annual</button>
+        <h1 item-end style="color: white ;font-size: 0.9em ">#Days</h1>
+      </ion-item>
+      <ion-item class="list">
+        <button ion-button clear item-start style="color: rgb(172, 172, 172)">Casual</button>
+        <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
+      </ion-item>
+      <ion-item class=list>
+        <button ion-button clear item-start style="color: rgb(172, 172, 172)">Sick</button>
+        <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
+      </ion-item>
+    </ion-list>
 </ion-content>
