@@ -10,7 +10,7 @@ import { ViewProfile6Page } from '../../pages/view-profile6/view-profile6';
   templateUrl: 'view-profile.html'
 })
 export class ViewProfilePage {
-  option:string
+  option:any;
   constructor(public navCtrl: NavController) {
     
   }
