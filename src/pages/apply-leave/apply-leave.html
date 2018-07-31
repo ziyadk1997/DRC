@@ -9,9 +9,9 @@
     <ion-item style="background-color: transparent; color:blueviolet">
       <ion-label class="leavet">Leave Type</ion-label>
       <ion-select [(ngModel)]="Request"> 
-        <ion-option value="Sick">Sick</ion-option>
-        <ion-option value="Annual">Annual</ion-option>
-        <ion-option value="Casual">Casual</ion-option>
+        <ion-option value="Sick" (ionSelect)="Display()">Sick</ion-option>
+        <ion-option value="Annual"(ionSelect)="OnChange()">Annual</ion-option>
+        <ion-option value="Casual"(ionSelect)="OnChange()">Casual</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
@@ -22,20 +22,23 @@
       </h5>     
       
       <div class="cont" align="center" (click)="Glow()">
-          <ion-avatar  class="check"  item-center>
+          <br/>  
+        <ion-avatar  class="check"  item-center>
               <img src="../assets/imgs/d1.png"  >
           </ion-avatar>
                 <ion-label class="day" style="color:grey;">  Full day  </ion-label>
       </div>
 
       <div class="cont" align="center" (click)="Glow()">
-          <ion-avatar  class="check" item-center >
+          <br/>  
+        <ion-avatar  class="check" item-center >
               <img src="../assets/imgs/d1.png" >
           </ion-avatar>      <ion-label class="day" style="color: grey;"> First half of day </ion-label>  
       </div>
 
       <div class="cont" align="center" (click)="Glow()">
-      <ion-avatar  class="check" item-center >
+          <br/>
+        <ion-avatar  class="check" item-center >
           <img src="../assets/imgs/d1.png" >
       </ion-avatar>
       <ion-label class="day" style="color:grey;"> Secont half day </ion-label> 
@@ -74,5 +77,6 @@
   </div>
   <br/>
   <br/>
+  <button *ngIf="HideFlag" id="Upload" ion-button   class="Up" block round  outline  (click)="GoToAnnualRequest()">Upload</button>
   <button id="Apply-request" ion-button   class="Applyb" block round  outline  (click)="GoToAnnualRequest()">Apply</button>
 </ion-content>
