@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AnnualRequestPage } from '../../pages/annual-request/annual-request';
+import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
 
 @Component({
   selector: 'page-apply-leave',
@@ -10,6 +10,7 @@ export class ApplyLeavePage {
   MyDataFrom:any;
   MyDataTo:any;
   Request:any;
+  HideFlag:boolean = false;
   constructor(public navCtrl: NavController) {
     
   }
@@ -18,16 +19,20 @@ export class ApplyLeavePage {
     this.navCtrl.pop();
   }
 
-  onChange(selectedValue){
-    this.Request=selectedValue;
+  OnChange(){
+    this.HideFlag = false;
+  }
+  Display(){
+    this.HideFlag = true;
   }
   GoToAnnualRequest(){
-    if(this.Request == "Sick"){
-      this.navCtrl.push(AnnualRequestPage)
+    if(this.Request == "Sick" || this.Request == "Annual" || this.Request == "Casual"){
+      this.navCtrl.push(LeaveTrackerPage)
     }
   }
   Glow(){
     console.log("glowed");
   }
+  
  
 }
