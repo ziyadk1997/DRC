@@ -65,5 +65,13 @@ page-apply-leave {
         background-color: transparent; 
         display: inline-block;
     }
+    ion-input {
+        &.custom-input {
+          font-size: 20px; //sets text font size
+          ::placeholder {
+            color : blueviolet; //sets placeholder font size
+          }
+        }
+      }
 }
  
