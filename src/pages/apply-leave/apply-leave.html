@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-navbar >
+  <ion-navbar>
     <ion-buttons end class="homeall">
-      <button (click)="openHomepage()"   style=" background-color: transparent;">
+      <button (click)="openHomepage()" style=" background-color: transparent;">
         <ion-icon name="home" style="font-size: 30px;"></ion-icon>
       </button>
     </ion-buttons>
@@ -25,7 +25,7 @@
     Choose one of the following periods or add it manual
   </h5>
 
-  <div class="cont" align="center" (click)="Glow()">
+  <div class="cont" align="center" (click)="Glow(1)" [ngClass]="{'selected': selected == 1}">
     <br/>
     <ion-avatar class="check" item-center>
       <img src="../assets/imgs/dn.png">
@@ -33,7 +33,7 @@
     <ion-label class="day" style="color:grey;"> Full day </ion-label>
   </div>
 
-  <div class="cont" align="center" (click)="Glow()">
+  <div class="cont" align="center" (click)="Glow(2)" [ngClass]="{'selected': selected == 2}">
     <br/>
     <ion-avatar class="check" item-center>
       <img src="../assets/imgs/d.png">
@@ -41,7 +41,7 @@
     <ion-label class="day" style="color: grey;"> 9:00AM - 1:00PM</ion-label>
   </div>
 
-  <div class="cont" align="center" (click)="Glow()">
+  <div class="cont" align="center" (click)="Glow(3)" [ngClass]="{'selected': selected == 3}">
     <br/>
     <ion-avatar class="check" item-center>
       <img src="../assets/imgs/n.png">
@@ -70,10 +70,10 @@
       </div>
     </form>
     <br/>
-    <div id="applyLeave-container2" > 
-      <form id="applyLeave-form7" >
+    <div id="applyLeave-container2">
+      <form id="applyLeave-form7">
         <ion-item id="applyLeave-input8" style=" background-color: transparent; ">
-          <ion-input type="text" class="place" placeholder="Add Justification" class="custom-input" ></ion-input>
+          <ion-input type="text" class="place" placeholder="Add Justification" class="custom-input"></ion-input>
           <br>
           <br>
           <br>
@@ -83,6 +83,6 @@
   </div>
   <br/>
   <br/>
-  <button *ngIf="HideFlag" id="Upload" ion-button  class="file-upload__label"  block round  outline  (click)="GoToAnnualRequest()">Upload</button>
-  <button id="Apply-request" ion-button   class="Applyb" block round  outline  (click)="GoToAnnualRequest()">Apply</button>
+  <button *ngIf="HideFlag" id="Upload" ion-button class="file-upload__label" block round outline (click)="GoToAnnualRequest()">Upload</button>
+  <button id="Apply-request" ion-button class="Applyb" block round outline (click)="GoToAnnualRequest()">Apply</button>
 </ion-content>
