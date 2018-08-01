@@ -26,6 +26,9 @@ import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
 import { AnnualRequestPage} from '../pages/annual-request/annual-request';
 import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';  
 import { WorkFromHomeSummaryPage} from '../pages/work-from-home-summary/work-from-home-summary';
+import { FinancialPage} from '../pages/financial/financial';
+
+
 
 
 
@@ -52,6 +55,7 @@ import { WorkFromHomeSummaryPage} from '../pages/work-from-home-summary/work-fro
     AnnualRequestPage,
     WorkFromHomePage,
     WorkFromHomeSummaryPage
+    FinancialPage
   ],
   imports: [
     BrowserModule,
@@ -82,6 +86,7 @@ import { WorkFromHomeSummaryPage} from '../pages/work-from-home-summary/work-fro
     AnnualRequestPage,
     WorkFromHomePage,
     WorkFromHomeSummaryPage
+    FinancialPage
   ],
   providers: [
     StatusBar,
