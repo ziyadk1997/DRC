@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ApplyLeavePage } from '../../pages/apply-leave/apply-leave';
 import { ViewProfilePage } from '../../pages/view-profile/view-profile';
-import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
+import { LeaveTrackerPage} from '../../pages/LeaveTracker/LeaveTracker';
+import { WorkFromHomePage} from '../../pages/work-from-home/work-from-home';
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
@@ -23,6 +24,9 @@ export class WelcomePage {
   }
   GoToProfilePage(){
     this.navCtrl.push(ViewProfilePage);
+  }
+  GoToWorkFromHomePage(){
+    this.navCtrl.push(WorkFromHomePage);
   }
   
 }

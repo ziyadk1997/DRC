@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
-
+import { AnnualRequestPage } from '../annual-request/annual-request';
 @Component({
   selector: 'page-apply-leave',
   templateUrl: 'apply-leave.html'
@@ -26,7 +26,9 @@ export class ApplyLeavePage {
     this.HideFlag = true;
   }
   GoToAnnualRequest(){
-    if(this.Request == "Sick" || this.Request == "Annual" || this.Request == "Casual"){
+    if(this.Request == "Sick"){
+      this.navCtrl.push(AnnualRequestPage)
+    }else{
       this.navCtrl.push(LeaveTrackerPage)
     }
   }
