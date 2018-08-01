@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ViewProfile2Page } from '../../pages/view-profile2/view-profile2';
-import { ViewProfile3Page } from '../../pages/view-profile3/view-profile3';
-import { ViewProfile4Page } from '../../pages/view-profile4/view-profile4';
-import { ViewProfile5Page } from '../../pages/view-profile5/view-profile5';
-import { ViewProfile6Page } from '../../pages/view-profile6/view-profile6';
+import { ViewProfile2Page } from '../view-profile2/view-profile2';
+import { ViewProfile3Page } from '../view-profile3/view-profile3';
+import { ViewProfile4Page } from '../view-profile4/view-profile4';
+import { ViewProfile5Page } from '../view-profile5/view-profile5';
+import { ViewProfile6Page } from '../view-profile6/view-profile6';
 @Component({
   selector: 'page-view-profile',
   templateUrl: 'view-profile.html'

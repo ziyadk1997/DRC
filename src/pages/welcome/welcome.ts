@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ApplyLeavePage } from '../../pages/apply-leave/apply-leave';
-import { ViewProfilePage } from '../../pages/view-profile/view-profile';
+import { ApplyLeavePage } from '../apply-leave/apply-leave';
+import { ViewProfilePage } from '../view-profile/view-profile';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
 import { LoginPage } from '../login/login';
 import{WorkFromHomePage} from '../work-from-home/work-from-home';
-import { FinancialPage} from '../../pages/financial/financial';
+import { FinancialPage} from '../financial/financial';
 
 
 @Component({

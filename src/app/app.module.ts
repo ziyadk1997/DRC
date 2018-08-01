@@ -11,27 +11,22 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ViewProfilePage } from '../pages/view-profile/view-profile';
 import { ViewProfile2Page } from '../pages/view-profile2/view-profile2';
-import { ViewProfile3Page} from '../pages/view-profile3/view-profile3';
+import { ViewProfile3Page } from '../pages/view-profile3/view-profile3';
 import { ViewProfile4Page } from '../pages/view-profile4/view-profile4';
 import { ViewProfile5Page } from '../pages/view-profile5/view-profile5';
 import { ViewProfile6Page } from '../pages/view-profile6/view-profile6';
-import { HttpRequest, HttpResponse, HttpInterceptor, HttpHandler, HttpEvent , HttpClient } from '@angular/common/http'
-import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { InterceptorModule } from '../providers/interceptor.module';
+// import { Http, HttpModule } from '@angular/http';
 import { AddNewSkillPage } from '../pages/add-new-skill/add-new-skill';
 import { AddEducationPage } from '../pages/add-education/add-education';
 import { AddLanguagePage } from '../pages/add-language/add-language';
 import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-experience';
 import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
-import { AnnualRequestPage} from '../pages/annual-request/annual-request';
-import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
-import { FinancialPage} from '../pages/financial/financial';
-FinancialPage
-
-
-
-
-
+import { AnnualRequestPage } from '../pages/annual-request/annual-request';
+import { WorkFromHomePage } from '../pages/work-from-home/work-from-home';
+import { FinancialPage } from '../pages/financial/financial';
+import { LoginProvider } from '../providers/login';
 
 @NgModule({
   declarations: [
@@ -58,11 +53,9 @@ FinancialPage
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
-    
-    
+    InterceptorModule,
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -90,8 +83,9 @@ FinancialPage
   providers: [
     StatusBar,
     SplashScreen,
-    HttpClient,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    HttpClientModule,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    LoginProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }
