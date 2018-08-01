@@ -4,6 +4,8 @@ import { ApplyLeavePage } from '../../pages/apply-leave/apply-leave';
 import { ViewProfilePage } from '../../pages/view-profile/view-profile';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
 import { LoginPage } from '../login/login';
+import{WorkFromHomePage} from '../work-from-home/work-from-home';
+
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
@@ -27,6 +29,9 @@ export class WelcomePage {
   }
   GoToProfilePage(){
     this.navCtrl.push(ViewProfilePage);
+  }
+  GoToWorkFromHomePage(){
+    this.navCtrl.push(WorkFromHomePage);
   }
   
 }

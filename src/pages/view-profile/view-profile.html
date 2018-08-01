@@ -14,21 +14,21 @@
         <img src="assets/imgs/profile.png" (click) = "UploadImage()">
       </ion-avatar>
       <br/>
-      <h2>
+      <h2 style="color: white">
         #name
       </h2>
     </div>
     </ion-item>
   </ion-list>
-  <h5 id="viewProfile-heading3" style="color:#000000;text-align:center;">
+  <h5 id="viewProfile-heading3" style="color:white;text-align:center;">
     #Position
   </h5>
-  <h5 id="viewProfile-heading4" style="color:#000000;text-align:center;">
+  <h5 id="viewProfile-heading4" style="color:white;text-align:center;">
     Three2one
   </h5>
-  <form id="viewProfile-form9">
-    <ion-item id="viewProfile-select3">
-      <ion-label>
+  <form id="viewProfile-form9" class="form">
+    <ion-item id="viewProfile-select3" style="background-color: transparent">
+      <ion-label style="color: white">
         Choose
       </ion-label>
       <ion-select [(ngModel)]="option" [ngModelOptions]="{standalone: true}" (ionChange)="test()">

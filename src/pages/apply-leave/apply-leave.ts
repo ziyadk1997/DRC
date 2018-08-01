@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
-import { WelcomePage } from '../welcome/welcome';
+import { AnnualRequestPage } from '../annual-request/annual-request';
 import { SwitchView } from '../../../node_modules/@angular/common/src/directives/ng_switch';
 
 @Component({
@@ -28,8 +28,10 @@ export class ApplyLeavePage {
   Display() {
     this.HideFlag = true;
   }
-  GoToAnnualRequest() {
-    if (this.Request == "Sick" || this.Request == "Annual" || this.Request == "Casual") {
+  GoToAnnualRequest(){
+    if(this.Request == "Sick"){
+      this.navCtrl.push(AnnualRequestPage)
+    }else{
       this.navCtrl.push(LeaveTrackerPage)
     }
   }
