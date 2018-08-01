@@ -7,11 +7,16 @@ import { ApplyLeavePage } from '../apply-leave/apply-leave';
   templateUrl: 'LeaveTracker.html'
 })
 export class LeaveTrackerPage {
+  
 
   constructor(public navCtrl: NavController) {
   }
+  
   GoToApplyLeavePage(){
 
     this.navCtrl.push(ApplyLeavePage);
+  }
+  openHomepage(){
+    this.navCtrl.popToRoot();
   }
 }

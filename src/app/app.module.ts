@@ -3,9 +3,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ListPage } from '../pages/list/list';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { ApplyLeavePage } from '../pages/apply-leave/apply-leave';
 import { NewProfilePage } from '../pages/new-profile/new-profile';
@@ -35,9 +33,7 @@ import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
     ItemDetailsPage,
-    ListPage, 
     WelcomePage,
     ApplyLeavePage,
     NewProfilePage,
@@ -62,13 +58,12 @@ import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
     HttpModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
     ItemDetailsPage,
-    ListPage, 
     WelcomePage,
     ApplyLeavePage,
     NewProfilePage,
