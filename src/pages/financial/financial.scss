@@ -1,0 +1,33 @@
+page-financial {
+    .back {
+        background-image: url('../assets/imgs/b1.png');
+    } 
+    .Salary{
+background: transparent;
+color: grey;
+    }
+    .Fsalary{
+        background: transparent;
+        color: grey;
+    }
+    .Head{
+        background: transparent;
+        color: blueviolet;
+    }
+    .Date{
+        background: transparent;
+        border-bottom-color: transparent;
+        color: grey;
+    }
+    .Date2{
+        text-align: center;
+        color: grey;
+    }
+    .container{
+        border:1px solid rgb(255, 255, 255);
+        height: 15%;
+        border-color:grey;
+        border-radius : 15px;
+        margin: 5px;
+    }
+}
