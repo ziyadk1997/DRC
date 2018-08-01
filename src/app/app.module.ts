@@ -23,8 +23,9 @@ import { AddEducationPage } from '../pages/add-education/add-education';
 import { AddLanguagePage } from '../pages/add-language/add-language';
 import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-experience';
 import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
-import { AnnualRequestPage} from '../pages/annual-request/annual-request';WorkFromHomePage
+import { AnnualRequestPage} from '../pages/annual-request/annual-request';
 import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
+
 
 
 
@@ -58,6 +59,7 @@ import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
     HttpModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
+    
     
   ],
   bootstrap: [IonicApp],
