@@ -7,7 +7,7 @@
 </ion-header>
 <ion-content  class="back" padding id="page1">
     <div class="img">
-        <ion-img src="assets\imgs\d1.png" >
+        <ion-img src="assets\imgs\freelancer-icon1.png" >
       </ion-img> 
       </div>
   <div id="workFromHome-container6" >
@@ -30,7 +30,16 @@
     </div>
     </form>
     <br> 
- 
+    <div id="applyLeave-container2">
+      <form id="applyLeave-form7">
+        <ion-item id="applyLeave-input8" style=" background-color: transparent; ">
+          <ion-input type="text" class="place" placeholder="Comment" class="custom-input"></ion-input>
+          <br>
+          <br>
+          <br>
+        </ion-item>
+      </form>
+    </div>
     <div>
-      <button ion-button  block round class="b-work" > Apply Request </button>
+      <button ion-button  block round (click)='GoToWorkFromHomeSummaryPage()' class="b-work" > Apply Request </button>
     </div> 

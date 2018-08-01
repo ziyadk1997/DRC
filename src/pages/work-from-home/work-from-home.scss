@@ -24,6 +24,19 @@ page-work-from-home {
      margin-right: auto;
      text-align:center;
 }
+ion-input {
+    &.custom-input {
+      font-size: 20px; //sets text font size
+      ::placeholder {
+        color : grey; //sets placeholder font size
+      }
+    }
+  }
+  input {
+    border-style:none;
+    color: #d1d1d1;
+   
+}
 
   
 
