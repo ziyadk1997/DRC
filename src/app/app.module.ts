@@ -23,8 +23,10 @@ import { AddEducationPage } from '../pages/add-education/add-education';
 import { AddLanguagePage } from '../pages/add-language/add-language';
 import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-experience';
 import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
-import { AnnualRequestPage} from '../pages/annual-request/annual-request';WorkFromHomePage
+import { AnnualRequestPage} from '../pages/annual-request/annual-request';
 import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
+import { FinancialPage} from '../pages/financial/financial';
+FinancialPage
 
 
 
@@ -50,8 +52,8 @@ import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
     AddWorkExperiencePage,
     LeaveTrackerPage,
     AnnualRequestPage,
-    WorkFromHomePage
-    
+    WorkFromHomePage,
+    FinancialPage
   ],
   imports: [
     BrowserModule,
@@ -80,7 +82,8 @@ import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
     AddWorkExperiencePage,
     LeaveTrackerPage,
     AnnualRequestPage,
-    WorkFromHomePage
+    WorkFromHomePage,
+    FinancialPage
   ],
   providers: [
     StatusBar,
