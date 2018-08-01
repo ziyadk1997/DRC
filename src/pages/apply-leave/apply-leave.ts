@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
-<<<<<<< HEAD
-import { AnnualRequestPage } from '../annual-request/annual-request';
-=======
 import { WelcomePage } from '../welcome/welcome';
 
->>>>>>> 13963d2c4dd19ddbbbee87bce4d39191984a85d2
 @Component({
   selector: 'page-apply-leave',
   templateUrl: 'apply-leave.html'
