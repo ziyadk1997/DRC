@@ -1,4 +1,4 @@
-import { HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/timeout';
 import { config } from './config'
@@ -12,7 +12,7 @@ import { config } from './config'
 export class ServicesProvider {
 
   constructor(public http: HttpClient) {
-    
+
   }
 
   doLogin(email, password) {
@@ -36,18 +36,5 @@ export class ServicesProvider {
         });
     });
 
-
-
-    this.http.post('http://localhost:8080/login',user,config).subscribe(res => {
-      var data = res;
-      if(data==true){
-        this.navCtrl.push(WelcomePage)//setRoot(WelcomePage);
-      }else{
-       this.alertCtrl.create(
-         {title: 'Login Failed',
-       subTitle: 'Wrong username or password',
-       buttons: ['Dismiss']}
-      ).present()
-      }},err => { });
   }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { WelcomePage } from '../../pages/welcome/welcome';
-import { HttpRequest, HttpResponse, HttpInterceptor, HttpHandler, HttpEvent , HttpClient } from '@angular/common/http'
+import { HttpRequest, HttpResponse, HttpInterceptor, HttpHandler, HttpEvent, HttpClient } from '@angular/common/http'
 import { AlertController } from 'ionic-angular';
 import { ServicesProvider } from '../../providers/services'
 @Component({
