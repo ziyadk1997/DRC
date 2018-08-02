@@ -88,7 +88,7 @@ export class ServicesProvider {
     });
   }
 
-  ApproveCasualLeaveRequest(username, from , to,comment, MedicalUrl) {
+  ApproveCasualLeaveRequest(username, from , to,comment) {
     var request = JSON.stringify
       ({
         "username": username,

@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
 import { AnnualRequestPage } from '../annual-request/annual-request';
 import { SwitchView } from '../../../node_modules/@angular/common/src/directives/ng_switch';
-
+import { ServicesProvider } from '../../providers/services'
 @Component({
   selector: 'page-apply-leave',
   templateUrl: 'apply-leave.html'
@@ -14,13 +14,15 @@ export class ApplyLeavePage {
   Request: any;
   HideFlag: boolean = false;
   selected: number;
-  constructor(public navCtrl: NavController) {
+  Comment: String;
+  constructor(public navCtrl: NavController,private servicesprovider:ServicesProvider) {
 
   }
   GoBack() {
     this.navCtrl.pop();
   }
   GoToAnnualRequest(){
+
       this.navCtrl.push(LeaveTrackerPage)
   }
   Glow(id) {
