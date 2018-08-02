@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
 import { AnnualRequestPage } from '../annual-request/annual-request';
 import { SwitchView } from '../../../node_modules/@angular/common/src/directives/ng_switch';
-import { ServicesProvider } from '../../providers/services';
+import { ServicesProvider } from '../../providers/services'
 @Component({
   selector: 'page-apply-leave',
   templateUrl: 'apply-leave.html'
@@ -14,14 +14,21 @@ export class ApplyLeavePage {
   Request: any;
   HideFlag: boolean = false;
   selected: number;
-  constructor(public navCtrl: NavController,private ApplyleaveBE: ServicesProvider) {
+  Comment: String;
+  constructor(public navCtrl: NavController,private servicesprovider:ServicesProvider) {
 
   }
   GoBack() {
     this.navCtrl.pop();
   }
   GoToAnnualRequest(){
-      this.navCtrl.push(LeaveTrackerPage)
+      var username = localStorage.getItem("username");
+      
+      this.servicesprovider.ApplyAnnualandCasualLeaveRequest(username,this.MyDataFrom,this.MyDataTo,this.Comment,"bala7").then(res => {
+        
+      })
+      
+      this.navCtrl.push(LeaveTrackerPage);
   }
   Glow(id) {
     this.selected = id;
@@ -38,23 +45,6 @@ export class ApplyLeavePage {
   openHomepage() {
     this.navCtrl.popToRoot();
   }
-   ApplyCasualLeave(){
-    this.loginBE.doLogin(this.email, this.password).then(res => {
-      if (res == true) {
-        this.navCtrl.setRoot(WelcomePage);
-      } else {
-        this.alertCtrl.create(
-          {
-            title: 'Login Failed',
-            subTitle: 'Wrong username or password',
-            buttons: ['Dismiss']
-          }
-        ).present()
-      }
-    });
-   }
-ApplyAnnualLeave(){
 
-}
 
 }

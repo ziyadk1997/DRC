@@ -16,8 +16,7 @@ export class LoginPage {
   password: any;
   
   Login() {
-    var username : String;
-   // this.navCtrl.setRoot(WelcomePage);
+    // this.navCtrl.setRoot(WelcomePage);
     if (this.email == null || this.password == null) {
       this.alertCtrl.create(
         {
@@ -27,8 +26,7 @@ export class LoginPage {
         }
       ).present()
     } else {
-      
-
+      localStorage.setItem('username',this.email);
       this.loginBE.doLogin(this.email, this.password).then(res => {
         if (res == true) {
           this.navCtrl.setRoot(WelcomePage);
