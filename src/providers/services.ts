@@ -36,4 +36,127 @@ export class ServicesProvider {
         });
     });
   }
+
+  ApplyAnnualandCasualLeaveRequest(username, from , to,comment, timeinday) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+        "From": from,
+        "To" : to,
+        "Comment" : comment,
+        "Timeinday" : timeinday
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "ApplyAnnualandCasualLeaveRequest", request).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+ 
+  ApproveCasualLeaveRequest(username, from , to,comment, MedicalUrl) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+        "From": from,
+        "To" : to,
+        "Comment" : comment,
+       
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "ApproveCasualLeaveRequest", request).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+  ApproveAnnualLeaveRequest(username, from , to,comment, MedicalUrl) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+        "From": from,
+        "To" : to,
+        "Comment" : comment,
+     
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "ApproveAnnualLeaveRequest", request).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+
+  ViewMyRequests(username) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+  
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "ViewMyRequests", request).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+
+  ViewMyReviewedRequests(username) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+  
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "ViewMyReviewedRequests", request).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
 }
