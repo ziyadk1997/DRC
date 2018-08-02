@@ -26,13 +26,7 @@ export class ApplyLeavePage {
     this.navCtrl.pop();
   }
   GoToAnnualRequest(){
-      var username = localStorage.getItem("username");
-      
-      this.servicesprovider.ApplyAnnualandCasualLeaveRequest(username,this.MyDateFrom,this.MyDateTo,this.Comment,"bala7").then(res => {
-        
-      })
-      
-      this.navCtrl.push(LeaveTrackerPage);
+    this.navCtrl.pop();
   }
   ApplyCasualLeave(){
   if(this.selected==1){
@@ -82,7 +76,7 @@ ApplyAnnualLeave(){
     console.log(this.Request)
   }
   openHomepage() {
-    this.navCtrl.popToRoot();
+    this.navCtrl.pop();
   }
 
 
