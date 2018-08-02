@@ -37,15 +37,15 @@ export class ServicesProvider {
     });
   }
 
-  ApplyAnnualandCasualLeaveRequest(username, from , to,comment, timeinday) {
+  ApplyAnnualandCasualLeaveRequest(username, from , to,comment, timeinday,type) {
     var request = JSON.stringify
       ({
         "username": username,
         "from": from,
         "to" : to,
         "comment" : comment,
-        "timeinday" : timeinday
-
+        "timeinday" : timeinday,
+        "type" : type
       });
 
     return new Promise((resolve, reject) => {
