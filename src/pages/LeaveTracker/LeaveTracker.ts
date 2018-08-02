@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ApplyLeavePage } from '../apply-leave/apply-leave';
 import { Chart } from 'chart.js';
-import { Body } from '@angular/http/src/body';
+import { Body } from '../../../node_modules/@angular/http/src/body';
 
 @Component({
   selector: 'page-LeaveTracker',
