@@ -26,7 +26,9 @@ import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
 import { AnnualRequestPage} from '../pages/annual-request/annual-request';
 import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
 import { FinancialPage} from '../pages/financial/financial';
-FinancialPage
+import {ViewRequested} from '../pages/ViewRequested/ViewRequested';
+import {RequestInfoPage} from '../pages/RequestInfoPage/RequestInfoPage';
+
 
 
 
@@ -54,7 +56,9 @@ FinancialPage
     LeaveTrackerPage,
     AnnualRequestPage,
     WorkFromHomePage,
-    FinancialPage
+    FinancialPage,
+    ViewRequested,
+    RequestInfoPage
   ],
   imports: [
     BrowserModule,
@@ -85,7 +89,9 @@ FinancialPage
     LeaveTrackerPage,
     AnnualRequestPage,
     WorkFromHomePage,
-    FinancialPage
+    FinancialPage,
+    ViewRequested,
+    RequestInfoPage
   ],
   providers: [
     StatusBar,

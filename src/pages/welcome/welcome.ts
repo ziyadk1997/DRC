@@ -6,7 +6,7 @@ import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
 import { LoginPage } from '../login/login';
 import{WorkFromHomePage} from '../work-from-home/work-from-home';
 import { FinancialPage} from '../../pages/financial/financial';
-
+import {ViewRequested} from '../../pages/ViewRequested/ViewRequested';
 
 @Component({
   selector: 'page-welcome',
@@ -37,6 +37,9 @@ export class WelcomePage {
   }
   GoToFinancialPage(){
     this.navCtrl.push(FinancialPage);
+  }
+  GoToRequestsPage(){
+    this.navCtrl.push(ViewRequested);
   }
   
 }
