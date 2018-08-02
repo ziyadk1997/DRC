@@ -7,6 +7,7 @@ import { LoginPage } from '../login/login';
 import{WorkFromHomePage} from '../work-from-home/work-from-home';
 import { FinancialPage} from '../../pages/financial/financial';
 import {ViewRequested} from '../../pages/ViewRequested/ViewRequested';
+import { TravelExpensePage } from '../travelexpense/travelexpense';
 
 @Component({
   selector: 'page-welcome',
@@ -40,6 +41,10 @@ export class WelcomePage {
   }
   GoToRequestsPage(){
     this.navCtrl.push(ViewRequested);
+  }
+  GoToTravelExpensePage(){
+    this.navCtrl.push(TravelExpensePage);
+
   }
   
 }

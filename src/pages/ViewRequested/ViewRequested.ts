@@ -9,11 +9,9 @@ export class ViewRequested {
 
   constructor(public navCtrl: NavController) {
   }
-  openHomepage(){
-    this.navCtrl.popToRoot();
-  }
+  
   ShowRequestInfo(){
-    this.navCtrl.push(RequestInfoPage);
+    this.navCtrl.pop();
   }
   
 }
