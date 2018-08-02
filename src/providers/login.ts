@@ -46,16 +46,16 @@ export class LoginProvider {
 
 
 
-    // this.http.post('http://localhost:8080/login',user,config).subscribe(res => {
-    //   var data = res;
-    //   if(data==true){
-    //     this.navCtrl.push(WelcomePage)//setRoot(WelcomePage);
-    //   }else{
-    //    this.alertCtrl.create(
-    //      {title: 'Login Failed',
-    //    subTitle: 'Wrong username or password',
-    //    buttons: ['Dismiss']}
-    //   ).present()
-    //   }},err => { });
+    this.http.post('http://localhost:8080/login',user,config).subscribe(res => {
+      var data = res;
+      if(data==true){
+        this.navCtrl.push(WelcomePage)//setRoot(WelcomePage);
+      }else{
+       this.alertCtrl.create(
+         {title: 'Login Failed',
+       subTitle: 'Wrong username or password',
+       buttons: ['Dismiss']}
+      ).present()
+      }},err => { });
   }
 }
