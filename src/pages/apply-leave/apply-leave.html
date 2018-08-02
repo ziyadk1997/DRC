@@ -12,10 +12,10 @@
   <ion-list>
     <ion-item style="background-color: transparent; color:blueviolet">
       <ion-label class="leavet">Leave Type</ion-label>
-      <ion-select [(ngModel)]="Request">
-        <ion-option value="Sick" (ionSelect)="Display()">Sick</ion-option>
-        <ion-option value="Annual" (ionSelect)="OnChange()">Annual</ion-option>
-        <ion-option value="Casual" (ionSelect)="OnChange()">Casual</ion-option>
+      <ion-select [(ngModel)]="Request" (ionChange)="SetFlag()">
+        <ion-option value="Sick">Sick</ion-option>
+        <ion-option value="Annual">Annual</ion-option>
+        <ion-option value="Casual">Casual</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>

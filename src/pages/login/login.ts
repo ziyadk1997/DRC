@@ -16,19 +16,28 @@ export class LoginPage {
   password: any;
   Login() {
     this.navCtrl.setRoot(WelcomePage);
-    // this.loginBE.doLogin(this.email, this.password).then(res => {
-    //   if (res == true) {
-    //     this.navCtrl.setRoot(WelcomePage);
-    //   } else {
-    //     this.alertCtrl.create(
-    //       {
-    //         title: 'Login Failed',
-    //         subTitle: 'Wrong username or password',
-    //         buttons: ['Dismiss']
-    //       }
-    //     ).present()
-    //   }
-    // });
+    // if (this.email == null || this.password == null) {
+    //   this.alertCtrl.create(
+    //     {
+    //       title: 'Please Enter Email and Password',
+    //       subTitle: 'The Email or Password are Empty',
+    //       buttons: ['Dismiss']
+    //     }
+    //   ).present()
+    // } else {
+    //   this.loginBE.doLogin(this.email, this.password).then(res => {
+    //     if (res == true) {
+    //       this.navCtrl.setRoot(WelcomePage);
+    //     } else {
+    //       this.alertCtrl.create(
+    //         {
+    //           title: 'Login Failed',
+    //           subTitle: 'Wrong username or password',
+    //           buttons: ['Dismiss']
+    //         }
+    //       ).present()
+    //     }
+    //   });
+    // }
   }
-
 }
