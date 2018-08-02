@@ -41,10 +41,10 @@ export class ServicesProvider {
     var request = JSON.stringify
       ({
         "username": username,
-        "From": from,
-        "To" : to,
-        "Comment" : comment,
-        "Timeinday" : timeinday
+        "from": from,
+        "to" : to,
+        "comment" : comment,
+        "timeinday" : timeinday
 
       });
 
