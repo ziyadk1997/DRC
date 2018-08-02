@@ -39,7 +39,14 @@ this.timeinday = "Full Day";
         this.timeinday = "Work in Second Half of Day";
      }
     var username = localStorage.getItem("username");
-    this.servicesprovider.ApplyAnnualandCasualLeaveRequest(username,this.MyDateFrom , this.MyDateTo,this.Comment, this.timeinday).then(res => {
+    var type:any;
+    if(this.Request == "Casual"){
+      type = "Casual"
+    }
+    if(this.Request == "Annual"){
+      type = "Annual"
+    }
+    this.servicesprovider.ApplyAnnualandCasualLeaveRequest(username,this.MyDateFrom , this.MyDateTo,this.Comment, this.timeinday,type).then(res => {
       if (res == true) {
         this.alertCtrl.create(
           {
