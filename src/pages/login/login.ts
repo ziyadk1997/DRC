@@ -16,20 +16,20 @@ export class LoginPage {
   password: any;
   Login() {
     this.navCtrl.setRoot(WelcomePage);
-    // this.loginBE.doLogin(this.email, this.password).then(res => {
+  //   this.loginBE.doLogin(this.email, this.password).then(res => {
 
-    //   if (res == true) {
-    //     this.navCtrl.setRoot(WelcomePage);
-    //   } else {
-    //     this.alertCtrl.create(
-    //       {
-    //         title: 'Login Failed',
-    //         subTitle: 'Wrong username or password',
-    //         buttons: ['Dismiss']
-    //       }
-    //     ).present()
-    //   }
     // });
-  }
+  //       this.navCtrl.setRoot(WelcomePage);
+  //     } else {
+  //       this.alertCtrl.create(
+  //         {
+  //           title: 'Login Failed',
+  //           subTitle: 'Wrong username or password',
+  //           buttons: ['Dismiss']
+  //         }
+  //       ).present()
+  //     }
+  //   });
+   }
 
 }
