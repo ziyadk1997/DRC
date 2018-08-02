@@ -88,31 +88,7 @@ export class ServicesProvider {
     });
   }
 
-  ApproveCasualLeaveRequest(username, from , to,comment) {
-    var request = JSON.stringify
-      ({
-        "username": username,
-        "From": from,
-        "To" : to,
-        "Comment" : comment,
-       
-
-      });
-
-    return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "ApproveCasualLeaveRequest", request).timeout(config.getTimeout).subscribe(res => {
-        try {
-          resolve(res);
-        }
-        catch (e) {
-          reject(false);
-        }
-      },
-        error => {
-          reject(error);
-        });
-    });
-  }
+ 
   ApplyReciptClaimRequest(username, Amount , comment, DueDate,ReciptLink) {
     var request = JSON.stringify
       ({

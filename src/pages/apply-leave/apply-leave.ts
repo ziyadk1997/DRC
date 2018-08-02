@@ -22,8 +22,13 @@ export class ApplyLeavePage {
     this.navCtrl.pop();
   }
   GoToAnnualRequest(){
-
-      this.navCtrl.push(LeaveTrackerPage)
+      var username = localStorage.getItem("username");
+      
+      this.servicesprovider.ApplyAnnualandCasualLeaveRequest(username,this.MyDataFrom,this.MyDataTo,this.Comment,"bala7").then(res => {
+        
+      })
+      
+      this.navCtrl.push(LeaveTrackerPage);
   }
   Glow(id) {
     this.selected = id;
