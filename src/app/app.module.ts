@@ -29,7 +29,7 @@ import { FinancialPage} from '../pages/financial/financial';
 import {ViewRequested} from '../pages/ViewRequested/ViewRequested';
 import {RequestInfoPage} from '../pages/RequestInfoPage/RequestInfoPage';
 import { ServicesProvider } from '../providers/services';
-
+import { InterceptorModule } from '../providers/interceptor.module';
 
 
 
@@ -62,6 +62,7 @@ import { ServicesProvider } from '../providers/services';
     BrowserModule,
     HttpModule,
     HttpClientModule,
+    InterceptorModule,
     IonicModule.forRoot(MyApp),
     
     
