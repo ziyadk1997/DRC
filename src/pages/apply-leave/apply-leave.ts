@@ -9,8 +9,8 @@ import { ServicesProvider } from '../../providers/services'
   templateUrl: 'apply-leave.html'
 })
 export class ApplyLeavePage {
-  MyDataFrom: any;
-  MyDataTo: any;
+  MyDateFrom: any;
+  MyDateTo: any;
   Request: any;
   HideFlag: boolean = false;
   selected: number;
@@ -24,7 +24,7 @@ export class ApplyLeavePage {
   GoToAnnualRequest(){
       var username = localStorage.getItem("username");
       
-      this.servicesprovider.ApplyAnnualandCasualLeaveRequest(username,this.MyDataFrom,this.MyDataTo,this.Comment,"bala7").then(res => {
+      this.servicesprovider.ApplyAnnualandCasualLeaveRequest(username,this.MyDateFrom,this.MyDateTo,this.Comment,"bala7").then(res => {
         
       })
       
