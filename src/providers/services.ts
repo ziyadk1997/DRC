@@ -1,4 +1,4 @@
-import { HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/timeout';
 import { config } from './config'
@@ -12,7 +12,7 @@ import { config } from './config'
 export class ServicesProvider {
 
   constructor(public http: HttpClient) {
-    
+
   }
 
   doLogin(email, password) {
