@@ -28,9 +28,7 @@ import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
 import { FinancialPage} from '../pages/financial/financial';
 import {ViewRequested} from '../pages/ViewRequested/ViewRequested';
 import {RequestInfoPage} from '../pages/RequestInfoPage/RequestInfoPage';
-
-
-
+import { ServicesProvider } from '../providers/services';
 
 
 
@@ -96,8 +94,9 @@ import {RequestInfoPage} from '../pages/RequestInfoPage/RequestInfoPage';
   providers: [
     StatusBar,
     SplashScreen,
-    HttpClient,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    HttpClientModule,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    ServicesProvider
   ]
 })
 export class AppModule {}
