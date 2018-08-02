@@ -36,9 +36,7 @@ export class ApplyLeavePage {
     }
     console.log(this.Request)
   }
-  openHomepage() {
-    this.navCtrl.pop();
-  }
+  
 
 
 }
