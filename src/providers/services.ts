@@ -1,7 +1,7 @@
 import { HttpClient} from '@angular/common/http'
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/timeout';
-import { config } from '../providers/config'
+import { config } from './config'
 /*
   Generated class for the LoginProvider provider.
 
@@ -9,10 +9,10 @@ import { config } from '../providers/config'
   and Angular DI.
 */
 @Injectable()
-export class LoginProvider {
+export class ServicesProvider {
 
   constructor(public http: HttpClient) {
-    console.log('Hello LoginProvider Provider');
+    
   }
 
   doLogin(email, password) {
@@ -21,14 +21,6 @@ export class LoginProvider {
         "username": email,
         "password": password
       });
-
-    var con:any = {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }
-    let header = new Headers();
-    header.append("Content-Type", "application/json");
 
     return new Promise((resolve, reject) => {
       this.http.post(config.apiUrl + "login", user).timeout(config.getTimeout).subscribe(res => {

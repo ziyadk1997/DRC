@@ -26,7 +26,7 @@ import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
 import { AnnualRequestPage } from '../pages/annual-request/annual-request';
 import { WorkFromHomePage } from '../pages/work-from-home/work-from-home';
 import { FinancialPage } from '../pages/financial/financial';
-import { LoginProvider } from '../providers/login';
+import { ServicesProvider } from '../providers/services';
 
 @NgModule({
   declarations: [
@@ -85,7 +85,7 @@ import { LoginProvider } from '../providers/login';
     SplashScreen,
     HttpClientModule,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    LoginProvider
+    ServicesProvider
   ]
 })
 export class AppModule { }

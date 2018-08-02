@@ -3,14 +3,14 @@ import { NavController } from 'ionic-angular';
 import { WelcomePage } from '../welcome/welcome';
 import { HttpRequest, HttpResponse, HttpInterceptor, HttpHandler, HttpEvent , HttpClient } from '@angular/common/http'
 import { AlertController } from 'ionic-angular';
-import { LoginProvider } from '../../providers/login'
+import { ServicesProvider } from '../../providers/services'
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private loginBE: LoginProvider) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private loginBE: ServicesProvider) {
   }
   email: any;
   password: any;
