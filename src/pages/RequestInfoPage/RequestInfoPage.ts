@@ -11,10 +11,8 @@ export class RequestInfoPage {
   constructor(public navCtrl: NavController) {
   }
   GoToRequestsPage(){
-      this.navCtrl.push(ViewRequested);
+      this.navCtrl.pop();
   }
-  openHomepage(){
-    this.navCtrl.popToRoot();
-  }
+
   
 }

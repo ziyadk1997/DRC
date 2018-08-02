@@ -30,6 +30,10 @@ import {ViewRequested} from '../pages/ViewRequested/ViewRequested';
 import {RequestInfoPage} from '../pages/RequestInfoPage/RequestInfoPage';
 import { ServicesProvider } from '../providers/services';
 import { InterceptorModule } from '../providers/interceptor.module';
+import {FundPage} from '../pages/fund/fund';
+import {ReceiptClaimPage} from '../pages/receiptclaim/receiptclaim';
+import {TravelExpensePage} from '../pages/travelexpense/travelexpense';
+
 
 
 
@@ -56,7 +60,10 @@ import { InterceptorModule } from '../providers/interceptor.module';
     WorkFromHomePage,
     FinancialPage,
     ViewRequested,
-    RequestInfoPage
+    RequestInfoPage,
+    FundPage,
+    ReceiptClaimPage,
+    TravelExpensePage
   ],
   imports: [
     BrowserModule,
@@ -90,7 +97,10 @@ import { InterceptorModule } from '../providers/interceptor.module';
     WorkFromHomePage,
     FinancialPage,
     ViewRequested,
-    RequestInfoPage
+    RequestInfoPage,
+    FundPage,
+    ReceiptClaimPage,
+    TravelExpensePage
   ],
   providers: [
     StatusBar,

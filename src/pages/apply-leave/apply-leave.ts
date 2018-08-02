@@ -18,7 +18,6 @@ export class ApplyLeavePage {
 
   }
   GoBack() {
-
     this.navCtrl.pop();
   }
 
@@ -29,11 +28,7 @@ export class ApplyLeavePage {
     this.HideFlag = true;
   }
   GoToAnnualRequest(){
-    if(this.Request == "Sick"){
-      this.navCtrl.push(AnnualRequestPage)
-    }else{
-      this.navCtrl.push(LeaveTrackerPage)
-    }
+    this.navCtrl.pop();
   }
   Glow(id) {
     console.log("glowed");
@@ -41,7 +36,7 @@ export class ApplyLeavePage {
 
   }
   openHomepage() {
-    this.navCtrl.popToRoot();
+    this.navCtrl.pop();
   }
 
 
