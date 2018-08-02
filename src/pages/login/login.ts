@@ -18,7 +18,7 @@ export class LoginPage {
     this.navCtrl.setRoot(WelcomePage);
   //   this.loginBE.doLogin(this.email, this.password).then(res => {
 
-    // });
+  //     if (res == true) {
   //       this.navCtrl.setRoot(WelcomePage);
   //     } else {
   //       this.alertCtrl.create(
