@@ -18,27 +18,22 @@ export class ApplyLeavePage {
 
   }
   GoBack() {
-
     this.navCtrl.pop();
   }
-
-  OnChange() {
-    this.HideFlag = false;
-  }
-  Display() {
-    this.HideFlag = true;
-  }
   GoToAnnualRequest(){
-    if(this.Request == "Sick"){
-      this.navCtrl.push(AnnualRequestPage)
-    }else{
       this.navCtrl.push(LeaveTrackerPage)
-    }
   }
   Glow(id) {
-    console.log("glowed");
     this.selected = id;
-
+  }
+  SetFlag(){
+    
+    if(this.Request=='Sick'){
+      this.HideFlag = true;
+    }else{
+      this.HideFlag = false;
+    }
+    console.log(this.Request)
   }
   openHomepage() {
     this.navCtrl.popToRoot();
