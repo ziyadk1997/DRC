@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ViewRequestInfo } from '../ViewRequestInfo/ViewRequestInfo';
 import { ServicesProvider } from '../../providers/services'
+import {RequestInfoPage} from '../../pages/RequestInfoPage/RequestInfoPage';
 
 @Component({
   selector: 'page-ViewWorkFromHomeRequests',
@@ -27,7 +28,7 @@ export class ViewWorkFromHomeRequests {
       }
     } });
   }
-  GoToViewRequest() {
-    this.navCtrl.push(ViewRequestInfo);
+  ViewDetails(){
+    this.navCtrl.push(RequestInfoPage)
   }
 }
