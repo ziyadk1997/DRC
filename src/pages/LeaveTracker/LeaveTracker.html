@@ -1,34 +1,46 @@
 <ion-header>
-    <ion-navbar  >
+  <ion-navbar>
 
-      <ion-title>
-       Leave Tracker
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
-<ion-content  class="back">  
-<canvas class="myChart" id="myChart"></canvas>
+    <ion-title>
+      Leave Tracker
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="back">
+  <canvas class="myChart" id="myChart"></canvas>
   <ion-list>
-    <ion-item class="list"   >
-  
-     
-      <button ion-button clear item-start style="color: rgb(172, 172, 172)"(click)="GoToAnnualRequests()">Annual</button>
-      <div item-end style="color: white ;font-size: 0.9em ">
-        # waiting #accepted #rejected <br>
-        <span item-start>12</span> <span item-center>13</span><span item-end>14</span> 
+    <ion-item class="list" (click)="GoToAnnualRequests()">
+      <div style="color: white ;font-size: 0.9em ">
+        <div item-end> Annual </div>
+        <div id="myProgress">
+          <div id="myBar"></div>
+        </div>
       </div>
-    </ion-item>
-    <ion-item class="list">
-      <button ion-button clear item-start style="color: rgb(172, 172, 172)" (click)="GoToCasualRequests()">Casual</button>
       <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
     </ion-item>
-    <ion-item class=list>
-      <button ion-button clear item-start style="color: rgb(172, 172, 172)" (click)="GoToSickRequests()">Sick</button>
+    <ion-item class="list" (click)="GoToCasualRequests()">
+      <div style="color: white ;font-size: 0.9em ">
+        <div item-end> Casual </div>
+        <div id="myProgress">
+          <div id="myBar" > </div>
+        </div>
+      </div>
       <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
     </ion-item>
+    <ion-item class="list" (click)="GoToSickRequests()">
+      <div style="color: white ;font-size: 0.9em ">
+        <div item-end> Sick </div>
+        <div id="myProgress">
+          <div id="myBar"></div>
+        </div>
+      </div>
+      <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
+    </ion-item>
+    <ion-item class="list" (click)="GoToWorkFromHomeRequests()">
+        <button ion-button clear item-start style="color: rgb(172, 172, 172)" >Work From Home</button>
+        <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
+      </ion-item>
   </ion-list>
-
-
 
     <button id="Apply" (click)="GoToApplyLeavePage()" ion-button round block outline color="DRC" >Apply leave</button>
     

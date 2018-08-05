@@ -9,13 +9,13 @@ import { WelcomePage } from '../../pages/welcome/welcome';
 import { ViewAnnualRequests } from '../ViewAnnualRequests/ViewAnnualRequests';
 import { ViewSickRequests } from '../ViewSickRequests/ViewSickRequests';
 import { ViewCasualRequests } from '../ViewCasualRequests/ViewCasualRequests';
+import { WorkFromHomePage } from '../work-from-home/work-from-home';
 
 @Component({
   selector: 'page-LeaveTracker',
   templateUrl: 'LeaveTracker.html'
 })
 export class LeaveTrackerPage {
-  
 
   constructor(public navCtrl: NavController,private alertCtrl: AlertController, private RequestsBE: ServicesProvider) {
     
@@ -24,12 +24,7 @@ export class LeaveTrackerPage {
   GoToApplyLeavePage(){
 
     this.navCtrl.push(ApplyLeavePage);
-    var username = localStorage.getItem("username");
-    this.RequestsBE.ViewMyCasualRequests(username).then(res => {
-       console.log(res);
-      });
   }
-
   ionViewDidLoad()
   {
     var ctx = document.getElementById("myChart");
@@ -57,6 +52,21 @@ export class LeaveTrackerPage {
        
     }
 });}
+<<<<<<< HEAD
+=======
+ /**move() {
+    var elem = document.getElementById("myBar"); 
+    var width = 1;
+    var id = setInterval(frame, 0);
+    function frame() {
+        if (width >= 22 ) {
+            clearInterval(id);
+        } else {
+            width++; 
+            elem.style.width = width + 'ch'; 
+        }
+    }
+}**/
 ViewMyAnnualRequests(){
     
     var username = localStorage.getItem("username");
@@ -64,6 +74,7 @@ ViewMyAnnualRequests(){
        console.log(res);
       });
 }
+>>>>>>> 44b6c1f122c2acabf104fccee344115c1a814d83
 GoToAnnualRequests(){
     this.navCtrl.push(ViewAnnualRequests);
 }
@@ -72,6 +83,9 @@ GoToSickRequests(){
 }
 GoToCasualRequests(){
     this.navCtrl.push(ViewCasualRequests);
+}
+GoToWorkFromHomeRequests(){
+    this.navCtrl.push(WorkFromHomePage);
 }
 
   

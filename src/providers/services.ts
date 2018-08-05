@@ -115,7 +115,7 @@ export class ServicesProvider {
         });
     });
   }
-  ApplyWorkFromHomeRequest(username, Amount , comment, Startdate,Enddate) {
+  ApplyWorkFromHomeRequest(username, comment, Startdate,Enddate) {
     var request = JSON.stringify
       ({
         "username": username,
@@ -129,6 +129,32 @@ export class ServicesProvider {
 
     return new Promise((resolve, reject) => {
       this.http.post(config.apiUrl + "ApplyWorkFromHomeRequest", request).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+  ApplySickRequest(username, comment, Startdate,Enddate,Link) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+        "Startdate": Startdate,
+        "Enddate" : Enddate,
+        "Comment" : comment,
+        "Link":Link
+       
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "ApplySickRequest", request).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);
         }
@@ -177,7 +203,7 @@ export class ServicesProvider {
       });
 
     return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "ViewMyAnnualRequests", request).timeout(config.getTimeout).subscribe(res => {
+      this.http.get(config.apiUrl + "ViewMyAnnualRequests/"+username).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);
         }
@@ -221,7 +247,7 @@ export class ServicesProvider {
       });
 
     return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "ViewMySickRequests", request).timeout(config.getTimeout).subscribe(res => {
+      this.http.get(config.apiUrl + "ViewMySickRequests/"+username).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);
         }
@@ -258,6 +284,29 @@ export class ServicesProvider {
     });
   }
   ViewMyReviewedRequests(username) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+  
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "ViewMyReviewedRequests", request).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+
+  ViewRequestsInfo(username) {
     var request = JSON.stringify
       ({
         "username": username,
