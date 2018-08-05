@@ -21,6 +21,10 @@ export class LeaveTrackerPage {
   GoToApplyLeavePage(){
 
     this.navCtrl.push(ApplyLeavePage);
+    var username = localStorage.getItem("username");
+    this.RequestsBE.ViewMyCasualRequests(username).then(res => {
+       console.log(res);
+      });
   }
 
   ionViewDidLoad()
@@ -53,19 +57,8 @@ export class LeaveTrackerPage {
 ViewMyAnnualRequests(){
     
     var username = localStorage.getItem("username");
-    this.RequestsBE.ViewMyAnnualRequests(username).then(res => {
+    this.RequestsBE.ViewMyCasualRequests(username).then(res => {
        console.log(res);
-        // var array =  [] ;
-
-        // requests = res;
-        // if (res != null) {
-        //  while(requests.next()){
-        //     array.push(requests.getString("Reviewerusername"))
-        //  }
-        // } 
-        // else {
-          
-        // }
       });
 }
 

@@ -18,7 +18,7 @@ export class ApplyLeavePage {
   selected: number;
   Comment: String;
   timeinday : String ;
-  
+  array :any =  [1,2,3];
   constructor(public navCtrl: NavController,private servicesprovider:ServicesProvider,private ApplyleaveBE: ServicesProvider,private alertCtrl: AlertController) {
 
   }
