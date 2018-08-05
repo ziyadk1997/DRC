@@ -7,7 +7,7 @@ page-welcome {
             // border-color: black;
             border: 1px solid rgb(153, 153, 153);
             text-align: start;
-            size: 5456465465ch;
+            
             
         }
            .back {
@@ -17,5 +17,16 @@ page-welcome {
         .Fn1{
             margin-left: -50px;
         }
+        .img{
+            display: block;
+            margin-left: -25%;
+            margin-right: 10%;
+             
+       }
+       .img1{
+           width:100%;
+        display: block;
+        margin-left: -10%;
+       }
         
 }

@@ -1,0 +1,32 @@
+<ion-header>
+</ion-header>
+<ion-content class="back">
+    <ion-card style="background-color: transparent">
+        <ion-card-header class="Headers">
+            #EmployeeName
+        </ion-card-header>
+        <ion-card-content>
+            <h4 class="Headers">#Request Status</h4>
+            <br>
+            <br>
+            <h1 class="Headers">#Request Type</h1>
+            <br>
+            <br>
+            <h2 class="Headers">#Request Comment</h2>
+            <br>
+            <br>
+            <h3 class="Headers">#Request Description</h3>
+            <br>
+        </ion-card-content>
+    </ion-card>
+    <ion-grid>
+        <ion-row>
+            <ion-col width-50>
+                <button style="width:100%; color: silver;background-color: transparent; border: orange 1px solid ;" outline ion-button (click)="GoToRequestsPage()">Accept</button>
+            </ion-col>
+            <ion-col width-50>
+                <button style="width:100%; color: silver;background-color: transparent; border: orange 1px solid ;" outline  ion-button (click)="GoToRequestsPage()">Reject</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

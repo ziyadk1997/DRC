@@ -6,6 +6,8 @@ import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
 import { LoginPage } from '../login/login';
 import{WorkFromHomePage} from '../work-from-home/work-from-home';
 import { FinancialPage} from '../../pages/financial/financial';
+import {ViewRequested} from '../../pages/ViewRequested/ViewRequested';
+import { TravelExpensePage } from '../travelexpense/travelexpense';
 
 
 @Component({
@@ -26,8 +28,9 @@ export class WelcomePage {
   }
   
   GoToleaveTrackerPage(){
-
+    var username = localStorage.getItem("username");
     this.navCtrl.push(LeaveTrackerPage);
+  
   }
   GoToProfilePage(){
     this.navCtrl.push(ViewProfilePage);
@@ -37,6 +40,13 @@ export class WelcomePage {
   }
   GoToFinancialPage(){
     this.navCtrl.push(FinancialPage);
+  }
+  GoToRequestsPage(){
+    this.navCtrl.push(ViewRequested);
+  }
+  GoToTravelExpensePage(){
+    this.navCtrl.push(TravelExpensePage);
+
   }
   
 }

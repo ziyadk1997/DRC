@@ -29,6 +29,16 @@ import { WorkFromHomeSummaryPage} from '../pages/work-from-home-summary/work-fro
 import { FinancialPage} from '../pages/financial/financial';
 
 
+import {ViewRequested} from '../pages/ViewRequested/ViewRequested';
+import {RequestInfoPage} from '../pages/RequestInfoPage/RequestInfoPage';
+import { ServicesProvider } from '../providers/services';
+import { InterceptorModule } from '../providers/interceptor.module';
+import {FundPage} from '../pages/fund/fund';
+import {ReceiptClaimPage} from '../pages/receiptclaim/receiptclaim';
+import {TravelExpensePage} from '../pages/travelexpense/travelexpense';
+import {ViewAnnualRequests } from '../pages/ViewAnnualRequests/ViewAnnualRequests';
+import {ViewSickRequests} from '../pages/ViewSickRequests/ViewSickRequests';
+import {ViewCasualRequests} from '../pages/ViewCasualRequests/ViewCasualRequests';
 
 
 
@@ -55,13 +65,23 @@ import { FinancialPage} from '../pages/financial/financial';
     AnnualRequestPage,
     WorkFromHomePage,
     WorkFromHomeSummaryPage,
-    FinancialPage
+    FinancialPage,
+    ViewRequested,
+    RequestInfoPage,
+    FundPage,
+    ReceiptClaimPage,
+    TravelExpensePage,
+    ViewAnnualRequests,
+    ViewSickRequests,
+    ViewCasualRequests
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
+    InterceptorModule,
     IonicModule.forRoot(MyApp),
+    
     
   ],
   bootstrap: [IonicApp],
@@ -86,13 +106,22 @@ import { FinancialPage} from '../pages/financial/financial';
     AnnualRequestPage,
     WorkFromHomePage,
     WorkFromHomeSummaryPage,
-    FinancialPage
+    FinancialPage,
+    ViewRequested,
+    RequestInfoPage,
+    FundPage,
+    ReceiptClaimPage,
+    TravelExpensePage,
+    ViewAnnualRequests,
+    ViewSickRequests,
+    ViewCasualRequests
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    HttpClient,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    HttpClientModule,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    ServicesProvider
   ]
 })
 export class AppModule {}
