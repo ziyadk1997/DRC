@@ -70,7 +70,7 @@ this.timeinday = "Full Day";
 ApplyAnnualLeave(){
 
 }
-  Glow(id) {
+    Glow(id) {
     this.selected = id;
   }
   SetFlag(){
@@ -82,9 +82,7 @@ ApplyAnnualLeave(){
     }
     console.log(this.Request)
   }
-  openHomepage() {
-    this.navCtrl.pop();
-  }
+  
 
 
 }
