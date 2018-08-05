@@ -54,7 +54,7 @@ import { FinancialPage} from '../pages/financial/financial';
     LeaveTrackerPage,
     AnnualRequestPage,
     WorkFromHomePage,
-    WorkFromHomeSummaryPage
+    WorkFromHomeSummaryPage,
     FinancialPage
   ],
   imports: [
@@ -85,7 +85,7 @@ import { FinancialPage} from '../pages/financial/financial';
     LeaveTrackerPage,
     AnnualRequestPage,
     WorkFromHomePage,
-    WorkFromHomeSummaryPage
+    WorkFromHomeSummaryPage,
     FinancialPage
   ],
   providers: [
