@@ -15,7 +15,6 @@ import { ViewCasualRequests } from '../ViewCasualRequests/ViewCasualRequests';
   templateUrl: 'LeaveTracker.html'
 })
 export class LeaveTrackerPage {
-  
 
   constructor(public navCtrl: NavController,private alertCtrl: AlertController, private RequestsBE: ServicesProvider) {
     
@@ -24,12 +23,7 @@ export class LeaveTrackerPage {
   GoToApplyLeavePage(){
 
     this.navCtrl.push(ApplyLeavePage);
-    var username = localStorage.getItem("username");
-    this.RequestsBE.ViewMyCasualRequests(username).then(res => {
-       console.log(res);
-      });
   }
-
   ionViewDidLoad()
   {
     var ctx = document.getElementById("myChart");

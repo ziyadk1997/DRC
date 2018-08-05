@@ -7,15 +7,21 @@
 </ion-header>
 <ion-content class="back">
     <h1 style="color: silver">Previous Annual Requests:</h1>
-    <ion-list>
+    <ion-list *ngFor="let request of requests">
         <ion-item class="List">
-            <ion-thumbnail item-start item>
+            <ion-thumbnail *ngIf="request.Status =='Pending'" item-start item>
                 <img src="assets/imgs/Pending.png">
             </ion-thumbnail>
-            <p style="color: silver">#Request period</p>
-            <p style="color: silver">#Request From/To </p>
-            <p style="color: silver">#Request Justification </p>
-            <button ion-button clear item-end style="color: orange" >View Request</button>
+            <ion-thumbnail *ngIf="request.Status =='Accepted'" item-start item>
+                <img src="assets/imgs/Accepted.png">
+            </ion-thumbnail>
+            <ion-thumbnail *ngIf="request.Status =='Rejected'" item-start item>
+                <img src="assets/imgs/Rejected.png">
+            </ion-thumbnail>
+            <p style="color: silver">{{request.Type}}</p>
+            <p style="color: silver">{{request.Date}}</p>
+            <p style="color: silver">{{request.RUsername}}</p>
+            <button ion-button clear item-end style="color: orange">View Request</button>
         </ion-item>
     </ion-list>
 
