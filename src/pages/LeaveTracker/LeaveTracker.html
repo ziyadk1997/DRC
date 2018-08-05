@@ -9,8 +9,8 @@
 <ion-content class="back">
   <canvas class="myChart" id="myChart"></canvas>
   <ion-list>
-    <ion-item class="list">
-      <button ion-button clear item-start style="color: rgb(172, 172, 172)" (click)="GoToAnnualRequests()">Annual</button>
+    <ion-item class="list" (click)="GoToAnnualRequests()">
+      <button ion-button clear item-start style="color: rgb(172, 172, 172)" >Annual</button>
       <div item-end style="color: white ;font-size: 0.9em ">
         #Pending #accepted #rejected
         <br>
@@ -19,12 +19,12 @@
         <span item-end>14</span>
       </div>
     </ion-item>
-    <ion-item class="list">
-      <button ion-button clear item-start style="color: rgb(172, 172, 172)" (click)="GoToCasualRequests()">Casual</button>
+    <ion-item class="list" (click)="GoToCasualRequests()">
+      <button ion-button clear item-start style="color: rgb(172, 172, 172)" >Casual</button>
       <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
     </ion-item>
-    <ion-item class=list>
-      <button ion-button clear item-start style="color: rgb(172, 172, 172)" (click)="GoToSickRequests()">Sick</button>
+    <ion-item class="list" (click)="GoToSickRequests()">
+      <button ion-button clear item-start style="color: rgb(172, 172, 172)" >Sick</button>
       <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
     </ion-item>
   </ion-list>
