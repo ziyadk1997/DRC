@@ -3,6 +3,9 @@ import { NavController } from 'ionic-angular';
 import { ApplyLeavePage } from '../apply-leave/apply-leave';
 import { Chart } from 'chart.js';
 import { Body } from '../../../node_modules/@angular/http/src/body';
+import { ViewAnnualRequests } from '../ViewAnnualRequests/ViewAnnualRequests';
+import { ViewSickRequests } from '../ViewSickRequests/ViewSickRequests';
+import { ViewCasualRequests } from '../ViewCasualRequests/ViewCasualRequests';
 
 @Component({
   selector: 'page-LeaveTracker',
@@ -47,6 +50,15 @@ export class LeaveTrackerPage {
        
     }
 });}
+GoToAnnualRequests(){
+    this.navCtrl.push(ViewAnnualRequests);
+}
+GoToSickRequests(){
+    this.navCtrl.push(ViewSickRequests);
+}
+GoToCasualRequests(){
+    this.navCtrl.push(ViewCasualRequests);
+}
 
   
 }

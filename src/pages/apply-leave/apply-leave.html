@@ -69,7 +69,8 @@
     <div id="applyLeave-container2">
       <form id="applyLeave-form7">
         <ion-item id="applyLeave-input8" style=" background-color: transparent; ">
-          <ion-input type="text" class="place" [(ngModel)]="Comment" [ngModelOptions]="{standalone: true}" placeholder="Add Justification" class="custom-input"></ion-input>
+          <ion-input type="text" class="place" [(ngModel)]="Comment" [ngModelOptions]="{standalone: true}" placeholder="Add Justification"
+            class="custom-input"></ion-input>
           <br>
           <br>
           <br>
@@ -79,6 +80,6 @@
   </div>
   <br/>
   <br/>
-  <button *ngI6f="HideFlag" id="Upload" ion-button class="file-upload__label" block round outline (click)="GoToAnnualRequest()">Upload</button>
+  <button *ngIf="HideFlag" id="Upload" ion-button class="file-upload__label" block round outline (click)="GoToAnnualRequest()">Upload</button>
   <button id="Apply-request" ion-button class="Applyb" block round outline (click)="ApplyCasualLeave()">Apply</button>
 </ion-content>
