@@ -15,7 +15,7 @@ export class ServicesProvider {
 
   }
 
-  doLogin(email, password) {
+  doLogin(email, password) { // done
     var user = JSON.stringify
       ({
         "username": email,
@@ -37,7 +37,7 @@ export class ServicesProvider {
     });
   }
 
-  ApplyAnnualandCasualLeaveRequest(username, from , to,comment, timeinday,type) {
+  ApplyAnnualandCasualLeaveRequest(username, from , to,comment, timeinday,type) { // done
     var request = JSON.stringify
       ({
         "username": username,
@@ -142,7 +142,7 @@ export class ServicesProvider {
     });
   }
 
-  ApproveAnnualLeaveRequest(username, from , to,comment, MedicalUrl) {
+  ApproveAnnualLeaveRequest(username, from , to,comment) {
     var request = JSON.stringify
       ({
         "username": username,
@@ -168,7 +168,7 @@ export class ServicesProvider {
     });
   }
 
-  ViewMyRequests(username) {
+  ViewMyAnnualRequests(username) {
     var request = JSON.stringify
       ({
         "username": username,
@@ -177,7 +177,51 @@ export class ServicesProvider {
       });
 
     return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "ViewMyRequests", request).timeout(config.getTimeout).subscribe(res => {
+      this.http.post(config.apiUrl + "ViewMyAnnualRequests", request).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+  ViewMyCasualRequests(username) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+  
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "ViewMyCasualRequests", request).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+  ViewMySickRequests(username) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+  
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "ViewMySickRequests", request).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);
         }
