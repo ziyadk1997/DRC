@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar  >
-  
+
       <ion-title>
        Leave Tracker
       </ion-title>
@@ -12,18 +12,18 @@
     <ion-item class="list"   >
   
      
-      <button ion-button clear item-start style="color: rgb(172, 172, 172)">Annual</button>
+      <button ion-button clear item-start style="color: rgb(172, 172, 172)"(click)="GoToAnnualRequests()">Annual</button>
       <div item-end style="color: white ;font-size: 0.9em ">
         # waiting #accepted #rejected <br>
         <span item-start>12</span> <span item-center>13</span><span item-end>14</span> 
       </div>
     </ion-item>
     <ion-item class="list">
-      <button ion-button clear item-start style="color: rgb(172, 172, 172)">Casual</button>
+      <button ion-button clear item-start style="color: rgb(172, 172, 172)" (click)="GoToCasualRequests()">Casual</button>
       <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
     </ion-item>
     <ion-item class=list>
-      <button ion-button clear item-start style="color: rgb(172, 172, 172)">Sick</button>
+      <button ion-button clear item-start style="color: rgb(172, 172, 172)" (click)="GoToSickRequests()">Sick</button>
       <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
     </ion-item>
   </ion-list>
