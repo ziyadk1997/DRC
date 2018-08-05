@@ -1,21 +1,22 @@
 <ion-header>
-    <ion-navbar  >
+  <ion-navbar>
 
-      <ion-title>
-       Leave Tracker
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
-<ion-content  class="back">  
-<canvas class="myChart" id="myChart"></canvas>
+    <ion-title>
+      Leave Tracker
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="back">
+  <canvas class="myChart" id="myChart"></canvas>
   <ion-list>
-    <ion-item class="list"   >
-  
-     
-      <button ion-button clear item-start style="color: rgb(172, 172, 172)"(click)="GoToAnnualRequests()">Annual</button>
+    <ion-item class="list">
+      <button ion-button clear item-start style="color: rgb(172, 172, 172)" (click)="GoToAnnualRequests()">Annual</button>
       <div item-end style="color: white ;font-size: 0.9em ">
-        # waiting #accepted #rejected <br>
-        <span item-start>12</span> <span item-center>13</span><span item-end>14</span> 
+        #Pending #accepted #rejected
+        <br>
+        <span item-start>12</span>
+        <span item-center>13</span>
+        <span item-end>14</span>
       </div>
     </ion-item>
     <ion-item class="list">
@@ -30,6 +31,6 @@
 
 
 
-    <button id="Apply" (click)="GoToApplyLeavePage()" ion-button round block outline color="DRC" >Apply leave</button>
-    
+  <button id="Apply" (click)="GoToApplyLeavePage()" ion-button round block outline color="DRC">Apply leave</button>
+
 </ion-content>

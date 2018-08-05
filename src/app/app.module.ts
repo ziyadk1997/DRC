@@ -36,7 +36,7 @@ import {TravelExpensePage} from '../pages/travelexpense/travelexpense';
 import {ViewAnnualRequests } from '../pages/ViewAnnualRequests/ViewAnnualRequests';
 import {ViewSickRequests} from '../pages/ViewSickRequests/ViewSickRequests';
 import {ViewCasualRequests} from '../pages/ViewCasualRequests/ViewCasualRequests';
-
+import {ViewRequestInfo} from '../pages/ViewRequestInfo/ViewRequestInfo';
 
 
 
@@ -69,7 +69,8 @@ import {ViewCasualRequests} from '../pages/ViewCasualRequests/ViewCasualRequests
     TravelExpensePage,
     ViewAnnualRequests,
     ViewSickRequests,
-    ViewCasualRequests
+    ViewCasualRequests,
+    ViewRequestInfo
   ],
   imports: [
     BrowserModule,
@@ -109,7 +110,8 @@ import {ViewCasualRequests} from '../pages/ViewCasualRequests/ViewCasualRequests
     TravelExpensePage,
     ViewAnnualRequests,
     ViewSickRequests,
-    ViewCasualRequests
+    ViewCasualRequests,
+    ViewRequestInfo
   ],
   providers: [
     StatusBar,
