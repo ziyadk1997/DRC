@@ -9,6 +9,7 @@ import { FinancialPage} from '../../pages/financial/financial';
 import {ViewRequested} from '../../pages/ViewRequested/ViewRequested';
 import { TravelExpensePage } from '../travelexpense/travelexpense';
 
+
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html'
@@ -27,8 +28,9 @@ export class WelcomePage {
   }
   
   GoToleaveTrackerPage(){
-
+    var username = localStorage.getItem("username");
     this.navCtrl.push(LeaveTrackerPage);
+  
   }
   GoToProfilePage(){
     this.navCtrl.push(ViewProfilePage);

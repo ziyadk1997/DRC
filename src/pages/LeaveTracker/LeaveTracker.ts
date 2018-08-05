@@ -3,9 +3,9 @@ import { NavController } from 'ionic-angular';
 import { ApplyLeavePage } from '../apply-leave/apply-leave';
 import { Chart } from 'chart.js';
 import { Body } from '../../../node_modules/@angular/http/src/body';
-import { ViewAnnualRequests } from '../ViewAnnualRequests/ViewAnnualRequests';
-import { ViewSickRequests } from '../ViewSickRequests/ViewSickRequests';
-import { ViewCasualRequests } from '../ViewCasualRequests/ViewCasualRequests';
+import { AlertController } from 'ionic-angular';
+import { ServicesProvider } from '../../providers/services'
+import { WelcomePage } from '../../pages/welcome/welcome';
 
 @Component({
   selector: 'page-LeaveTracker',
@@ -14,7 +14,7 @@ import { ViewCasualRequests } from '../ViewCasualRequests/ViewCasualRequests';
 export class LeaveTrackerPage {
   
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,private alertCtrl: AlertController, private RequestsBE: ServicesProvider) {
     
   }
   
@@ -50,14 +50,23 @@ export class LeaveTrackerPage {
        
     }
 });}
-GoToAnnualRequests(){
-    this.navCtrl.push(ViewAnnualRequests);
-}
-GoToSickRequests(){
-    this.navCtrl.push(ViewSickRequests);
-}
-GoToCasualRequests(){
-    this.navCtrl.push(ViewCasualRequests);
+ViewMyAnnualRequests(){
+    
+    var username = localStorage.getItem("username");
+    this.RequestsBE.ViewMyAnnualRequests(username).then(res => {
+       console.log(res);
+        // var array =  [] ;
+
+        // requests = res;
+        // if (res != null) {
+        //  while(requests.next()){
+        //     array.push(requests.getString("Reviewerusername"))
+        //  }
+        // } 
+        // else {
+          
+        // }
+      });
 }
 
   
