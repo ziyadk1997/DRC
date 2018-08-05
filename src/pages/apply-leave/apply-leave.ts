@@ -17,72 +17,112 @@ export class ApplyLeavePage {
   HideFlag: boolean = false;
   selected: number;
   Comment: String;
-  timeinday : String ;
-  array :any =  [1,2,3];
-  constructor(public navCtrl: NavController,private servicesprovider:ServicesProvider,private ApplyleaveBE: ServicesProvider,private alertCtrl: AlertController) {
+  timeinday: String;
+  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider, private ApplyleaveBE: ServicesProvider, private alertCtrl: AlertController) {
 
   }
   GoBack() {
     this.navCtrl.pop();
   }
-  GoToAnnualRequest(){
+  GoToAnnualRequest() {
     this.navCtrl.pop();
   }
-  ApplyCasualLeave(){
-  if(this.selected==1){
-this.timeinday = "Full Day";
-  }
-  if(this.selected==2){
-    this.timeinday = " Work in First Half of Day";
-      }
-  if(this.selected==1){
-        this.timeinday = "Work in Second Half of Day";
-     }
+  ApplyCasualLeave() {
+    if (this.selected == 1) {
+      this.timeinday = "Full Day";
+    }
+    if (this.selected == 2) {
+      this.timeinday = " Work in First Half of Day";
+    }
+    if (this.selected == 3) {
+      this.timeinday = "Work in Second Half of Day";
+    }
     var username = localStorage.getItem("username");
-    var type:any;
-    if(this.Request == "Casual"){
-      type = "Casual"
-    }
-    if(this.Request == "Annual"){
-      type = "Annual"
-    }
-    this.servicesprovider.ApplyAnnualandCasualLeaveRequest(username,this.MyDateFrom , this.MyDateTo,this.Comment, this.timeinday,type).then(res => {
-      if (res == true) {
-        this.alertCtrl.create(
-          {
-            title: 'Request Submitted',
-            subTitle: 'Your request was submitted to your manager',
-            buttons: ['Okay']
-          }
-        ).present()
-        this.navCtrl.push(LeaveTrackerPage);
-      } else {
-        this.alertCtrl.create(
-          {
-            title: 'Request Submition failed',
-            subTitle: 'Please fill request form correctly',
-            buttons: ['Dismiss']
-          }
-        ).present()
-      }
-    });
-   }
-ApplyAnnualLeave(){
+    var type: any;
+    if (this.Request == "Casual" || this.Request == "Annual") {
 
-}
-    Glow(id) {
+      this.servicesprovider.ApplyAnnualandCasualLeaveRequest(username, this.MyDateFrom, this.MyDateTo, this.Comment, this.timeinday, this.Request).then(res => {
+        if (res == true) {
+          this.alertCtrl.create(
+            {
+              title: 'Request Submitted',
+              subTitle: 'Your request was submitted to your manager',
+              buttons: ['Okay']
+            }
+          ).present()
+          this.navCtrl.push(LeaveTrackerPage);
+        } else {
+          this.alertCtrl.create(
+            {
+              title: 'Request Submition failed',
+              subTitle: 'Please fill request form correctly',
+              buttons: ['Dismiss']
+            }
+          ).present()
+        }
+      });
+    }
+    if (this.Request == "Sick") {
+      this.servicesprovider.ApplySickRequest(username, this.MyDateFrom, this.MyDateTo, this.Comment,"url").then(res => {
+        if (res == true) {
+          this.alertCtrl.create(
+            {
+              title: 'Request Submitted',
+              subTitle: 'Your request was submitted to your manager',
+              buttons: ['Okay']
+            }
+          ).present()
+          this.navCtrl.push(LeaveTrackerPage);
+        } else {
+          this.alertCtrl.create(
+            {
+              title: 'Request Submition failed',
+              subTitle: 'Please fill request form correctly',
+              buttons: ['Dismiss']
+            }
+          ).present()
+        }
+      });
+    }
+    if (this.Request == "WorkFromHome") {
+      this.servicesprovider.ApplyWorkFromHomeRequest(username, this.Comment, this.MyDateFrom, this.MyDateTo).then(res => {
+        if (res == true) {
+          this.alertCtrl.create(
+            {
+              title: 'Request Submitted',
+              subTitle: 'Your request was submitted to your manager',
+              buttons: ['Okay']
+            }
+          ).present()
+          this.navCtrl.push(LeaveTrackerPage);
+        } else {
+          this.alertCtrl.create(
+            {
+              title: 'Request Submition failed',
+              subTitle: 'Please fill request form correctly',
+              buttons: ['Dismiss']
+            }
+          ).present()
+        }
+      });
+    }
+  }
+  ApplyAnnualLeave() {
+
+  }
+  Glow(id) {
     this.selected = id;
   }
-  SetFlag(){
-    
-    if(this.Request=='Sick'){
+  SetFlag() {
+
+    if (this.Request == 'Sick') {
       this.HideFlag = true;
-    }else{
+    } else {
       this.HideFlag = false;
     }
     console.log(this.Request)
   }
-  
+
 
 
 }

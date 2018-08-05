@@ -9,6 +9,7 @@ import { WelcomePage } from '../../pages/welcome/welcome';
 import { ViewAnnualRequests } from '../ViewAnnualRequests/ViewAnnualRequests';
 import { ViewSickRequests } from '../ViewSickRequests/ViewSickRequests';
 import { ViewCasualRequests } from '../ViewCasualRequests/ViewCasualRequests';
+import { WorkFromHomePage } from '../work-from-home/work-from-home';
 
 @Component({
   selector: 'page-LeaveTracker',
@@ -51,13 +52,6 @@ export class LeaveTrackerPage {
        
     }
 });}
-ViewMyAnnualRequests(){
-    
-    var username = localStorage.getItem("username");
-    this.RequestsBE.ViewMyCasualRequests(username).then(res => {
-       console.log(res);
-      });
-}
 GoToAnnualRequests(){
     this.navCtrl.push(ViewAnnualRequests);
 }
@@ -66,6 +60,9 @@ GoToSickRequests(){
 }
 GoToCasualRequests(){
     this.navCtrl.push(ViewCasualRequests);
+}
+GoToWorkFromHomeRequests(){
+    this.navCtrl.push(WorkFromHomePage);
 }
 
   
