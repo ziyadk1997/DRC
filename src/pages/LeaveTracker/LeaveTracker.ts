@@ -6,6 +6,9 @@ import { Body } from '../../../node_modules/@angular/http/src/body';
 import { AlertController } from 'ionic-angular';
 import { ServicesProvider } from '../../providers/services'
 import { WelcomePage } from '../../pages/welcome/welcome';
+import { ViewAnnualRequests } from '../ViewAnnualRequests/ViewAnnualRequests';
+import { ViewSickRequests } from '../ViewSickRequests/ViewSickRequests';
+import { ViewCasualRequests } from '../ViewCasualRequests/ViewCasualRequests';
 
 @Component({
   selector: 'page-LeaveTracker',
@@ -67,6 +70,15 @@ ViewMyAnnualRequests(){
           
         // }
       });
+}
+GoToAnnualRequests(){
+    this.navCtrl.push(ViewAnnualRequests);
+}
+GoToSickRequests(){
+    this.navCtrl.push(ViewSickRequests);
+}
+GoToCasualRequests(){
+    this.navCtrl.push(ViewCasualRequests);
 }
 
   
