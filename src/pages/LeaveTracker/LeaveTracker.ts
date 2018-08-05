@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ApplyLeavePage } from '../apply-leave/apply-leave';
-import { Chart } from 'chart.js';
+import { Chart } from '../../assets/Chart.js';
 import { Body } from '../../../node_modules/@angular/http/src/body';
 import { AlertController } from 'ionic-angular';
 import { ServicesProvider } from '../../providers/services'

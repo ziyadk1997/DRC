@@ -27,8 +27,6 @@ import { AnnualRequestPage} from '../pages/annual-request/annual-request';
 import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';  
 import { WorkFromHomeSummaryPage} from '../pages/work-from-home-summary/work-from-home-summary';
 import { FinancialPage} from '../pages/financial/financial';
-
-
 import {ViewRequested} from '../pages/ViewRequested/ViewRequested';
 import {RequestInfoPage} from '../pages/RequestInfoPage/RequestInfoPage';
 import { ServicesProvider } from '../providers/services';
@@ -73,7 +71,7 @@ import {ViewCasualRequests} from '../pages/ViewCasualRequests/ViewCasualRequests
     TravelExpensePage,
     ViewAnnualRequests,
     ViewSickRequests,
-    ViewCasualRequests
+    ViewCasualRequests,
   ],
   imports: [
     BrowserModule,
@@ -81,6 +79,7 @@ import {ViewCasualRequests} from '../pages/ViewCasualRequests/ViewCasualRequests
     HttpClientModule,
     InterceptorModule,
     IonicModule.forRoot(MyApp),
+    
     
     
   ],
