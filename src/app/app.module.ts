@@ -24,7 +24,6 @@ import { AddLanguagePage } from '../pages/add-language/add-language';
 import { AddWorkExperiencePage } from '../pages/add-work-experience/add-work-experience';
 import { LeaveTrackerPage } from '../pages/LeaveTracker/LeaveTracker';
 import { AnnualRequestPage} from '../pages/annual-request/annual-request';
-import { WorkFromHomePage} from '../pages/work-from-home/work-from-home';
 import { FinancialPage} from '../pages/financial/financial';
 import {ViewRequested} from '../pages/ViewRequested/ViewRequested';
 import {RequestInfoPage} from '../pages/RequestInfoPage/RequestInfoPage';
@@ -37,7 +36,7 @@ import {ViewAnnualRequests } from '../pages/ViewAnnualRequests/ViewAnnualRequest
 import {ViewSickRequests} from '../pages/ViewSickRequests/ViewSickRequests';
 import {ViewCasualRequests} from '../pages/ViewCasualRequests/ViewCasualRequests';
 import {ViewRequestInfo} from '../pages/ViewRequestInfo/ViewRequestInfo';
-
+import {ViewWorkFromHomeRequests} from '../pages/ViewWorkFromHomeRequests/ViewWorkFromHomeRequests';
 
 
 @NgModule({
@@ -60,7 +59,6 @@ import {ViewRequestInfo} from '../pages/ViewRequestInfo/ViewRequestInfo';
     AddWorkExperiencePage,
     LeaveTrackerPage,
     AnnualRequestPage,
-    WorkFromHomePage,
     FinancialPage,
     ViewRequested,
     RequestInfoPage,
@@ -70,6 +68,7 @@ import {ViewRequestInfo} from '../pages/ViewRequestInfo/ViewRequestInfo';
     ViewAnnualRequests,
     ViewSickRequests,
     ViewCasualRequests,
+    ViewWorkFromHomeRequests,
     ViewRequestInfo
   ],
   imports: [
@@ -101,7 +100,6 @@ import {ViewRequestInfo} from '../pages/ViewRequestInfo/ViewRequestInfo';
     AddWorkExperiencePage,
     LeaveTrackerPage,
     AnnualRequestPage,
-    WorkFromHomePage,
     FinancialPage,
     ViewRequested,
     RequestInfoPage,
@@ -111,6 +109,7 @@ import {ViewRequestInfo} from '../pages/ViewRequestInfo/ViewRequestInfo';
     ViewAnnualRequests,
     ViewSickRequests,
     ViewCasualRequests,
+    ViewWorkFromHomeRequests,
     ViewRequestInfo
   ],
   providers: [

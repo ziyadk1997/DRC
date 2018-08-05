@@ -27,7 +27,7 @@ export class ApplyLeavePage {
   GoToAnnualRequest() {
     this.navCtrl.pop();
   }
-  ApplyCasualLeave() {
+  ApplyLeave() {
     if (this.selected == 1) {
       this.timeinday = "Full Day";
     }
@@ -63,7 +63,7 @@ export class ApplyLeavePage {
       });
     }
     if (this.Request == "Sick") {
-      this.servicesprovider.ApplySickRequest(username, this.MyDateFrom, this.MyDateTo, this.Comment,"url").then(res => {
+      this.servicesprovider.ApplySickRequest(username, this.MyDateFrom, this.MyDateTo, this.Comment,"url",this.timeinday).then(res => {
         if (res == true) {
           this.alertCtrl.create(
             {
