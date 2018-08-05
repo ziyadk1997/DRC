@@ -57,6 +57,19 @@ export class LeaveTrackerPage {
        
     }
 });}
+ /**move() {
+    var elem = document.getElementById("myBar"); 
+    var width = 1;
+    var id = setInterval(frame, 0);
+    function frame() {
+        if (width >= 22 ) {
+            clearInterval(id);
+        } else {
+            width++; 
+            elem.style.width = width + 'ch'; 
+        }
+    }
+}**/
 ViewMyAnnualRequests(){
     
     var username = localStorage.getItem("username");
