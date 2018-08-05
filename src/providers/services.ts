@@ -199,7 +199,7 @@ export class ServicesProvider {
       });
 
     return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "ViewMyCasualRequests", request).timeout(config.getTimeout).subscribe(res => {
+      this.http.get(config.apiUrl + "ViewMyCasualRequests/"+username).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);
         }
