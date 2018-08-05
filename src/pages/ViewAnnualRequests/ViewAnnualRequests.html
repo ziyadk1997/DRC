@@ -12,6 +12,7 @@
             <ion-thumbnail *ngIf="request.Status =='Pending'" item-start item>
                 <img src="assets/imgs/Pending.png">
             </ion-thumbnail>
+<<<<<<< HEAD
             <ion-thumbnail *ngIf="request.Status =='Accepted'" item-start item>
                 <img src="assets/imgs/Accepted.png">
             </ion-thumbnail>
@@ -22,6 +23,12 @@
             <p style="color: silver">{{request.Date}}</p>
             <p style="color: silver">{{request.RUsername}}</p>
             <button ion-button clear item-end style="color: orange">View Request</button>
+=======
+            <p style="color: silver">#Request period</p>
+            <p style="color: silver">#Request From/To </p>
+            <p style="color: silver">#Request Justification </p>
+            <button ion-button clear item-end style="color: orange" (click)="GoToViewRequest()">View Request</button>
+>>>>>>> cc0091ce4d34450db445f3d01c607bfec2290406
         </ion-item>
     </ion-list>
 
