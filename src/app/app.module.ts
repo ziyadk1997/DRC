@@ -72,10 +72,7 @@ import {ViewRequestInfo} from '../pages/ViewRequestInfo/ViewRequestInfo';
     ViewAnnualRequests,
     ViewSickRequests,
     ViewCasualRequests,
-<<<<<<< HEAD
-=======
     ViewRequestInfo
->>>>>>> ee444f95cc48dcb1574ad0a7bf63c8a0dfb31c6e
   ],
   imports: [
     BrowserModule,

@@ -52,8 +52,6 @@ export class LeaveTrackerPage {
        
     }
 });}
-<<<<<<< HEAD
-=======
  /**move() {
     var elem = document.getElementById("myBar"); 
     var width = 1;
@@ -74,7 +72,6 @@ ViewMyAnnualRequests(){
        console.log(res);
       });
 }
->>>>>>> 44b6c1f122c2acabf104fccee344115c1a814d83
 GoToAnnualRequests(){
     this.navCtrl.push(ViewAnnualRequests);
 }
