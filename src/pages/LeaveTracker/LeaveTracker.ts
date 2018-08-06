@@ -34,7 +34,7 @@ export class LeaveTrackerPage {
         
         datasets: [{
             label: 'OverAll',
-            data: [87,0 ],
+            data: [50,87],
             backgroundColor: [
                 'rgba(255, 255, 255, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -44,14 +44,37 @@ export class LeaveTrackerPage {
                 'rgba(54, 162, 235, 1)',
                 
             ],
-            borderWidth:1
+            borderWidth:7
+            
         }]
         
     },
     options: {
+        cutoutPercentage : 100
+        
        
     }
 });}
+ /**move() {
+    var elem = document.getElementById("myBar"); 
+    var width = 1;
+    var id = setInterval(frame, 0);
+    function frame() {
+        if (width >= 22 ) {
+            clearInterval(id);
+        } else {
+            width++; 
+            elem.style.width = width + 'ch'; 
+        }
+    }
+}**/
+ViewMyAnnualRequests(){
+    
+    var username = localStorage.getItem("username");
+    this.RequestsBE.ViewMyCasualRequests(username).then(res => {
+       console.log(res);
+      });
+}
 GoToAnnualRequests(){
     this.navCtrl.push(ViewAnnualRequests);
 }
