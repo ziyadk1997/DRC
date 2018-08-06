@@ -15,7 +15,7 @@ export class ServicesProvider {
 
   }
 
-  doLogin(email, password) {
+  doLogin(email, password) { // done
     var user = JSON.stringify
       ({
         "username": email,
@@ -37,15 +37,15 @@ export class ServicesProvider {
     });
   }
 
-  ApplyAnnualandCasualLeaveRequest(username, from , to,comment, timeinday) {
+  ApplyAnnualandCasualLeaveRequest(username, from , to,comment, timeinday,type) { // done
     var request = JSON.stringify
       ({
         "username": username,
-        "From": from,
-        "To" : to,
-        "Comment" : comment,
-        "Timeinday" : timeinday
-
+        "from": from,
+        "to" : to,
+        "comment" : comment,
+        "timeinday" : timeinday,
+        "type" : type
       });
 
     return new Promise((resolve, reject) => {
@@ -115,7 +115,7 @@ export class ServicesProvider {
         });
     });
   }
-  ApplyWorkFromHomeRequest(username, Amount , comment, Startdate,Enddate) {
+  ApplyWorkFromHomeRequest(username, comment, Startdate,Enddate) {
     var request = JSON.stringify
       ({
         "username": username,
@@ -141,8 +141,34 @@ export class ServicesProvider {
         });
     });
   }
+  ApplySickRequest(username, Startdate,Enddate,comment,Link,timeinday) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+        "Startdate": Startdate,
+        "Enddate" : Enddate,
+        "Comment" : comment,
+        "Link":Link,
+       "timeinday":timeinday
 
-  ApproveAnnualLeaveRequest(username, from , to,comment, MedicalUrl) {
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "ApplySickRequest", request).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+
+  ApproveAnnualLeaveRequest(username, from , to,comment) {
     var request = JSON.stringify
       ({
         "username": username,
@@ -168,7 +194,7 @@ export class ServicesProvider {
     });
   }
 
-  ViewMyRequests(username) {
+  ViewMyWorkFromHomeRequests(username) {
     var request = JSON.stringify
       ({
         "username": username,
@@ -177,7 +203,73 @@ export class ServicesProvider {
       });
 
     return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "ViewMyRequests", request).timeout(config.getTimeout).subscribe(res => {
+      this.http.get(config.apiUrl + "ViewMyWorkFromHomeRequests/"+username).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+  ViewMyAnnualRequests(username) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+  
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.get(config.apiUrl + "ViewMyAnnualRequests/"+username).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+  ViewMyCasualRequests(username) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+  
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.get(config.apiUrl + "ViewMyCasualRequests/"+username).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
+  ViewMySickRequests(username) {
+    var request = JSON.stringify
+      ({
+        "username": username,
+  
+
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.get(config.apiUrl + "ViewMySickRequests/"+username).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);
         }
@@ -213,6 +305,7 @@ export class ServicesProvider {
         });
     });
   }
+  
   ViewMyReviewedRequests(username) {
     var request = JSON.stringify
       ({
@@ -222,7 +315,7 @@ export class ServicesProvider {
       });
 
     return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "ViewMyReviewedRequests", request).timeout(config.getTimeout).subscribe(res => {
+      this.http.get(config.apiUrl + "ViewMyReviewedRequests"+"/"+username).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);
         }
@@ -235,6 +328,29 @@ export class ServicesProvider {
         });
     });
   }
+
+  // ViewRequestsInfo(username) {
+  //   var request = JSON.stringify
+  //     ({
+  //       "username": username,
+  
+
+  //     });
+
+  //   return new Promise((resolve, reject) => {
+  //     this.http.post(config.apiUrl + "ViewMyReviewedRequests", request).timeout(config.getTimeout).subscribe(res => {
+  //       try {
+  //         resolve(res);
+  //       }
+  //       catch (e) {
+  //         reject(false);
+  //       }
+  //     },
+  //       error => {
+  //         reject(error);
+  //       });
+  //   });
+  // }
 
 HRorOwnerorAdminViewEmployees(username) {
     var request = JSON.stringify
@@ -278,6 +394,7 @@ HRorOwnerorAdminViewEmployees(username) {
         });
     });
   }
+
   EmployeeViewEmployees(username) {
     var request = JSON.stringify
       ({
@@ -455,4 +572,5 @@ HRorOwnerorAdminViewEmployees(username) {
         });
     });
   }
+  
 }

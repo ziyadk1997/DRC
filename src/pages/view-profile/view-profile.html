@@ -7,48 +7,41 @@
 </ion-header>
 
 <ion-content class="back" padding id="page2">
-  <ion-list id="viewProfile-list5">
+  <ion-list id="viewProfile-list5" >
     <ion-item class="i1" id="viewProfile-list-item2" no-border>
-      <div  align = "center">
-      <ion-avatar item-center>
-        <img src="assets/imgs/profile.png" (click) = "UploadImage()">
+      <div  no-border align = "center">
+      <ion-avatar item-center no-border>
+        <img  [style.border]="'3px solid' + white" src="assets/imgs/profile.png" (click) = "UploadImage()">
       </ion-avatar>
-      <br/>
-      <h2 style="color: white">
-        #name
-      </h2>
     </div>
     </ion-item>
+    <h2 align = "center"  no-border style="color: rgb(101, 101, 150)">
+      #name
+    </h2>
+    <h6 align = "center" no-border style="color: white">
+      #username
+    </h6>
+    <h5 id="viewProfile-heading3" style="color:green;text-align:center;">
+      #JobDescription
+    </h5>
   </ion-list>
-  <h5 id="viewProfile-heading3" style="color:white;text-align:center;">
-    #Position
-  </h5>
-  <h5 id="viewProfile-heading4" style="color:white;text-align:center;">
-    Three2one
-  </h5>
-  <form id="viewProfile-form9" class="form">
-    <ion-item id="viewProfile-select3" style="background-color: transparent">
-      <ion-label style="color: white">
-        Choose
-      </ion-label>
-      <ion-select [(ngModel)]="option" [ngModelOptions]="{standalone: true}" (ionChange)="test()">
-        <ion-option value="skills">
-          Skills
-        </ion-option>
-        <ion-option value="workexperience">
-          Work Experience
-        </ion-option>
-        <ion-option value="education">
-          Education
-        </ion-option>
-        <ion-option value="language">
-          language
-        </ion-option>
-        <ion-option value="attachment">
-          Attachments
-        </ion-option>
-      </ion-select>
-    </ion-item>
-  </form>
   
+
+<div style="background-color: rgba(12, 119, 165, 0.226); border: 2px solid blueviolet">
+  <button ion-button (click)="GoToSkills()" style="background-color: transparent; border-bottom: 1px solid blueviolet;" block >Skills</button> 
+  <button ion-button (click)="GoToWorkExperience()" style="background-color: transparent; border-bottom: 1px solid blueviolet;" block>Work Experience</button>
+  <button ion-button (click)="GoToEducation()" style="background-color: transparent; border-bottom: 1px solid blueviolet;" block>Education</button>
+  <button ion-button (click)="GoToLanguage()" style="background-color: transparent; border-bottom: 1px solid blueviolet;" block>Language</button>
+  <button ion-button (click)="GoToAttachmets()" style="background-color: transparent;" block>Attachments</button>
+</div>>
+<br/>
+<button ion-button   outline style="color: rgb(223, 223, 223);background-color: rgb(21, 75, 119);" block round>
+ Make Admin
+</button>
+<button ion-button   outline style="color: rgb(223, 223, 223);background-color: rgb(21, 75, 119);" block round>
+  Remove Admin
+ </button>
+ <button ion-button    outline style="color: rgb(223, 223, 223);background-color: rgb(21, 75, 119);" block round>
+  Remove User
+ </button>
 </ion-content>

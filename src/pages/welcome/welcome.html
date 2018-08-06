@@ -22,7 +22,7 @@
      <div>Leave Tracker <br> <span style="color: rgb(69, 129, 185); font-size: 0.6em "> You Have # Days Availabe </span></div>
   </button>
 
-  <button id="welcome-button3" class="Fn" ion-button  block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
+  <button id="welcome-button3" class="Fn" ion-button  (click)="GoToTravelExpensePage()" block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
       <ion-img width="50" height="50" style="background-color: transparent ;" src="assets/imgs/Travel.png" class="img"></ion-img>
       <div >Travel Expense <br> <span style="color: rgb(69, 129, 185); font-size: 0.6em "> Your Travel Budget control </span></div>
   </button>
@@ -30,7 +30,11 @@
     <ion-img width="50" height="50" style="background-color: transparent ;" src="assets/imgs/Travel.png" class="img"></ion-img>
     <div >Financial <br> <span style="color: rgb(69, 129, 185); font-size: 0.6em "> Check Your Financial Status </span></div>
 </button>
- 
+<button id="welcome-button4" class="Fn" ion-button  (click)="GoToRequestsPage()" block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
+  <ion-img width="50" height="50" style="background-color: transparent ;" src="assets/imgs/Travel.png" class="img"></ion-img>
+  <div >View Requests Page <br> <span style="color: rgb(69, 129, 185); font-size: 0.6em ">  View requests submitted to me </span></div>
+</button>
+
   <div align = "center">
     <br/>
     <br/>
@@ -43,5 +47,5 @@
     Logout
   </button>
 
-  <button ion-button (click)="GoToRequestsPage()"> View Requests Page     . </button>
 </div>
+</ion-content>

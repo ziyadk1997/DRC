@@ -26,23 +26,22 @@ export class ViewProfilePage {
 
     this.navCtrl.pop();
   }
-  test() {
-    if (this.option == 'skills') {
-      this.navCtrl.push(ViewProfile2Page);
-    }
-    if (this.option == 'workexperience') {
-      this.navCtrl.push(ViewProfile3Page);
-    }
-    if (this.option == 'education') {
-      this.navCtrl.push(ViewProfile4Page);
-    }
-    if (this.option == 'language') {
-      this.navCtrl.push(ViewProfile5Page);
-    }
-    if (this.option == 'attachment') {
-      this.navCtrl.push(ViewProfile6Page);
-    }
+  GoToSkills() {
+    this.navCtrl.push(ViewProfile2Page);
   }
+  GoToWorkExperience() {
+    this.navCtrl.push(ViewProfile3Page);
+  }
+  GoToEducation() {
+    this.navCtrl.push(ViewProfile4Page);
+  }
+  GoToLanguage() {
+    this.navCtrl.push(ViewProfile5Page);
+  }
+  GoToAttachments() {
+    this.navCtrl.push(ViewProfile6Page);
+  }
+
   UploadImage() {
     console.log("yala ya wad ya wel3a");
   }
@@ -70,4 +69,5 @@ export class ViewProfilePage {
 
 
   }
+
 }

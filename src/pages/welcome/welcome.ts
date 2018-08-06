@@ -4,9 +4,10 @@ import { ApplyLeavePage } from '../../pages/apply-leave/apply-leave';
 import { ViewProfilePage } from '../../pages/view-profile/view-profile';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
 import { LoginPage } from '../login/login';
-import{WorkFromHomePage} from '../work-from-home/work-from-home';
 import { FinancialPage} from '../../pages/financial/financial';
 import {ViewRequested} from '../../pages/ViewRequested/ViewRequested';
+import { TravelExpensePage } from '../travelexpense/travelexpense';
+
 
 @Component({
   selector: 'page-welcome',
@@ -26,20 +27,23 @@ export class WelcomePage {
   }
   
   GoToleaveTrackerPage(){
-
+    var username = localStorage.getItem("username");
     this.navCtrl.push(LeaveTrackerPage);
+  
   }
   GoToProfilePage(){
     this.navCtrl.push(ViewProfilePage);
   }
-  GoToWorkFromHomePage(){
-    this.navCtrl.push(WorkFromHomePage);
-  }
+  
   GoToFinancialPage(){
     this.navCtrl.push(FinancialPage);
   }
   GoToRequestsPage(){
     this.navCtrl.push(ViewRequested);
+  }
+  GoToTravelExpensePage(){
+    this.navCtrl.push(TravelExpensePage);
+
   }
   
 }
