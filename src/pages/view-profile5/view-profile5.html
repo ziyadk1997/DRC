@@ -6,25 +6,24 @@
   </ion-navbar>
 </ion-header>
 <ion-content class="back" padding id="page6">
-  <ion-list id="viewProfile5-list10">
-      <ion-item color="none"class="i1" id="viewProfile-list-item2">
-          <div align = "center">
-          <ion-avatar item-center>
-            <img src="assets/imgs/profile.png" />
-          </ion-avatar>
-          <br/>
-          <h2>
-            #name
-          </h2>
-        </div>
-        </ion-item>
+  <ion-list id="viewProfile-list5" >
+    <ion-item class="i1" id="viewProfile-list-item2" no-border>
+      <div  no-border align = "center">
+      <ion-avatar item-center no-border>
+        <img  [style.border]="'3px solid' + white" src="assets/imgs/profile.png" (click) = "UploadImage()">
+      </ion-avatar>
+    </div>
+    </ion-item>
+    <h2 align = "center"  no-border style="color: rgb(101, 101, 150)">
+      #name
+    </h2>
+    <h6 align = "center" no-border style="color: white">
+      #username
+    </h6>
+    <h5 id="viewProfile-heading3" style="color:green;text-align:center;">
+      #JobDescription
+    </h5>
   </ion-list>
-  <h5 id="viewProfile5-heading22" style="color:#000000;text-align:center;">
-    #position
-  </h5>
-  <h5 id="viewProfile5-heading23" style="color:#000000;text-align:center;">
-    #nameofcompany
-  </h5>
   <h4 id="viewProfile5-heading24" style="color:#ffffff;font-weight:600;">
     Languages
   </h4>
