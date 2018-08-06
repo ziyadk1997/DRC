@@ -50,7 +50,7 @@ export class ApplyLeavePage {
               buttons: ['Okay']
             }
           ).present()
-          this.navCtrl.push(LeaveTrackerPage);
+          this.navCtrl.pop();
         } else {
           this.alertCtrl.create(
             {
@@ -72,7 +72,7 @@ export class ApplyLeavePage {
               buttons: ['Okay']
             }
           ).present()
-          this.navCtrl.push(LeaveTrackerPage);
+          this.navCtrl.pop();
         } else {
           this.alertCtrl.create(
             {
