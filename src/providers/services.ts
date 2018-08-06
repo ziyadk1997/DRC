@@ -193,15 +193,15 @@ export class ServicesProvider {
         });
     });
   }
-  Approverequest(reviewerusername, requestid) {
+  ApproveRequest(reviewerusername, requestid) {
     var request = JSON.stringify
       ({
         "reviewerusername": reviewerusername,
-      "requestid" : requestid
+         "requestid" : requestid
       });
 
     return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "ApproveAnnualLeaveRequest", request).timeout(config.getTimeout).subscribe(res => {
+      this.http.post(config.apiUrl + "ApproveRequest", request).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);
         }
