@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ServicesProvider } from '../../providers/services'
 import { RequestInfoPage } from '../RequestInfoPage/RequestInfoPage';
+import { ViewRequestInfo } from '../ViewRequestInfo/ViewRequestInfo';
 @Component({
   selector: 'page-ViewAnnualRequests',
   templateUrl: 'ViewAnnualRequests.html'
@@ -12,6 +13,7 @@ export class ViewAnnualRequests {
     var username = localStorage.getItem("username");
     this.RequestsBE.ViewMyAnnualRequests(username).then((res: any) => {
       console.log(res)
+      if(res != null){
       var length = (res.length) / 4;
       console.log(length);
       for (let i = 0; i < length; i++) {
@@ -22,12 +24,12 @@ export class ViewAnnualRequests {
           Status: res[4 * i + 3]
         }
         this.requests[i] = request
-      }
+      }}
     });
   }
 
   ViewDetails(){
-    this.navCtrl.push(RequestInfoPage);
+    this.navCtrl.push(ViewRequestInfo);
   }
 
 }
