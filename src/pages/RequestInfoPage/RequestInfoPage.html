@@ -1,25 +1,30 @@
 <ion-header>
+    <ion-navbar>
+        <ion-title>
+            Request Information
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 <ion-content class="back">
     <ion-card style="background-color: transparent">
-      
+
         <ion-card-content>
-     <ion-list *ngFor="let request of requests">
-            <h4 class="Headers">{{request.Employeeusername}}</h4>
-            <br>
-            <br>
-            <h4 class="Headers">{{request.Status}}</h4>
-            <br>
-            <br>
-            <h1 class="Headers">{{request.Employeeusername}}</h1>
-            <br>
-            <br>
-            <h2 class="Headers">{{request.Comment}}</h2>
-            <br>
-            <br>
-            <h3 class="Headers">#Request Description</h3>
-            <br>
-        </ion-list>
+            <ion-list *ngFor="let request of requests">
+                <h4 class="Headers">{{request.Employeeusername}}</h4>
+                <br>
+                <br>
+                <h4 class="Headers">{{request.Status}}</h4>
+                <br>
+                <br>
+                <h1 class="Headers">{{request.Employeeusername}}</h1>
+                <br>
+                <br>
+                <h2 class="Headers">{{request.Comment}}</h2>
+                <br>
+                <br>
+                <h3 class="Headers">#Request Description</h3>
+                <br>
+            </ion-list>
         </ion-card-content>
     </ion-card>
     <ion-grid>
@@ -28,7 +33,7 @@
                 <button style="width:100%; color: silver;background-color: transparent; border: orange 1px solid ;" outline ion-button (click)="GoToRequestsPage()">Accept</button>
             </ion-col>
             <ion-col width-50>
-                <button style="width:100%; color: silver;background-color: transparent; border: orange 1px solid ;" outline  ion-button (click)="GoToRequestsPage()">Reject</button>
+                <button style="width:100%; color: silver;background-color: transparent; border: orange 1px solid ;" outline ion-button (click)="GoToRequestsPage()">Reject</button>
             </ion-col>
         </ion-row>
     </ion-grid>
