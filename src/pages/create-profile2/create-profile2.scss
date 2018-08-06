@@ -1,0 +1,34 @@
+page-create-profile2{
+    .back {
+        background-color:transparent;
+        background-image: url('../assets/imgs/b1.png');
+}
+.img{
+    margin-left: 5%;
+}
+.Text{
+    color: silver;
+    font-size: 20px;
+    
+}
+.cont{
+        width:30%;
+        border-radius : 15px;
+        display: inline-block;
+        border:1px solid rgb(115, 165, 223);
+        box-shadow: 0 5px 15px rgba(70, 134, 253, 0.4);
+        margin-left: 2%;
+        margin-top: 1%;
+        
+}
+.check {
+    width:100% !important;  
+    height : 100% !important;
+    margin: auto; 
+    border: none ;
+    vertical-align: top;
+    background-color: transparent; 
+    display: inline-block;
+}
+ 
+}   

@@ -305,6 +305,7 @@ export class ServicesProvider {
         });
     });
   }
+  
   ViewMyReviewedRequests(username) {
     var request = JSON.stringify
       ({
@@ -314,7 +315,7 @@ export class ServicesProvider {
       });
 
     return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "ViewMyReviewedRequests", request).timeout(config.getTimeout).subscribe(res => {
+      this.http.get(config.apiUrl + "ViewMyReviewedRequests"+"/"+username).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);
         }
@@ -328,28 +329,28 @@ export class ServicesProvider {
     });
   }
 
-  ViewRequestsInfo(username) {
-    var request = JSON.stringify
-      ({
-        "username": username,
+  // ViewRequestsInfo(username) {
+  //   var request = JSON.stringify
+  //     ({
+  //       "username": username,
   
 
-      });
+  //     });
 
-    return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "ViewMyReviewedRequests", request).timeout(config.getTimeout).subscribe(res => {
-        try {
-          resolve(res);
-        }
-        catch (e) {
-          reject(false);
-        }
-      },
-        error => {
-          reject(error);
-        });
-    });
-  }
+  //   return new Promise((resolve, reject) => {
+  //     this.http.post(config.apiUrl + "ViewMyReviewedRequests", request).timeout(config.getTimeout).subscribe(res => {
+  //       try {
+  //         resolve(res);
+  //       }
+  //       catch (e) {
+  //         reject(false);
+  //       }
+  //     },
+  //       error => {
+  //         reject(error);
+  //       });
+  //   });
+  // }
 
 HRorOwnerorAdminViewEmployees(username) {
     var request = JSON.stringify
@@ -571,4 +572,5 @@ HRorOwnerorAdminViewEmployees(username) {
         });
     });
   }
+  
 }

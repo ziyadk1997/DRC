@@ -16,8 +16,8 @@ export class LoginPage {
   password: any;
   
   Login() {
-      this.navCtrl.setRoot(WelcomePage);
-    if (this.email == null || this.password == null) {
+      //this.navCtrl.setRoot(WelcomePage);
+   if (this.email == null || this.password == null) {
       this.alertCtrl.create(
         {
           title: 'Please Enter Email and Password',
@@ -41,5 +41,8 @@ export class LoginPage {
         }
       });
     }
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 5f38c6b66a1a60478adcbb7e9a4d2cc41de02748
   }
