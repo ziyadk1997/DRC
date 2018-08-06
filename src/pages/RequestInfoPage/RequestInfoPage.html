@@ -2,21 +2,24 @@
 </ion-header>
 <ion-content class="back">
     <ion-card style="background-color: transparent">
-        <ion-card-header class="Headers">
-            #EmployeeName
-        </ion-card-header>
+      
         <ion-card-content>
-            <h4 class="Headers">#Request Status</h4>
+     <ion-list *ngFor="let request of requests">
+            <h4 class="Headers">{{request.Employeeusername}}</h4>
             <br>
             <br>
-            <h1 class="Headers">#Request Type</h1>
+            <h4 class="Headers">{{request.Status}}</h4>
             <br>
             <br>
-            <h2 class="Headers">#Request Comment</h2>
+            <h1 class="Headers">{{request.Employeeusername}}</h1>
+            <br>
+            <br>
+            <h2 class="Headers">{{request.Comment}}</h2>
             <br>
             <br>
             <h3 class="Headers">#Request Description</h3>
             <br>
+        </ion-list>
         </ion-card-content>
     </ion-card>
     <ion-grid>

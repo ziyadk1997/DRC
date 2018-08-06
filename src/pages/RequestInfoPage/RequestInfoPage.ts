@@ -8,11 +8,23 @@ import { ServicesProvider } from '../../providers/services'
 })
 export class RequestInfoPage {
   requests: any = [];
+  requestid: any;
+  
   constructor(public navCtrl: NavController, private RequestBE: ServicesProvider) {
   }
   GoToRequestsPage(){
+  
     
-      this.navCtrl.pop();
+  }
+
+  ionViewDidLoad()
+  {
+    var username = localStorage.getItem("username");
+    var requestid = localStorage.getItem('requestid');
+    this.RequestBE.ViewRequestbyId(requestid).then((res: any) => {
+      if(res!=null){
+      this.requests = res;
+    }});
   }
 
   
