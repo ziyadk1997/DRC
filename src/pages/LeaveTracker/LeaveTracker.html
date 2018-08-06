@@ -37,8 +37,13 @@
       <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
     </ion-item>
     <ion-item class="list" (click)="GoToWorkFromHomeRequests()">
-        <button ion-button clear item-start style="color: rgb(172, 172, 172)" >Work From Home</button>
-        <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
+        <div style="color: white ;font-size: 0.9em ">
+            <div item-end> Work From Home </div>
+            <div id="myProgress">
+              <div id="myBar"></div>
+            </div>
+          </div>
+          <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
       </ion-item>
   </ion-list>
 

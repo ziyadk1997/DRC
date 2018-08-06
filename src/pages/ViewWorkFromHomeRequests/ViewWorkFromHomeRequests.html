@@ -1,12 +1,12 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-            View Annual Requests
+            View Work From Home Requests
         </ion-title>
     </ion-navbar>
 </ion-header>
 <ion-content class="back">
-    <h1 style="color: silver">Previous Annual Requests:</h1>
+    <h1 style="color: silver">Previous Work From Home Requests:</h1>
     <ion-list *ngFor="let request of requests">
         <ion-item class="List">
             <ion-thumbnail *ngIf="request.Status =='Pending'" item-start item>
@@ -21,8 +21,7 @@
             <p style="color: silver">{{request.Type}}</p>
             <p style="color: silver">{{request.Date}}</p>
             <p style="color: silver">{{request.RUsername}}</p>
-            <button ion-button clear item-end style="color: orange" (click)="ViewDetails()">View Request</button>
+            <button ion-button clear item-end style="color: orange"(click) = "ViewDetails()">View Request</button>
         </ion-item>
     </ion-list>
-
 </ion-content>

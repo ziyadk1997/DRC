@@ -8,10 +8,13 @@ import {RequestInfoPage} from '../../pages/RequestInfoPage/RequestInfoPage';
 export class ViewRequested {
 
   constructor(public navCtrl: NavController) {
+    
   }
   
   ShowRequestInfo(){
     this.navCtrl.pop();
   }
-  
+  ViewDetails(){
+    this.navCtrl.push(RequestInfoPage)
+  }
 }

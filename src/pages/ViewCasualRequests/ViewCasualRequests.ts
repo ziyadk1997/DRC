@@ -26,7 +26,7 @@ export class ViewCasualRequests {
       }
     });
   }
-  GoToViewRequest(){
+ ViewDetails(){
     this.navCtrl.push(ViewRequestInfo);
   }
   

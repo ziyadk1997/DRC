@@ -2,18 +2,19 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ViewRequestInfo } from '../ViewRequestInfo/ViewRequestInfo';
 import { ServicesProvider } from '../../providers/services'
+import {RequestInfoPage} from '../../pages/RequestInfoPage/RequestInfoPage';
 
 @Component({
-  selector: 'page-ViewSickRequests',
-  templateUrl: 'ViewSickRequests.html'
+  selector: 'page-ViewWorkFromHomeRequests',
+  templateUrl: 'ViewWorkFromHomeRequests.html'
 })
-export class ViewSickRequests {
+export class ViewWorkFromHomeRequests {
   requests: any = [];
   constructor(public navCtrl: NavController, private RequestBE: ServicesProvider) {
     var username = localStorage.getItem("username");
-    this.RequestBE.ViewMySickRequests(username).then((res: any) => {
+    this.RequestBE.ViewMyWorkFromHomeRequests(username).then((res: any) => {
       console.log(res)
-      if(res!=null){
+     if(res!=null){
       var length = (res.length) / 4;
       console.log(length);
       for (let i = 0; i < length; i++) {
@@ -25,9 +26,9 @@ export class ViewSickRequests {
         }
         this.requests[i] = request
       }
-    }});
+    } });
   }
-  GoToViewRequest() {
-    this.navCtrl.push(ViewRequestInfo);
+  ViewDetails(){
+    this.navCtrl.push(RequestInfoPage)
   }
 }
