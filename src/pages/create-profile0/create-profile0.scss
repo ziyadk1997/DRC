@@ -14,6 +14,7 @@ page-create-profile0 {
   ion-input {
     &.custom {
       font-size: 20px; //sets text font size
+      color: rgb(101, 101, 240);
       ::placeholder {
         color : white; //sets placeholder font size
       }

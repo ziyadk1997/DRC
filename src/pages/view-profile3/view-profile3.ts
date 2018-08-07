@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AddWorkExperiencePage } from '../add-work-experience/add-work-experience';
+import { NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-view-profile3',
@@ -8,7 +9,12 @@ import { AddWorkExperiencePage } from '../add-work-experience/add-work-experienc
 })
 export class ViewProfile3Page {
 
-  constructor(public navCtrl: NavController) {
+  infos: any = {};
+  userName:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.infos = this.navParams.data;
+    this.userName=localStorage.getItem("username");
+    console.log(this.infos);
   }
   AddNewWork(){
     this.navCtrl.push(AddWorkExperiencePage);
