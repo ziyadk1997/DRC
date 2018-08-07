@@ -368,7 +368,7 @@ export class ServicesProvider {
     });
   }
 
-
+ 
 
 HRorOwnerorAdminViewEmployees(username) {
     var request = JSON.stringify
@@ -591,7 +591,6 @@ HRorOwnerorAdminViewEmployees(username) {
     });
   }
   
-<<<<<<< HEAD
   RejectRequest(reviewerusername, requestid,comment) {
     var request = JSON.stringify
       ({
@@ -602,15 +601,6 @@ HRorOwnerorAdminViewEmployees(username) {
 
     return new Promise((resolve, reject) => {
       this.http.post(config.apiUrl + "RejectRequest", request).timeout(config.getTimeout).subscribe(res => {
-=======
-  IsManagerorAdminorOwner(username) { // done
-      ({
-        "username": username
-      });
-
-    return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "IsManagerorAdminorOwner", username).timeout(config.getTimeout).subscribe(res => {
->>>>>>> 51b395c814f38bac3facba2fd793a9d672443104
         try {
           resolve(res);
         }
@@ -623,4 +613,24 @@ HRorOwnerorAdminViewEmployees(username) {
         });
     });
   }
+  IsManagerorAdminorOwner(username) { // done
+    ({
+      "username": username
+    });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "IsManagerorAdminorOwner", username).timeout(config.getTimeout).subscribe(res => {
+
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
 }
