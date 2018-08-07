@@ -10,7 +10,7 @@
 
         <ion-card-content>
             <ion-list *ngFor="let request of requests">
-                <h4 class="Headers">{{request.Employeeusername}}</h4>
+                <h4 class="Headers">{{request.Date}}</h4>
                 <br>
                 <br>
                 <h4 class="Headers">{{request.Status}}</h4>
@@ -22,7 +22,7 @@
                 <h2 class="Headers">{{request.Comment}}</h2>
                 <br>
                 <br>
-                <h3 class="Headers">#Request Description</h3>
+                <h3 class="Headers">{{request.name}}</h3>
                 <br>
             </ion-list>
         </ion-card-content>
