@@ -9,15 +9,14 @@ import { ServicesProvider } from '../../providers/services';
   templateUrl: 'login.html'
 })
 export class LoginPage {
-
+  IsHr : boolean = false;
   constructor(public navCtrl: NavController, private alertCtrl: AlertController, private loginBE: ServicesProvider) {
     var username = localStorage.getItem("username");
       this.loginBE.IsManagerorAdminorOwner(username).then((res: any) => {
        console.log(res)
       });
       this.loginBE.IsHrorAdminorOwner(username).then((res: any) => {
-       console.log(res)
-      });
+          });
   }
   email: any;
   password: any;
@@ -36,7 +35,7 @@ export class LoginPage {
       localStorage.setItem('username',this.email.split("@")[0].toLowerCase());
       this.loginBE.doLogin(this.email, this.password).then(res => {
         if (res == true) {
-          this.navCtrl.setRoot(WelcomePage);
+          this.navCtrl.setRoot(WelcomePage,this.IsHr);
         } else {
           this.alertCtrl.create(
             {

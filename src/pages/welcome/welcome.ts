@@ -15,12 +15,24 @@ import { ServicesProvider } from '../../providers/services';
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
-
+   IsHr : boolean = false;
   constructor(public navCtrl: NavController, private RequestBE: ServicesProvider) {
-    
-    
-    
+  this.SetHr();
   }
+
+
+  SetHr(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsHrorAdminorOwner(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsHr=false;
+      }else{
+        this.IsHr=true;
+      }
+    });
+  }
+ 
+ 
   GoBack(){
 
     this.navCtrl.pop();
