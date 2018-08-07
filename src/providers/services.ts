@@ -638,4 +638,23 @@ IsHrorAdminorOwner(username){
       });
   });
 }
+  IsManagerorAdminorOwner(username) { // done
+      ({
+        "username": username
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "IsManagerorAdminorOwner", username).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
 }
