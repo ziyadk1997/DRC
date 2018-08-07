@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {RequestInfoPage} from '../../pages/RequestInfoPage/RequestInfoPage';
+import { RequestInfoPage } from '../../pages/RequestInfoPage/RequestInfoPage';
 import { ServicesProvider } from '../../providers/services'
 @Component({
   selector: 'page-ViewRequested',
@@ -11,22 +11,21 @@ export class ViewRequested {
   constructor(public navCtrl: NavController, private RequestBE: ServicesProvider) {
 
   }
- 
-  ionViewDidLoad()
-  {
+
+  ionViewDidLoad() {
     var username = localStorage.getItem("username");
     this.RequestBE.ViewMyReviewedRequests(username).then((res: any) => {
-      if(res!=null){
-      this.requests = res;
-    }});
+      if (res != null) {
+        this.requests = res;
+      }
+    });
   }
 
-  ViewDetails(requestid : any){
+  ViewDetails(requestid: any) {
     console.log(requestid);
-    localStorage.setItem('requestid',requestid);
-    this.navCtrl.push(RequestInfoPage)
+    this.navCtrl.push(RequestInfoPage, { reqId: requestid })
   }
-  GoToRequestInfo(){
+  GoToRequestInfo() {
 
   }
 }

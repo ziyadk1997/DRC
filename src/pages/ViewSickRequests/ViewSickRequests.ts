@@ -20,7 +20,8 @@ export class ViewSickRequests {
       this.requests = res;
     }});
   }
-  GoToViewRequest() {
-    this.navCtrl.push(RequestInfoPage);
+ 
+  ViewDetails(requestid: any){
+    this.navCtrl.push(RequestInfoPage, { reqId: requestid });
   }
 }
