@@ -15,6 +15,9 @@ export class LoginPage {
       this.loginBE.IsManagerorAdminorOwner(username).then((res: any) => {
        console.log(res)
       });
+      this.loginBE.IsHrorAdminorOwner(username).then((res: any) => {
+       console.log(res)
+      });
   }
   email: any;
   password: any;
