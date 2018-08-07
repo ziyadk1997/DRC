@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      work from home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content  class="back" padding id="page1">
+    <div class="img">
+        <ion-img src="assets\imgs\freelancer-icon1.png" >
+      </ion-img> 
+      </div>
+  <div id="workFromHome-container6" >
+    <form id="workFromHome-form2">
+        <div class="datefrom">
+            <ion-item style=" background-color: transparent; color: grey;">
+                <ion-label>From</ion-label>
+                <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="MyDateFrom" [ngModelOptions]="{standalone: true}">
+                </ion-datetime>
+                <ion-icon name="calendar" item-right style="color: rgb(69, 154, 194)" ></ion-icon>
+              </ion-item> 
+    </div>
+    <div class="dateto">
+        <ion-item style=" background-color: transparent; color: grey;">
+            <ion-label>To</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="MyDateTo" [ngModelOptions]="{standalone: true}" style="color: white">
+            </ion-datetime>
+            <ion-icon name="calendar" item-right style="color: rgb(69, 154, 194)" ></ion-icon>
+          </ion-item>
+    </div>
+    </form>
+    <br> 
+    <div id="applyLeave-container2">
+      <form id="applyLeave-form7">
+        <ion-item id="applyLeave-input8" style=" background-color: transparent; ">
+          <ion-input type="text" class="place" placeholder="Comment" class="custom-input"></ion-input>
+          <br>
+          <br>
+          <br>
+        </ion-item>
+      </form>
+    </div>
+    <div>
+      <button ion-button  block round (click)='GoToWorkFromHomeSummaryPage()' class="b-work" > Apply Request </button>
+    </div> 

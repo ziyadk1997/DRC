@@ -1,0 +1,47 @@
+page-create-profile {
+    .back {
+        background-color:transparent;
+        background-image: url('../assets/imgs/b1.png');}
+        .item {
+            background-color:transparent;
+        }
+       
+
+        .item ::placeholder {
+            color: rgb(64, 177, 243);
+        }
+    .saveb{
+            background: rgba(4, 187, 44, 0.171);  
+    }
+    .continue{
+        background: rgba(10, 130, 241, 0.171);  
+    }
+    .toolbar-background-md,.header-md::after{
+        background-color:transparent !important;
+    }
+   
+   /* .float-right{
+        float: right;
+    }
+    .float-left{
+        float: left;
+    }
+    .inline-block{
+        display:inline-block;
+    }
+    .img{
+        width:40%;
+    }
+    .width-60{
+        width:60%;
+    }
+    .Save{
+        color: gray;
+    }
+   */
+.toolbar-title-md{
+        text-align: center;
+        color:white;
+
+    }
+}

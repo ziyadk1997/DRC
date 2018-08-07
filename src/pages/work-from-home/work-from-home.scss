@@ -1,0 +1,42 @@
+page-work-from-home {
+    .back {
+        background-color:transparent;
+        background-image: url('../assets/imgs/b1.png');}
+
+.datefrom{
+    display: inline-block!important;
+    width: 49%;
+    color: #d1d1d1; }
+
+  .dateto{
+      display: inline-block!important;
+    width: 49%;
+    color: #d1d1d1; }
+}
+.b-work{
+    text-align: center;
+    display: block !important ;
+    background-color:  rgba(62, 186, 240, 0.699) !important;
+}
+.img{
+    display: block;
+    margin-left: auto;
+     margin-right: auto;
+     text-align:center;
+}
+ion-input {
+    &.custom-input {
+      font-size: 20px; //sets text font size
+      ::placeholder {
+        color : grey; //sets placeholder font size
+      }
+    }
+  }
+  input {
+    border-style:none;
+    color: #d1d1d1;
+   
+}
+
+  
+

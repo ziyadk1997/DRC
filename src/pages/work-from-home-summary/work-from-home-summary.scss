@@ -1,0 +1,63 @@
+page-work-from-home-summary {
+    .back {
+        background-image: url('../assets/imgs/b1.png');
+    } 
+    .Salary{
+background: transparent;
+color: grey;
+    }
+    .Fsalary{
+        background: transparent;
+        color: grey;
+    }
+    .Head{
+        background: transparent;
+        color: #f7f8f5;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .datefrom{
+        display: inline-block!important;
+        width: 49%;
+        color: #d1d1d1;
+        margin: 10px;
+        font-weight: bold;
+      }
+      .dateto{
+          display: inline-block!important;
+        color: #d1d1d1;
+        font-weight: bold;
+      }
+    .Date2{
+        text-align: center;
+        color: grey;
+    }
+    .container1{
+        border:1px solid rgb(255, 255, 255);
+        height:13%;
+        border-color:rgb(250, 243, 248);
+        border-radius : 15px;
+        margin: 5px;
+    }
+    .container2{
+        border:1px solid rgb(255, 255, 255);
+        height: 13%;
+        border-color:rgb(243, 7, 184);
+        border-radius : 15px;
+        margin: 5px;
+    }
+    .container3{
+        border:1px solid rgb(255, 255, 255);
+        height: 13%;
+        border-color:rgb(88, 226, 88);
+        border-radius : 15px;
+        
+        margin: 5px;
+    }
+
+.icon{
+color: blueviolet;
+margin-right: 10px;
+}
+}
