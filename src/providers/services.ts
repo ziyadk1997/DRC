@@ -351,12 +351,7 @@ export class ServicesProvider {
   }
   
   ViewMyReviewedRequests(username) {
-    // var request = JSON.stringify
-    //   ({
-    //     "username": username,
-  
-
-    //   });
+   
 
     return new Promise((resolve, reject) => {
       this.http.get(config.apiUrl + "ViewMyReviewedRequests/"+username).timeout(config.getTimeout).subscribe(res => {
@@ -373,28 +368,7 @@ export class ServicesProvider {
     });
   }
 
-  // ViewRequestsInfo(username) {
-  //   var request = JSON.stringify
-  //     ({
-  //       "username": username,
-  
 
-  //     });
-
-  //   return new Promise((resolve, reject) => {
-  //     this.http.post(config.apiUrl + "ViewMyReviewedRequests", request).timeout(config.getTimeout).subscribe(res => {
-  //       try {
-  //         resolve(res);
-  //       }
-  //       catch (e) {
-  //         reject(false);
-  //       }
-  //     },
-  //       error => {
-  //         reject(error);
-  //       });
-  //   });
-  // }
 
 HRorOwnerorAdminViewEmployees(username) {
     var request = JSON.stringify
@@ -617,4 +591,36 @@ HRorOwnerorAdminViewEmployees(username) {
     });
   }
   
+<<<<<<< HEAD
+  RejectRequest(reviewerusername, requestid,comment) {
+    var request = JSON.stringify
+      ({
+        "reviewerusername": reviewerusername,
+         "requestid" : requestid,
+         "comment" :comment
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "RejectRequest", request).timeout(config.getTimeout).subscribe(res => {
+=======
+  IsManagerorAdminorOwner(username) { // done
+      ({
+        "username": username
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "IsManagerorAdminorOwner", username).timeout(config.getTimeout).subscribe(res => {
+>>>>>>> 51b395c814f38bac3facba2fd793a9d672443104
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
 }

@@ -10,7 +10,7 @@ import { AlertController } from 'ionic-angular';
 export class RequestInfoPage {
   requests: any = [];
   requestid: any;
-
+  comment : any;
   constructor(public navCtrl: NavController, private navparams: NavParams, private alertCtrl: AlertController, private RequestBE: ServicesProvider) {
     this.requestid = this.navparams.data.reqId;
     console.log(this.requestid)
@@ -44,6 +44,34 @@ export class RequestInfoPage {
         ).present()
       }
     });
+  }
+
+  RejectRequest() {
+    var username = localStorage.getItem("username");
+    if(this.comment!=null){
+    this.RequestBE.RejectRequest(username, this.requestid,this.comment).then((res: any) => {
+      if (res == true) {
+        this.navCtrl.setRoot(ViewRequested);
+      } else {
+        this.alertCtrl.create(
+          {
+            title: 'Operation Failed',
+            subTitle: 'Wrong username or password',
+            buttons: ['Dismiss']
+          }
+        ).present()
+      }
+    });
+  }
+  else{
+    this.alertCtrl.create(
+      {
+        title: 'Rejection Failed',
+        subTitle: 'Please enter cause for rejection',
+        buttons: ['Dismiss']
+      }
+    ).present()
+  }
   }
 
 }
