@@ -14,7 +14,7 @@ export class LoginPage {
   }
   email: any;
   password: any;
-  
+
   Login() {
       //this.navCtrl.setRoot(WelcomePage);
    if (this.email == null || this.password == null) {
@@ -41,8 +41,3 @@ export class LoginPage {
         }
       });
     }
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 5f38c6b66a1a60478adcbb7e9a4d2cc41de02748
-  }
