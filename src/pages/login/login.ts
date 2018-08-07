@@ -26,7 +26,7 @@ export class LoginPage {
         }
       ).present()
     } else {
-      localStorage.setItem('username',this.email.split("@")[0]);
+      localStorage.setItem('username',this.email.split("@")[0].toLowerCase());
       this.loginBE.doLogin(this.email, this.password).then(res => {
         if (res == true) {
           this.navCtrl.setRoot(WelcomePage);
