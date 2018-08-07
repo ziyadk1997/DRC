@@ -14,9 +14,14 @@ page-create-profile0 {
   ion-input {
     &.custom {
       font-size: 20px; //sets text font size
+      color: rgb(101, 101, 240);
       ::placeholder {
-        color : blueviolet; //sets placeholder font size
+        color : white; //sets placeholder font size
       }
     }
+  }
+  .Checkbox1{
+    background-color: transparent;
+    color: white;
   }
 }
