@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/timeout';
 import { config } from './config'
+import { resolveDefinition } from '../../node_modules/@angular/core/src/view/util';
 /*
   Generated class for the LoginProvider provider.
 
@@ -591,36 +592,14 @@ HRorOwnerorAdminViewEmployees(username) {
     });
   }
   
-  RejectRequest(reviewerusername, requestid,comment) {
-    var request = JSON.stringify
-      ({
-        "reviewerusername": reviewerusername,
-         "requestid" : requestid,
-         "comment" :comment
-      });
 
-    return new Promise((resolve, reject) => {
-      this.http.post(config.apiUrl + "RejectRequest", request).timeout(config.getTimeout).subscribe(res => {
-        try {
-          resolve(res);
-        }
-        catch (e) {
-          reject(false);
-        }
-      },
-        error => {
-          reject(error);
-        });
-    });
-  }
-  IsManagerorAdminorOwner(username) { // done
-    ({
-      "username": username
-    });
+IsHrorAdminorOwner(username){
+  var user=JSON.stringify({
+    "username" : username
+  });
 
   return new Promise((resolve, reject) => {
-    this.http.post(config.apiUrl + "IsManagerorAdminorOwner", username).timeout(config.getTimeout).subscribe(res => {
-
+    this.http.post(config.apiUrl + "IsHrorAdminorOwner", user).timeout(config.getTimeout).subscribe(res => {
       try {
         resolve(res);
       }
@@ -633,4 +612,23 @@ HRorOwnerorAdminViewEmployees(username) {
       });
   });
 }
+  IsManagerorAdminorOwner(username) { // done
+      ({
+        "username": username
+      });
+
+    return new Promise((resolve, reject) => {
+      this.http.post(config.apiUrl + "IsManagerorAdminorOwner", username).timeout(config.getTimeout).subscribe(res => {
+        try {
+          resolve(res);
+        }
+        catch (e) {
+          reject(false);
+        }
+      },
+        error => {
+          reject(error);
+        });
+    });
+  }
 }
