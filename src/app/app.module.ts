@@ -35,7 +35,6 @@ import {TravelExpensePage} from '../pages/travelexpense/travelexpense';
 import {ViewAnnualRequests } from '../pages/ViewAnnualRequests/ViewAnnualRequests';
 import {ViewSickRequests} from '../pages/ViewSickRequests/ViewSickRequests';
 import {ViewCasualRequests} from '../pages/ViewCasualRequests/ViewCasualRequests';
-import {ViewRequestInfo} from '../pages/ViewRequestInfo/ViewRequestInfo';
 import {ViewWorkFromHomeRequests} from '../pages/ViewWorkFromHomeRequests/ViewWorkFromHomeRequests';
 import {CreateProfilePage} from '../pages/create-profile0/create-profile0';
 import {CreateProfile2} from '../pages/create-profile2/create-profile2';
@@ -71,7 +70,6 @@ import {CreateProfile1Page} from '../pages/create-profile/create-profile';
     ViewSickRequests,
     ViewCasualRequests,
     ViewWorkFromHomeRequests,
-    ViewRequestInfo,
     CreateProfilePage,
     CreateProfile2,
     CreateProfile1Page
@@ -117,7 +115,6 @@ import {CreateProfile1Page} from '../pages/create-profile/create-profile';
     ViewSickRequests,
     ViewCasualRequests,
     ViewWorkFromHomeRequests,
-    ViewRequestInfo,
     CreateProfilePage,
     CreateProfile2,
     CreateProfile1Page

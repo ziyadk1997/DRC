@@ -14,7 +14,7 @@ import { ServicesProvider } from '../../providers/services'
 export class ViewProfilePage {
   option: any;
   infos: any = {};
-  Name: any;
+  userName: any;
   constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider) {
   }
 
@@ -27,19 +27,19 @@ export class ViewProfilePage {
     this.navCtrl.pop();
   }
   GoToSkills() {
-    this.navCtrl.push(ViewProfile2Page);
+    this.navCtrl.push(ViewProfile2Page , this.infos)
   }
   GoToWorkExperience() {
-    this.navCtrl.push(ViewProfile3Page);
+    this.navCtrl.push(ViewProfile3Page,this.infos);
   }
   GoToEducation() {
-    this.navCtrl.push(ViewProfile4Page);
+    this.navCtrl.push(ViewProfile4Page,this.infos); 
   }
   GoToLanguage() {
-    this.navCtrl.push(ViewProfile5Page);
+    this.navCtrl.push(ViewProfile5Page,this.infos);
   }
-  GoToAttachments() {
-    this.navCtrl.push(ViewProfile6Page);
+  GoToAttachmets() {
+    this.navCtrl.push(ViewProfile6Page,this.infos);
   }
 
   UploadImage() {
@@ -64,7 +64,7 @@ export class ViewProfilePage {
 
       // }
       this.infos = res;
-      this.Name = res[0];
+      this.userName = username;
     })
 
 
