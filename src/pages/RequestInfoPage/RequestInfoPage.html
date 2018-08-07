@@ -10,16 +10,19 @@
 
         <ion-card-content>
             <ion-list *ngFor="let request of requests">
-                <h4 class="Headers">{{request.Date}}</h4>
+                <h4 class="Headers">Request-Date :{{request.Date}}</h4>
                 <br>
                 <br>
-                <h4 class="Headers">{{request.Status}}</h4>
+                <h4 class="Headers"><span item-left> From : {{request.From}} </span> <span item-right>To : {{request.To}} </span> </h4>
                 <br>
                 <br>
-                <h1 class="Headers">{{request.Employeeusername}}</h1>
+                <h4 class="Headers">Request-Status :{{request.Status}}</h4>
                 <br>
                 <br>
-                <h2 class="Headers">{{request.Comment}}</h2>
+                <h1 class="Headers">EmployeeName :{{request.Employeeusername}}</h1>
+                <br>
+                <br>
+                <h2 class="Headers">Comment :{{request.Comment}}</h2>
                 <br>
                 <br>
                 <h3 class="Headers">{{request.name}}</h3>
