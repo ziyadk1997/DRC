@@ -15,8 +15,12 @@ page-create-profile0 {
     &.custom {
       font-size: 20px; //sets text font size
       ::placeholder {
-        color : blueviolet; //sets placeholder font size
+        color : white; //sets placeholder font size
       }
     }
+  }
+  .Checkbox1{
+    background-color: transparent;
+    color: white;
   }
 }

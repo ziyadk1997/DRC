@@ -10,7 +10,7 @@
     Basic Information
   </h4>
   <form id="createProfile-form20">
-    <ion-item id="createProfile-input22">
+    <ion-item id="createProfile-input22" style="background-color: transparent;">
       <ion-input type="text" placeholder="Full Name"></ion-input>
     </ion-item>
     <h5 id="createProfile-heading20" style="color:grey;">
@@ -71,34 +71,34 @@
     <h5 id="createProfile-heading16" style="color:grey;">
       Military Services
     </h5>
-    <ion-item id="createProfile-checkbox7">
+    <ion-item id="createProfile-checkbox7" class="Checkbox1">
       <ion-label>
         Not Applicable
       </ion-label>
       <ion-checkbox></ion-checkbox>
     </ion-item>
-    <ion-item id="createProfile-checkbox8">
+    <ion-item id="createProfile-checkbox8" class ="Checkbox1">
       <ion-label>
         Exampled
       </ion-label>
       <ion-checkbox></ion-checkbox>
     </ion-item>
-    <ion-item id="createProfile-checkbox6">
+    <ion-item id="createProfile-checkbox6" class=" Checkbox1" >
       <ion-label>
         Completed
       </ion-label>
       <ion-checkbox></ion-checkbox>
     </ion-item>
-    <ion-item id="createProfile-checkbox5">
+    <ion-item id="createProfile-checkbox5" class="Checkbox1">
       <ion-label>
         Postponed
       </ion-label>
       <ion-checkbox></ion-checkbox>
     </ion-item>
-    <button id="createProfile-button15" ion-button color="positive" block>
+    <button id="createProfile-button15" ion-button color="positive" block round (click)="GoToProfile2()" style="color:white;background-color:  rgb(21, 75, 119)">
       Continue
     </button>
-    <button id="createProfile-button16" ion-button color="positive" block>
+    <button id="createProfile-button16" ion-button color="positive" block round style="color: white;background-color: rgb(21, 75, 119)">
       Save
     </button>
   </form>
