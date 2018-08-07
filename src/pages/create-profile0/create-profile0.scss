@@ -1,0 +1,27 @@
+page-create-profile0 {
+    .back {
+        background-color:transparent;
+        background-image: url('../assets/imgs/b1.png');
+}
+.Gender{
+    background-color:transparent;
+    display: inline-block!important;
+    width: 35%;
+    height: 40px;
+    border:1px solid rgb(44, 101, 255);
+    border-radius: 30px;
+  }
+  ion-input {
+    &.custom {
+      font-size: 20px; //sets text font size
+      color: rgb(101, 101, 240);
+      ::placeholder {
+        color : white; //sets placeholder font size
+      }
+    }
+  }
+  .Checkbox1{
+    background-color: transparent;
+    color: white;
+  }
+}

@@ -7,6 +7,7 @@ import { LoginPage } from '../login/login';
 import { FinancialPage} from '../../pages/financial/financial';
 import {ViewRequested} from '../../pages/ViewRequested/ViewRequested';
 import { TravelExpensePage } from '../travelexpense/travelexpense';
+import { CreateProfilePage } from '../create-profile0/create-profile0';
 
 
 @Component({
@@ -44,6 +45,9 @@ export class WelcomePage {
   GoToTravelExpensePage(){
     this.navCtrl.push(TravelExpensePage);
 
+  }
+  GoToCreatePage(){
+this.navCtrl.push(CreateProfilePage);
   }
   
 }

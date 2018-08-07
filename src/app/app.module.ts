@@ -37,7 +37,8 @@ import {ViewSickRequests} from '../pages/ViewSickRequests/ViewSickRequests';
 import {ViewCasualRequests} from '../pages/ViewCasualRequests/ViewCasualRequests';
 import {ViewRequestInfo} from '../pages/ViewRequestInfo/ViewRequestInfo';
 import {ViewWorkFromHomeRequests} from '../pages/ViewWorkFromHomeRequests/ViewWorkFromHomeRequests';
-
+import {CreateProfilePage} from '../pages/create-profile0/create-profile0';
+import {CreateProfile2} from '../pages/create-profile2/create-profile2';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,10 @@ import {ViewWorkFromHomeRequests} from '../pages/ViewWorkFromHomeRequests/ViewWo
     ViewSickRequests,
     ViewCasualRequests,
     ViewWorkFromHomeRequests,
-    ViewRequestInfo
+    ViewRequestInfo,
+    CreateProfilePage,
+    CreateProfile2
+    
   ],
   imports: [
     BrowserModule,
@@ -110,7 +114,9 @@ import {ViewWorkFromHomeRequests} from '../pages/ViewWorkFromHomeRequests/ViewWo
     ViewSickRequests,
     ViewCasualRequests,
     ViewWorkFromHomeRequests,
-    ViewRequestInfo
+    ViewRequestInfo,
+    CreateProfilePage,
+    CreateProfile2
   ],
   providers: [
     StatusBar,
