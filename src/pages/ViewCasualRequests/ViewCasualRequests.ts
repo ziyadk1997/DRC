@@ -21,8 +21,8 @@ export class ViewCasualRequests {
     }});
   }
   
- ViewDetails(){
-    this.navCtrl.push(RequestInfoPage);
+  ViewDetails(requestid: any){
+    this.navCtrl.push(RequestInfoPage, { reqId: requestid });
   }
   
 }

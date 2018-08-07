@@ -20,7 +20,7 @@ export class ViewWorkFromHomeRequests {
       this.requests = res;
     }});
   }
-  ViewDetails(){
-    this.navCtrl.push(RequestInfoPage)
+  ViewDetails(requestid: any){
+    this.navCtrl.push(RequestInfoPage, { reqId: requestid });
   }
 }

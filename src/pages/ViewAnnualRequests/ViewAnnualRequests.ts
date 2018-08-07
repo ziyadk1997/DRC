@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ServicesProvider } from '../../providers/services'
 import { RequestInfoPage } from '../RequestInfoPage/RequestInfoPage';
-
 @Component({
   selector: 'page-ViewAnnualRequests',
   templateUrl: 'ViewAnnualRequests.html'
@@ -20,8 +19,9 @@ export class ViewAnnualRequests {
       this.requests = res;
     }});
   }
-  ViewDetails(){
-    this.navCtrl.push(RequestInfoPage);
+  ViewDetails(requestid: any){
+    //console.log(requestid)
+    this.navCtrl.push(RequestInfoPage, { reqId: requestid });
   }
 
 }
