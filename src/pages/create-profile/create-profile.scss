@@ -11,8 +11,11 @@ page-create-profile {
             color: rgb(64, 177, 243);
         }
     .saveb{
-            background: rgba(4, 187, 44, 0.171);  
+            background: rgba(72, 211, 72, 0.171);  
     }
+    .Save{
+        color: gray; 
+    }    
     .continue{
         background: rgba(10, 130, 241, 0.171);  
     }
@@ -43,5 +46,13 @@ page-create-profile {
         text-align: center;
         color:white;
 
+    }
+    ._seperator-border{
+        height: 1px;
+        width: 100%;
+        background-image: radial-gradient(50% 50%, #169DD9 56%, rgba(22, 157, 217, 0) 100%)
+    }
+    .input-text{
+        color: white;
     }
 }
