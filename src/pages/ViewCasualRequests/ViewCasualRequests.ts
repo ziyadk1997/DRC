@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ViewRequestInfo } from '../ViewRequestInfo/ViewRequestInfo';
+import {RequestInfoPage} from '../../pages/RequestInfoPage/RequestInfoPage';
 import { ServicesProvider } from '../../providers/services'
 
 @Component({
@@ -22,7 +22,7 @@ export class ViewCasualRequests {
   }
   
  ViewDetails(){
-    this.navCtrl.push(ViewRequestInfo);
+    this.navCtrl.push(RequestInfoPage);
   }
   
 }

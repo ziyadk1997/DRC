@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ViewRequestInfo } from '../ViewRequestInfo/ViewRequestInfo';
 import { ServicesProvider } from '../../providers/services'
 import {RequestInfoPage} from '../../pages/RequestInfoPage/RequestInfoPage';
 
