@@ -8,7 +8,7 @@ import { FinancialPage} from '../../pages/financial/financial';
 import {ViewRequested} from '../../pages/ViewRequested/ViewRequested';
 import { TravelExpensePage } from '../travelexpense/travelexpense';
 import { CreateProfilePage } from '../create-profile0/create-profile0';
-
+import { ServicesProvider } from '../../providers/services';
 
 @Component({
   selector: 'page-welcome',
@@ -16,7 +16,9 @@ import { CreateProfilePage } from '../create-profile0/create-profile0';
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private RequestBE: ServicesProvider) {
+    
+    
     
   }
   GoBack(){
