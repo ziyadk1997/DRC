@@ -1,6 +1,6 @@
 page-apply-leave {
     .homeall{
-        color: blueviolet;
+        color: rgb(142, 196, 247);
     }
     .datefrom{
       display: inline-block!important;
@@ -13,7 +13,7 @@ page-apply-leave {
       color: #d1d1d1;
     }
     .leavet{
-        color:blueviolet;
+        color:rgb(142, 196, 247);
     }
     input {
         border-style:none;
@@ -22,7 +22,7 @@ page-apply-leave {
     }
     .fromlabel{
         width: 100%;
-       color:blueviolet;
+       color:rgb(142, 196, 247);
     }
     .date-input{
         width: 50%;
@@ -49,11 +49,11 @@ page-apply-leave {
     }
     .cont{
         width:32%;
-        border-color:blueviolet;
+        border-color:rgb(142, 196, 247);
         border-radius : 15px;
         display: inline-block;
         border:1px solid rgb(255, 255, 255);
-        box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+        box-shadow: 0 5px 15px rgb(142, 196, 247);
     }
    
     .selected {
@@ -73,7 +73,7 @@ page-apply-leave {
         &.custom-input {
           font-size: 20px; //sets text font size
           ::placeholder {
-            color : blueviolet; //sets placeholder font size
+            color : rgb(142, 196, 247); //sets placeholder font size
           }
         }
       }
