@@ -39,6 +39,8 @@ import {ViewWorkFromHomeRequests} from '../pages/ViewWorkFromHomeRequests/ViewWo
 import {CreateProfilePage} from '../pages/create-profile0/create-profile0';
 import {CreateProfile2} from '../pages/create-profile2/create-profile2';
 import {CreateProfile1Page} from '../pages/create-profile/create-profile';
+import { IonRating } from '../app/ion-rating/ion-rating';
+
 
 @NgModule({
   declarations: [
@@ -72,7 +74,8 @@ import {CreateProfile1Page} from '../pages/create-profile/create-profile';
     ViewWorkFromHomeRequests,
     CreateProfilePage,
     CreateProfile2,
-    CreateProfile1Page
+    CreateProfile1Page,
+    IonRating 
     
   ],
   imports: [
@@ -117,7 +120,8 @@ import {CreateProfile1Page} from '../pages/create-profile/create-profile';
     ViewWorkFromHomeRequests,
     CreateProfilePage,
     CreateProfile2,
-    CreateProfile1Page
+    CreateProfile1Page,
+    IonRating 
   ],
   providers: [
     StatusBar,

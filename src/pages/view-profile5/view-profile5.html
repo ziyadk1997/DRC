@@ -27,15 +27,54 @@
   <h4 id="viewProfile5-heading24" style="color:#ffffff;font-weight:600;">
     Languages
   </h4>
-  <form id="viewProfile5-form12">
-    <ion-item id="viewProfile5-range5">
-      <ion-range min="0" max="100" step="1" color="positive" value="50">
-        <ion-label range-left>
-          #Language
-        </ion-label>
-      </ion-range>
-    </ion-item>
-  </form>
+
+  <ion-list *ngFor="let language of infos.languages">
+      <ion-item style="background-color:transparent;"class="List">
+          
+          <p style="color: silver;">Language:</p>
+          <p style="color: teal">{{language.language}}</p>
+
+          <p style="color: silver;">Reading:</p>
+          <ion-rating style="color:teal;"
+              [numStars]="5"
+                [readOnly]="true"
+             [value]=language.reading
+             >
+           </ion-rating>
+
+           <p style="color: silver;">Writing:</p>
+           <ion-rating style="color:teal;"
+           [numStars]="5"
+             [readOnly]="true"
+          [value]=language.writing
+          >
+        </ion-rating>
+
+        <p style="color: silver;">Listening:</p>
+           <ion-rating style="color:teal;"
+           [numStars]="5"
+             [readOnly]="true"
+          [value]=language.listening
+          > </ion-rating>
+
+          <p style="color: silver;">Speaking:</p>
+           <ion-rating style="color:teal;"
+           [numStars]="5"
+             [readOnly]="true"
+          [value]=language.speaking
+          ></ion-rating>
+
+          <p style="color: silver;">Jusification:</p>
+          <p style="color: teal">{{language.jusification}}</p>
+
+        
+           
+
+
+
+
+      </ion-item>
+  </ion-list>
   <button id="Add-Language" ion-button (click)="AddNewLanguage()" color="stable" round block>Add New Language</button>
 
 </ion-content>
