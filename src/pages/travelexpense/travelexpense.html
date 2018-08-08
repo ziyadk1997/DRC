@@ -6,32 +6,25 @@
     </ion-navbar>
   </ion-header>
   <ion-content class="back" padding id="page13">
-    <h1 class="Head" id="expense-heading10" style="color:#a08989;">
+    <h1 class="Head" id="expense-heading10" style="color:silver">
       Previous Expenses
     </h1>
-    <div class="container">
-        <ion-label  class="Date"  align-left>
-          14/7/2018
-        </ion-label>
-      <ion-label class="Date2" align-centre style="font-size: 20px">
-          -1800
-        </ion-label>
-    </div>
-    <div class="container">
-        <ion-label  class="Date"  align-left>
-          13/7/2018
-        </ion-label>
-      <ion-label class="Date2" align-centre style="font-size: 20px">
-          2000
-        </ion-label>
-    </div>
-    <div class="container">
-        <ion-label  class="Date"  align-left>
-          13/7/2018
-        </ion-label>
-      <ion-label class="Date2" align-centre style="font-size: 20px">
-          1000
-        </ion-label>
-    </div>
+    <ion-list *ngFor="let request of requests">
+      <ion-item class="List">
+          <ion-thumbnail *ngIf="request.Status =='Pending'" item-start item>
+              <img src="assets/imgs/Pending.png">
+          </ion-thumbnail>
+          <ion-thumbnail *ngIf="request.Status =='Accepted'" item-start item>
+              <img src="assets/imgs/Accepted.png">
+          </ion-thumbnail>
+          <ion-thumbnail *ngIf="request.Status =='Rejected'" item-start item>
+              <img src="assets/imgs/Rejected.png">
+          </ion-thumbnail>
+          <p style="color: silver">{{request.Type}}</p>
+          <p style="color: silver">{{request.Date}}</p>
+          <p style="color: silver">{{request.Reviewerusername}}</p>
+          <button ion-button clear item-end style="color: orange" (click)="ViewDetails(request.Id)">View Request</button>
+      </ion-item>
+  </ion-list>
     <button id="xpense" ion-button class="Apply" block round outline (click)="GoToReceiptClaimPage()">Apply For Receipt Claim</button>
   </ion-content>
