@@ -27,14 +27,44 @@
   <h4 id="viewProfile2-heading9" style="color:#ffffff;font-weight:600;">
     Skills
   </h4>
-  <form id="viewProfile2-form10">
-    <ion-item id="viewProfile2-range3">
-      <ion-range min="0" max="100" step="1" color="positive" value="50">
-        <ion-label range-left>
-          #SkillType
-        </ion-label>
-      </ion-range>
+  <!-- <form id="viewProfile2-form10">
+    <ion-item id="viewProfile2-range3" >
+        <ion-rating style="color:teal"
+        [numStars]="5"
+        [readOnly]="false"
+        [value]="0" >
+      </ion-rating>
     </ion-item>
-  </form>
+  </form> -->
+
+  <ion-list *ngFor="let skill of infos.skills">
+      <ion-item style="background-color:transparent;"class="List">
+          
+          <p style="color: silver;">skill name:</p>
+          <p style="color: teal">{{skill.skill}}</p>
+          <p style="color: silver;">profeciency:</p>
+          <ion-rating style="color:teal;"
+              [numStars]="5"
+                [readOnly]="true"
+             [value]=skill.profeciency >
+           </ion-rating>
+
+           <p style="color: silver;">interest:</p>
+           <ion-rating style="color:teal;"
+              [numStars]="5"
+                [readOnly]="true"
+             [value]=skill.interest >
+           </ion-rating>
+           <p style="color: silver;">years of experience:</p>
+           <p style="color: teal">{{skill.yearsOfExprince}}</p>
+
+
+
+
+      </ion-item>
+  </ion-list>
   <button id="Add-Skill" ion-button (click)="AddNewSkill()" color="stable" round block>Add New Skill </button>
+
+
+  
 </ion-content>

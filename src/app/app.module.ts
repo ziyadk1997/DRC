@@ -39,7 +39,12 @@ import {ViewWorkFromHomeRequests} from '../pages/ViewWorkFromHomeRequests/ViewWo
 import {CreateProfilePage} from '../pages/create-profile0/create-profile0';
 import {CreateProfile2} from '../pages/create-profile2/create-profile2';
 import {CreateProfile1Page} from '../pages/create-profile/create-profile';
+<<<<<<< HEAD
 import {CreateProfile3} from '../pages/create-profile3/create-profile3';
+=======
+import { IonRating } from '../app/ion-rating/ion-rating';
+
+>>>>>>> 4d43fbd84a714c45b4f314fc9b84c748a1bd90ec
 
 @NgModule({
   declarations: [
@@ -74,7 +79,11 @@ import {CreateProfile3} from '../pages/create-profile3/create-profile3';
     CreateProfilePage,
     CreateProfile2,
     CreateProfile1Page,
+<<<<<<< HEAD
     CreateProfile3
+=======
+    IonRating 
+>>>>>>> 4d43fbd84a714c45b4f314fc9b84c748a1bd90ec
     
   ],
   imports: [
@@ -120,7 +129,11 @@ import {CreateProfile3} from '../pages/create-profile3/create-profile3';
     CreateProfilePage,
     CreateProfile2,
     CreateProfile1Page,
+<<<<<<< HEAD
     CreateProfile3
+=======
+    IonRating 
+>>>>>>> 4d43fbd84a714c45b4f314fc9b84c748a1bd90ec
   ],
   providers: [
     StatusBar,

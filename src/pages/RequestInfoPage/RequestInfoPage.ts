@@ -14,8 +14,10 @@ export class RequestInfoPage {
   IsManager : boolean = false;
   IsOwner : boolean = false;
   IsAdmin : boolean = false;
+  username : any;
   constructor(public navCtrl: NavController, private navparams: NavParams, private alertCtrl: AlertController, private RequestBE: ServicesProvider) {
     this.requestid = this.navparams.data.reqId;
+    this.username = localStorage.getItem("username");
     console.log(this.requestid)
   this.SetManager();
   this.SetOwner();
@@ -26,8 +28,8 @@ export class RequestInfoPage {
 
   }
   SetAdmin(){
-    var username = localStorage.getItem("username");
-    this.RequestBE.IsAdmin(username).then((res) => {
+    
+    this.RequestBE.IsAdmin(this.username).then((res) => {
       if(res.toString() == "false"){
         this.IsAdmin=false;
       }else{
