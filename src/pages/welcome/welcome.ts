@@ -17,7 +17,14 @@ import { ServicesProvider } from '../../providers/services';
 export class WelcomePage {
 
   constructor(public navCtrl: NavController, private RequestBE: ServicesProvider) {
-    
+    var username = localStorage.getItem("username");
+      this.RequestBE.IsManagerorAdminorOwner(username).then((res: any) => {
+       console.log(res)
+      });
+      var username = localStorage.getItem("username");
+      this.RequestBE.IsHrorAdminorOwner(username).then((res: any) => {
+       console.log(res)
+      });
     
     
   }

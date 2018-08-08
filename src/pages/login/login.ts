@@ -11,10 +11,7 @@ import { ServicesProvider } from '../../providers/services';
 export class LoginPage {
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController, private loginBE: ServicesProvider) {
-    var username = localStorage.getItem("username");
-      this.loginBE.IsManagerorAdminorOwner(username).then((res: any) => {
-       console.log(res)
-      });
+    
   }
   email: any;
   password: any;
