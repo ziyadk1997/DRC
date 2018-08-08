@@ -23,7 +23,7 @@ export class WelcomePage {
 
   SetHr(){
     var username = localStorage.getItem("username");
-    this.RequestBE.IsHrorAdminorOwner(username).then((res) => {
+    this.RequestBE.IsHr(username).then((res) => {
       if(res.toString() == "false"){
         this.IsHr=false;
       }else{

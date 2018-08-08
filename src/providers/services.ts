@@ -633,13 +633,70 @@ HRorOwnerorAdminViewEmployees(username) {
       });
   });
 }
-IsHrorAdminorOwner(username){
+IsHr(username){
   var user=JSON.stringify({
     "username" : username
   });
 
   return new Promise((resolve, reject) => {
-    this.http.post(config.apiUrl + "IsHrorAdminorOwner", user).timeout(config.getTimeout).subscribe(res => {
+    this.http.post(config.apiUrl + "IsHr", user).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+IsManager(username){
+  var user=JSON.stringify({
+    "username" : username
+  });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "IsManager", user).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+IsOwner(username){
+  var user=JSON.stringify({
+    "username" : username
+  });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "IsOwner", user).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+IsAdmin(username){
+  var user=JSON.stringify({
+    "username" : username
+  });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "IsAdmin", user).timeout(config.getTimeout).subscribe(res => {
       try {
         resolve(res);
       }
