@@ -613,26 +613,6 @@ HRorOwnerorAdminViewEmployees(username) {
         });
     });
   }
-  IsManagerorAdminorOwner(username) { 
-    ({
-      "username": username
-    });
-
-  return new Promise((resolve, reject) => {
-    this.http.post(config.apiUrl + "IsManagerorAdminorOwner", username).timeout(config.getTimeout).subscribe(res => {
-
-      try {
-        resolve(res);
-      }
-      catch (e) {
-        reject(false);
-      }
-    },
-      error => {
-        reject(error);
-      });
-  });
-}
 IsHr(username){
   var user=JSON.stringify({
     "username" : username
@@ -656,7 +636,7 @@ IsManager(username){
   var user=JSON.stringify({
     "username" : username
   });
-
+  
   return new Promise((resolve, reject) => {
     this.http.post(config.apiUrl + "IsManager", user).timeout(config.getTimeout).subscribe(res => {
       try {
@@ -680,6 +660,8 @@ IsOwner(username){
     this.http.post(config.apiUrl + "IsOwner", user).timeout(config.getTimeout).subscribe(res => {
       try {
         resolve(res);
+        console.log(res);
+        
       }
       catch (e) {
         reject(false);

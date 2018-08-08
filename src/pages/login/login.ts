@@ -9,7 +9,6 @@ import { ServicesProvider } from '../../providers/services';
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  IsHr : boolean = false;
   constructor(public navCtrl: NavController, private alertCtrl: AlertController, private loginBE: ServicesProvider) {
     
   }
@@ -30,7 +29,7 @@ export class LoginPage {
       localStorage.setItem('username',this.email.split("@")[0].toLowerCase());
       this.loginBE.doLogin(this.email, this.password).then(res => {
         if (res == true) {
-          this.navCtrl.setRoot(WelcomePage,this.IsHr);
+          this.navCtrl.setRoot(WelcomePage);
         } else {
           this.alertCtrl.create(
             {
