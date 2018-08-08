@@ -23,6 +23,7 @@ export class WelcomePage {
   this.SetHr();
   this.SetManager();
   this.SetOwner();
+  this.SetAdmin();
   }
 
 
