@@ -711,4 +711,13 @@ ViewMyTransactions(username){
   });
 }
 
+AddAdmin(username){
+
+}
+RemoveAdmin(username){
+
+}
+RemoveEmployee(username){
+  
+}
 }
