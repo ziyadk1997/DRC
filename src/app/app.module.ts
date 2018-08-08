@@ -39,6 +39,7 @@ import {ViewWorkFromHomeRequests} from '../pages/ViewWorkFromHomeRequests/ViewWo
 import {CreateProfilePage} from '../pages/create-profile0/create-profile0';
 import {CreateProfile2} from '../pages/create-profile2/create-profile2';
 import {CreateProfile1Page} from '../pages/create-profile/create-profile';
+import { GlobalsService } from '../providers/globals';
 
 @NgModule({
   declarations: [
@@ -80,10 +81,7 @@ import {CreateProfile1Page} from '../pages/create-profile/create-profile';
     HttpModule,
     HttpClientModule,
     InterceptorModule,
-    IonicModule.forRoot(MyApp),
-    
-    
-    
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -124,7 +122,8 @@ import {CreateProfile1Page} from '../pages/create-profile/create-profile';
     SplashScreen,
     HttpClientModule,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    ServicesProvider
+    ServicesProvider,
+    GlobalsService
   ]
 })
 export class AppModule {}

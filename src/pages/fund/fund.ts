@@ -7,19 +7,12 @@ import { AlertController } from 'ionic-angular';
   templateUrl: 'fund.html'
 })
 export class FundPage {
-requests :any;
-  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider, private RequestBE: ServicesProvider, private alertCtrl: AlertController) {
+
+  constructor(public navCtrl: NavController,  private alertCtrl: AlertController) {
   }
   GoBack(){
     this.navCtrl.pop();
   }
-  ionViewDidLoad()
-  {
-    var username = localStorage.getItem("username");
-    this.RequestBE.ViewMySalary(username).then((res: any) => {
-      if(res!=null){
-      this.requests = res;
-    }});
-  }
+  
   
 }

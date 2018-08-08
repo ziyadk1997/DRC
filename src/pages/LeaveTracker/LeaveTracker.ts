@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ApplyLeavePage } from '../apply-leave/apply-leave';
 import { Chart } from '../../assets/Chart.js';
-import { Body } from '../../../node_modules/@angular/http/src/body';
+import { Body } from '@angular/http/src/body';
 import { AlertController } from 'ionic-angular';
 import { ServicesProvider } from '../../providers/services'
-import { WelcomePage } from '../../pages/welcome/welcome';
+import { WelcomePage } from '../welcome/welcome';
 import { ViewAnnualRequests } from '../ViewAnnualRequests/ViewAnnualRequests';
 import { ViewSickRequests } from '../ViewSickRequests/ViewSickRequests';
 import { ViewCasualRequests } from '../ViewCasualRequests/ViewCasualRequests';

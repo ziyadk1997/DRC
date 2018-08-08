@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ServicesProvider } from '../../providers/services'
-import {RequestInfoPage} from '../../pages/RequestInfoPage/RequestInfoPage';
+import {RequestInfoPage} from '../RequestInfoPage/RequestInfoPage';
 
 @Component({
   selector: 'page-ViewWorkFromHomeRequests',

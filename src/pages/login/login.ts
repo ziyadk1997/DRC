@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { WelcomePage } from '../../pages/welcome/welcome';
+import { WelcomePage } from '../welcome/welcome';
 import { HttpRequest, HttpResponse, HttpInterceptor, HttpHandler, HttpEvent, HttpClient } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
 import { ServicesProvider } from '../../providers/services';
+import { GlobalsService } from '../../providers/globals';
+
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
 })
 export class LoginPage {
   IsHr : boolean = false;
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private loginBE: ServicesProvider) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private loginBE: ServicesProvider, private globals: GlobalsService) {
     var username = localStorage.getItem("username");
       this.loginBE.IsManagerorAdminorOwner(username).then((res: any) => {
        console.log(res)
@@ -32,7 +34,9 @@ export class LoginPage {
         }
       ).present()
     } else {
-      localStorage.setItem('username',this.email.split("@")[0].toLowerCase());
+      var username = this.email.split("@")[0].toLowerCase();
+      this.globals.username = username;
+      localStorage.setItem('username',username);
       this.loginBE.doLogin(this.email, this.password).then(res => {
         if (res == true) {
           this.navCtrl.setRoot(WelcomePage,this.IsHr);

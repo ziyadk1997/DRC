@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
 import { AnnualRequestPage } from '../annual-request/annual-request';
-import { SwitchView } from '../../../node_modules/@angular/common/src/directives/ng_switch';
+import { SwitchView } from '@angular/common/src/directives/ng_switch';
 import { ServicesProvider } from '../../providers/services';
-import { WelcomePage } from '../../pages/welcome/welcome';
+import { WelcomePage } from '../welcome/welcome';
 import { AlertController } from 'ionic-angular';
 @Component({
   selector: 'page-apply-leave',

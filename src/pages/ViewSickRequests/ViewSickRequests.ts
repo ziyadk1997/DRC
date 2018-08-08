@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {RequestInfoPage} from '../../pages/RequestInfoPage/RequestInfoPage';
+import {RequestInfoPage} from '../RequestInfoPage/RequestInfoPage';
 import { ServicesProvider } from '../../providers/services'
 
 @Component({
