@@ -27,16 +27,23 @@
   <h4 id="viewProfile4-heading19" style="color:#ffffff;font-weight:600;">
     Education
   </h4>
-  <ion-list id="viewProfile4-list4">
-    <ion-item id="viewProfile4-list-item-container6">
-      <div id="viewProfile4-markdown10" class="show-list-numbers-and-dots">
-        <p style="margin-top:0px;color:#000000;">
-          Field of study : {{infos.fieldStudy}}.<br>
-          Degree         :{{infos.degree}}.<br>
-          University     :{{infos.university}}.
-        </p>
-      </div>
-    </ion-item>
+  <ion-list *ngFor="let EmpEducation of infos.education">
+      <ion-item style="background-color:transparent;"class="List">
+          
+          <p style="color: silver;">Field of study : </p>
+          <p style="color: teal">{{EmpEducation.fieldOfStudy}}.</p>
+        
+           <p style="color: silver;">Degree:</p>
+           <p style="color: teal">{{EmpEducation.degree}}</p>
+
+           <p style="color: silver;">school:</p>
+           <p style="color: teal">{{EmpEducation.school}}</p>
+
+           <p style="color: silver;">grade:</p>
+           <p style="color: teal">{{EmpEducation.grade}}</p>
+
+      </ion-item>
   </ion-list>
+ 
   <button id="Add-Education" ion-button (click)="AddNewEducation()" color="stable" round block>Add New Education</button>
 </ion-content>
