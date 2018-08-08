@@ -653,4 +653,28 @@ IsHrorAdminorOwner(username){
   });
 }
 
+
+ViewMySalary(username) {
+  var request = JSON.stringify
+    ({
+      "username": username,
+
+
+    });
+
+  return new Promise((resolve, reject) => {
+    this.http.get(config.apiUrl + "ViewMySalary/"+username).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+
 }
