@@ -692,4 +692,23 @@ IsAdmin(username){
   });
 }
 
+ViewMyTransactions(username){
+  var user=JSON.stringify({
+    "username" :username
+  });
+  return new Promise((resolve, reject) => {
+    this.http.get(config.apiUrl + "ViewMyTransactions/"+username).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+
 }
