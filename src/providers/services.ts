@@ -660,7 +660,6 @@ IsOwner(username){
     this.http.post(config.apiUrl + "IsOwner", user).timeout(config.getTimeout).subscribe(res => {
       try {
         resolve(res);
-        console.log(res);
         
       }
       catch (e) {
@@ -709,6 +708,25 @@ ViewMyTransactions(username){
         reject(error);
       });
   });
+}
+ViewMyExpenses(username){
+  var user=JSON.stringify({
+    "username" :username
+  });
+  return new Promise((resolve, reject) => {
+    this.http.get(config.apiUrl + "ViewMyExpenses/"+username).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+
 }
 
 AddAdmin(username){

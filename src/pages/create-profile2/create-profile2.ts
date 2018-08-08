@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { CreateProfile1Page } from '../create-profile/create-profile';
+import {CreateProfile3} from '../create-profile3/create-profile3';
 
 @Component({
   selector: 'page-create-profile2',
@@ -12,7 +13,8 @@ export class CreateProfile2 {
   constructor(public navCtrl: NavController) {
   }
   
-  GoToProfile1(){
-    this.navCtrl.push(CreateProfile1Page);
+
+  GoToCreate3(){
+    this.navCtrl.push(CreateProfile3);
   }
 }

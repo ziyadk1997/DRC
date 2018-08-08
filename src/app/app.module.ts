@@ -39,6 +39,7 @@ import {ViewWorkFromHomeRequests} from '../pages/ViewWorkFromHomeRequests/ViewWo
 import {CreateProfilePage} from '../pages/create-profile0/create-profile0';
 import {CreateProfile2} from '../pages/create-profile2/create-profile2';
 import {CreateProfile1Page} from '../pages/create-profile/create-profile';
+import {CreateProfile3} from '../pages/create-profile3/create-profile3';
 import { IonRating } from '../app/ion-rating/ion-rating';
 
 
@@ -75,6 +76,7 @@ import { IonRating } from '../app/ion-rating/ion-rating';
     CreateProfilePage,
     CreateProfile2,
     CreateProfile1Page,
+    CreateProfile3,
     IonRating 
     
   ],
@@ -121,6 +123,7 @@ import { IonRating } from '../app/ion-rating/ion-rating';
     CreateProfilePage,
     CreateProfile2,
     CreateProfile1Page,
+    CreateProfile3,
     IonRating 
   ],
   providers: [
