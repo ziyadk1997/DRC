@@ -19,31 +19,16 @@
     </ion-item>
   </form>
   <h1 class="Head" id="financial-heading10" style="color:#a08989;">
-    Transactions
+    Transactions :
   </h1>
-  <div class="container">
-      <ion-label  class="Date"  align-left>
-        14/7/2018
-      </ion-label>
-    <ion-label class="Date2" align-centre style="font-size: 20px">
-        -1800
-      </ion-label>
-  </div>
-  <div class="container">
-      <ion-label  class="Date"  align-left>
-        13/7/2018
-      </ion-label>
-    <ion-label class="Date2" align-centre style="font-size: 20px">
-        2000
-      </ion-label>
-  </div>
-  <div class="container">
-      <ion-label  class="Date"  align-left>
-        13/7/2018
-      </ion-label>
-    <ion-label class="Date2" align-centre style="font-size: 20px">
-        1000
-      </ion-label>
-  </div>
+  <ion-list *ngFor="let financial of financials">
+    <ion-item class="List">
+        <p style="color: silver">Date :{{financial.date}}</p>
+        <p style="color: silver">Amount: {{financial.signbit}} {{financial.amount}} {{financial.Currency}}</p>
+        <p style="color: silver">Comment:{{financial.comment}}</p>
+    </ion-item>
+</ion-list>
+
+
   <button id="Apply-Fund" ion-button class="Apply" block round outline (click)="GoToFundRequest()">Apply For Fund</button>
 </ion-content>

@@ -13,7 +13,12 @@
                 <h4 class="Headers">Request-Date :{{request.Date}}</h4>
                 <br>
                 <br>
+                <div *ngIf='requests.length > 0 && (requests[0].name !="Receipt")' >
                 <h4 class="Headers"><span item-left> From : {{request.FromDate}} </span> <br><br> <span item-right>To : {{request.ToDate}} </span> </h4>
+                </div>
+                <div *ngIf='requests.length > 0 && (requests[0].name =="Receipt")' >
+                    <h4 class="Headers"><span item-left> Amount : {{request.amount}} </span> <br><br></h4>
+                    </div>
                 <br>
                 <br>
                 <h4 class="Headers">Request-Status :{{request.Status}}</h4>
@@ -33,13 +38,13 @@
             </ion-list>
         </ion-card-content>
     </ion-card>
-    <ion-grid *ngIf='requests.length > 0 && (requests[0].Status =="Pending")' >
+    <ion-grid *ngIf='requests.length > 0 && (requests[0].Status =="Pending") && (IsManager || IsOwner || IsAdmin)' >
         <ion-row>
                 <ion-item style="background-color:transparent;">
                         <ion-input type="text"  placeholder="Reason if rejected" style=" color:white"[(ngModel)]="comment" [ngModelOptions]="{standalone: true}">  </ion-input>
                     </ion-item>
         </ion-row>
-        <ion-row >
+        <ion-row  >
             <ion-col width-50>
                 <button  style="width:100%; color: silver;background-color: transparent; border: orange 1px solid ;" outline ion-button (click)="AcceptRequest()">Accept</button>
             </ion-col>

@@ -15,12 +15,60 @@ import { ServicesProvider } from '../../providers/services';
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
-
+   IsHr : boolean = false;
+   IsOwner :boolean =false;
+   IsAdmin : boolean = false;
+   IsManager : boolean = false;
   constructor(public navCtrl: NavController, private RequestBE: ServicesProvider) {
-    
-    
-    
+  this.SetHr();
+  this.SetManager();
+  this.SetOwner();
+  this.SetAdmin();
   }
+
+
+  SetHr(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsHr(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsHr=false;
+      }else{
+        this.IsHr=true;
+      }
+    });
+  }
+  SetAdmin(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsAdmin(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsAdmin=false;
+      }else{
+        this.IsAdmin=true;
+      }
+    });
+  }
+  SetOwner(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsOwner(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsOwner=false;
+      }else{
+        this.IsOwner=true;
+      }
+    });
+  }
+  SetManager(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsManager(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsManager=false;
+      }else{
+        this.IsManager=true;
+      }
+    });
+  }
+ 
+ 
   GoBack(){
 
     this.navCtrl.pop();

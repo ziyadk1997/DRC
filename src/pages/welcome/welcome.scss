@@ -1,6 +1,6 @@
 page-welcome {
     
-        .Fn{
+    .Fn{
             background-color: transparent;
             color: rgb(165, 165, 165);
 
@@ -8,23 +8,23 @@ page-welcome {
             text-align: start;
             
             
-        }
-           .back {
+    }
+    .back {
             background-color:transparent;
             background-image: url('../assets/imgs/b1.png');
     }
-        .img{
-            display: block;
-            margin-left: -25%;
-            margin-right: 10%;
+    .img{
+        display: block;
+        margin-left: -25%;
+        margin-right: 10%;
              
-       }
-       .img1{
-           width:100%;
+   }
+   .img1{
+        width:100%;
         display: block;
         margin-left: -10%;
         margin-right: 7%;
-       }
+   }
 
         
 }
