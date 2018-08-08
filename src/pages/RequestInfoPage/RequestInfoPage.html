@@ -33,13 +33,13 @@
             </ion-list>
         </ion-card-content>
     </ion-card>
-    <ion-grid *ngIf='requests.length > 0 && (requests[0].Status =="Pending")' >
+    <ion-grid *ngIf='requests.length > 0 && (requests[0].Status =="Pending") && (IsManager || IsOwner || IsAdmin)' >
         <ion-row>
                 <ion-item style="background-color:transparent;">
                         <ion-input type="text"  placeholder="Reason if rejected" style=" color:white"[(ngModel)]="comment" [ngModelOptions]="{standalone: true}">  </ion-input>
                     </ion-item>
         </ion-row>
-        <ion-row >
+        <ion-row  >
             <ion-col width-50>
                 <button  style="width:100%; color: silver;background-color: transparent; border: orange 1px solid ;" outline ion-button (click)="AcceptRequest()">Accept</button>
             </ion-col>

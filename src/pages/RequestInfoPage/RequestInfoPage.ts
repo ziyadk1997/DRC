@@ -11,15 +11,51 @@ export class RequestInfoPage {
   requests: any = [];
   requestid: any;
   comment : any;
+  IsManager : boolean = false;
+  IsOwner : boolean = false;
+  IsAdmin : boolean = false;
   constructor(public navCtrl: NavController, private navparams: NavParams, private alertCtrl: AlertController, private RequestBE: ServicesProvider) {
     this.requestid = this.navparams.data.reqId;
     console.log(this.requestid)
+  this.SetManager();
+  this.SetOwner();
+  this.SetAdmin();
   }
   GoToRequestsPage() {
 
 
   }
-
+  SetAdmin(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsAdmin(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsAdmin=false;
+      }else{
+        this.IsAdmin=true;
+      }
+    });
+  }
+  SetOwner(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsOwner(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsOwner=false;
+      }else{
+        this.IsOwner=true;
+      }
+    });
+  }
+  SetManager(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsManager(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsManager=false;
+      }else{
+        this.IsManager=true;
+      }
+    });
+  }
+ 
   ionViewDidLoad() {
     
     var username = localStorage.getItem("username");
