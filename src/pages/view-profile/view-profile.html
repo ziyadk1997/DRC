@@ -18,12 +18,17 @@
     <h2 align = "center"  no-border style="color: rgb(101, 101, 150)">
       {{infos.name}}
     </h2>
+    <h5 id="viewProfile-heading3" style="color:white;text-align:center;">
+      {{infos.mobile}}
+    </h5>
     <h6 align = "center" no-border style="color: white">
      {{userName}}
     </h6>
+    
     <h5 id="viewProfile-heading3" style="color:green;text-align:center;">
       {{infos.jobTitle}}
     </h5>
+   
   </ion-list>
   
 
@@ -33,7 +38,11 @@
   <button ion-button (click)="GoToEducation()" style="background-color: transparent; border-bottom: 1px solid blueviolet;" block>Education</button>
   <button ion-button (click)="GoToLanguage()" style="background-color: transparent; border-bottom: 1px solid blueviolet;" block>Language</button>
   <button ion-button (click)="GoToAttachmets()" style="background-color: transparent;" block>Attachments</button>
-</div>>
+</div>
 <br/>
+<br/><br/>
+<button id="coti" *ngIf="IsOwner&&!IsSameuser" ion-button class="continue"  block round  >Make Admin</button>
+<button id="coti" *ngIf="IsOwner&&!IsSameuser" ion-button class="continue"  block round  >Remove Admin</button>
+<button id="coti" *ngIf="(IsHr || IsAdmin)&&!IsSameuser" ion-button class="continue"  block round (click)="RemoveEmployee()"  >Remove User</button>
 
 </ion-content>

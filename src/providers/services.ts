@@ -101,7 +101,6 @@ export class ServicesProvider {
       });
 
     return new Promise((resolve, reject) => {
-      console.log(request);
       this.http.post(config.apiUrl + "ApplyReciptClaimRequest", request).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);
@@ -730,12 +729,134 @@ ViewMyExpenses(username){
 }
 
 AddAdmin(username){
+  var user=JSON.stringify({
+    "username" : username
+  });
 
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "MakeAdmin", user).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
 }
 RemoveAdmin(username){
+  var user=JSON.stringify({
+    "username" : username
+  });
 
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "RemoveAdmin", user).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
 }
 RemoveEmployee(username){
-  
+  var user=JSON.stringify({
+    "username" : username
+  });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "RemoveUser", user).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+ViewMyVacations(username){
+  var user=JSON.stringify({
+    "username" :username
+  });
+  return new Promise((resolve, reject) => {
+    this.http.get(config.apiUrl + "ViewMyVacations/"+username).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+GetAllEmployees(){
+  return new Promise((resolve, reject) => {
+    this.http.get(config.apiUrl + "GetAllEmployees").timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+ViewMySalary(username) {
+
+
+  return new Promise((resolve, reject) => {
+    this.http.get(config.apiUrl + "ViewMySalary/"+username).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+ApplyFundRequest(username, comment,Amount,Duedate ) { 
+  var request = JSON.stringify
+    ({
+      "username": username,
+      "Amount" : Amount,
+      "comment" : comment,
+      "Duedate" : Duedate,
+    });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "ApplyFundRequest", request).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
 }
 }
+

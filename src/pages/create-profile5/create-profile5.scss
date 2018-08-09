@@ -1,0 +1,40 @@
+page-create-profile5 {
+    .back {
+        background-color:transparent;
+        background-image: url('../assets/imgs/b1.png');}
+        .item {
+            background-color:transparent;
+        }
+       
+
+        .item ::placeholder {
+            color: rgb(64, 177, 243);
+        }
+    .saveb{
+            background: rgba(72, 211, 72, 0.171);  
+    }
+    .Save{
+        color: gray; 
+    }    
+    .continue{
+        background: rgba(10, 130, 241, 0.171);  
+    }
+    .toolbar-background-md,.header-md::after{
+        background-color:transparent !important;
+    }
+   
+
+.toolbar-title-md{
+        text-align: center;
+        color:white;
+
+    }
+    ._seperator-border{
+        height: 1px;
+        width: 100%;
+        background-image: radial-gradient(50% 50%, #169DD9 56%, rgba(22, 157, 217, 0) 100%)
+    }
+    .input-text{
+        color: white;
+    }
+}

@@ -10,7 +10,7 @@
   <canvas class="myChart" id="myChart"></canvas>
   <div class="donut-inner">
     <h5>Overall:</h5>
-    <h6>50 <span style="color: rgb(168, 168, 168)">/87</span></h6>
+    <h6> {{total}} <span style="color: rgb(168, 168, 168)">/87</span></h6>
   </div>
   <ion-list>
     <ion-item class="list" (click)="GoToAnnualRequests()">
@@ -20,7 +20,7 @@
           <div id="myBar"></div>
         </div>
       </div>
-      <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
+      <h1 item-end style="color: white;font-size: 0.9em">Days Left:{{annual}}</h1>
     </ion-item>
     <ion-item class="list" (click)="GoToCasualRequests()">
       <div style="color: white ;font-size: 0.9em ">
@@ -29,7 +29,7 @@
           <div id="myBar"> </div>
         </div>
       </div>
-      <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
+      <h1 item-end style="color: white;font-size: 0.9em">Days Left:{{casual}}</h1>
     </ion-item>
     <ion-item class="list" (click)="GoToSickRequests()">
       <div style="color: white ;font-size: 0.9em ">
@@ -38,7 +38,7 @@
           <div id="myBar"></div>
         </div>
       </div>
-      <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
+      <h1 item-end style="color: white;font-size: 0.9em">Days Left:{{sick}}</h1>
     </ion-item>
     <ion-item class="list" (click)="GoToWorkFromHomeRequests()">
       <div style="color: white ;font-size: 0.9em ">
@@ -47,7 +47,7 @@
           <div id="myBar"></div>
         </div>
       </div>
-      <h1 item-end style="color: white;font-size: 0.9em">#Days</h1>
+      <h1 item-end style="color: white;font-size: 0.9em"></h1>
     </ion-item>
   </ion-list>
 

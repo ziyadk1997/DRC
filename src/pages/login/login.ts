@@ -42,4 +42,7 @@ export class LoginPage {
       });
     }
   }
+  ForgetPassword(){
+ // this.push(ForgetPasswordPage);
+  }
 }
