@@ -12,81 +12,90 @@ import { ViewCasualRequests } from '../ViewCasualRequests/ViewCasualRequests';
 import { ViewWorkFromHomeRequests } from '../ViewWorkFromHomeRequests/ViewWorkFromHomeRequests';
 
 @Component({
-  selector: 'page-LeaveTracker',
-  templateUrl: 'LeaveTracker.html'
+    selector: 'page-LeaveTracker',
+    templateUrl: 'LeaveTracker.html'
 })
 export class LeaveTrackerPage {
+    days: any = [];
+    annual: any;
+    casual: any;
+    sick: any;
+    total: any;
+    constructor(public navCtrl: NavController, private alertCtrl: AlertController, private RequestsBE: ServicesProvider) {
+        this.ViewMyDays();
+    }
 
-  constructor(public navCtrl: NavController,private alertCtrl: AlertController, private RequestsBE: ServicesProvider) {
-    
-  }
-  
-  GoToApplyLeavePage(){
+    GoToApplyLeavePage() {
 
-    this.navCtrl.push(ApplyLeavePage);
-  }
-  ionViewDidLoad()
-  {
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-        
-        datasets: [{
-            label: 'OverAll',
-            data: [50,87],
-            backgroundColor: [
-                'rgba(255, 255, 255, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-            ],
-            borderColor: [
-                'rgba(255, 255, 255,1)',
-                'rgba(54, 162, 235, 1)',
-                
-            ],
-            borderWidth:7
+        this.navCtrl.push(ApplyLeavePage);
+    }
+    ionViewDidLoad() {
+
+    }
+
+    ViewMyAnnualRequests() {
+
+        var username = localStorage.getItem("username");
+        this.RequestsBE.ViewMyCasualRequests(username).then(res => {
+
+        });
+    }
+    GoToAnnualRequests() {
+        this.navCtrl.push(ViewAnnualRequests);
+    }
+    GoToSickRequests() {
+        this.navCtrl.push(ViewSickRequests);
+    }
+    GoToCasualRequests() {
+        this.navCtrl.push(ViewCasualRequests);
+    }
+    GoToWorkFromHomeRequests() {
+        this.navCtrl.push(ViewWorkFromHomeRequests);
+    }
+    ViewMyDays() {
+        var username = localStorage.getItem("username");
+        this.RequestsBE.ViewMyVacations(username).then((res: any) => {
+            if (res != null) {
+                this.days = res;
+                this.annual = this.days[0];
+                this.casual = this.days[1];
+                this.sick = this.days[2];
+                this.total = this.days[3];
+                this.drawChart();
+            }
+        });
+    }
+    drawChart()
+    {
+        var ctx = document.getElementById("myChart");
+        console.log(this.total);
+        var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
             
-        }]
-        
-    },
-    options: {
-        cutoutPercentage : 100
-        
-       
-    }
-});}
- /**move() {
-    var elem = document.getElementById("myBar"); 
-    var width = 1;
-    var id = setInterval(frame, 0);
-    function frame() {
-        if (width >= 22 ) {
-            clearInterval(id);
-        } else {
-            width++; 
-            elem.style.width = width + 'ch'; 
+            datasets: [{
+                label: 'OverAll',
+                data: [this.total,87-this.total],
+                backgroundColor: [
+                    'rgba(255, 255, 255, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 255, 255,1)',
+                    'rgba(54, 162, 235, 1)',
+                    
+                ],
+                borderWidth:7
+                
+            }]
+            
+        },
+        options: {
+            cutoutPercentage : 100
+            
+           
         }
+    });
     }
-}**/
-ViewMyAnnualRequests(){
-    
-    var username = localStorage.getItem("username");
-    this.RequestsBE.ViewMyCasualRequests(username).then(res => {
-       console.log(res);
-      });
-}
-GoToAnnualRequests(){
-    this.navCtrl.push(ViewAnnualRequests);
-}
-GoToSickRequests(){
-    this.navCtrl.push(ViewSickRequests);
-}
-GoToCasualRequests(){
-    this.navCtrl.push(ViewCasualRequests);
-}
-GoToWorkFromHomeRequests(){
-    this.navCtrl.push(ViewWorkFromHomeRequests);
-}
 
-  
 }

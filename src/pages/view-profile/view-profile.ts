@@ -45,6 +45,7 @@ export class ViewProfilePage {
   UploadImage() {
     console.log("TODO THE UPLOAD");
   }
+
   ViewMyInfo() {
     var username = this.navparams.data;
     this.servicesprovider.ViewMyInfo(username).then(res => {
