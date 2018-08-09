@@ -40,23 +40,23 @@
   <ion-list *ngFor="let skill of infos.skills">
       <ion-item style="background-color:transparent;"class="List">
           
-          <p style="color: silver;">skill name:</p>
-          <p style="color: teal">{{skill.skill}}</p>
-          <p style="color: silver;">profeciency:</p>
+          <p style="color: silver;">Skill name:<span style="color:rgb(84, 179, 243); ">{{skill.skill}}</span> </p>
+        
+          <p style="color: silver;">Profeciency:</p>
           <ion-rating style="color:teal;"
               [numStars]="5"
                 [readOnly]="true"
              [value]=skill.profeciency >
            </ion-rating>
 
-           <p style="color: silver;">interest:</p>
+           <p style="color: silver;">Interest:</p>
            <ion-rating style="color:teal;"
               [numStars]="5"
                 [readOnly]="true"
              [value]=skill.interest >
            </ion-rating>
-           <p style="color: silver;">years of experience:</p>
-           <p style="color: teal">{{skill.yearsOfExprince}}</p>
+           <p style="color: silver;">Years of experience: <span style="color:rgb(84, 179, 243); ">{{skill.yearsOfExprince}}</span></p>
+
 
 
 
