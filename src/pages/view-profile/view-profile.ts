@@ -15,11 +15,49 @@ export class ViewProfilePage {
   option: any;
   infos: any = {};
   userName: any;
-  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider,private navparams:NavParams, private alertCtrl: AlertController) {
+  IsHr: boolean = false;
+  IsOwner: boolean = false;
+  IsAdmin: boolean = false;
+
+  constructor(public navCtrl: NavController, private RequestBE: ServicesProvider,private navparams:NavParams, private alertCtrl: AlertController) {
+    this.SetHr();
+    this.SetOwner();
+    this.SetAdmin();
   }
 
   ionViewDidLoad() {
     this.ViewMyInfo();
+  }
+
+  SetHr() {
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsHr(username).then((res) => {
+      if (res.toString() == "false") {
+        this.IsHr = false;
+      } else {
+        this.IsHr = true;
+      }
+    });
+  }
+  SetAdmin() {
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsAdmin(username).then((res) => {
+      if (res.toString() == "false") {
+        this.IsAdmin = false;
+      } else {
+        this.IsAdmin = true;
+      }
+    });
+  }
+  SetOwner() {
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsOwner(username).then((res) => {
+      if (res.toString() == "false") {
+        this.IsOwner = false;
+      } else {
+        this.IsOwner = true;
+      }
+    });
   }
 
   GoBack() {
@@ -48,37 +86,35 @@ export class ViewProfilePage {
 
   ViewMyInfo() {
     var username = this.navparams.data;
-    this.servicesprovider.ViewMyInfo(username).then(res => {
+    this.RequestBE.ViewMyInfo(username).then(res => {
+      console.log(res);
+      // var info    ={
+
+      //   Name:res[0],
+      //   ppassword:res[1],
+      //   NumberOfAnnualVacations:res[2],
+      //   NumberOfCasualVacations:res[3],
+      //   Gender:res[4],
+      //   Email:res[5],
+      //   Address:res[6],
+      //   Nationality:res[7]
+
+
+      // }
       this.infos = res;
       this.userName = username;
     })
   }
   MakeAdmin(){
     var username = this.navparams.data;
-    this.servicesprovider.AddAdmin(username).then(res => {
-      if (res == true) {
-        this.alertCtrl.create(
-          {
-            title: 'Request Submitted',
-            subTitle: 'Your request was submitted to your manager',
-            buttons: ['Okay']
-          }
-        ).present()
-        this.navCtrl.pop();
-      } else {
-        this.alertCtrl.create(
-          {
-            title: 'Request Submition failed',
-            subTitle: 'Please fill request form correctly',
-            buttons: ['Dismiss']
-          }
-        ).present()
-      }
+    this.RequestBE.AddAdmin(username).then(res => {
+
+      
     })
   }
   RemoveAdmin(){
     var username = this.navparams.data;
-    this.servicesprovider.RemoveAdmin(username).then(res => {
+    this.RequestBE.RemoveAdmin(username).then(res => {
       if (res == true) {
       this.alertCtrl.create(
         {
@@ -101,8 +137,7 @@ export class ViewProfilePage {
   }
   RemoveEmployee(){
     var username = this.navparams.data;
-    this.servicesprovider.RemoveEmployee(username).then(res => {
-      if (res == true) {
+    this.RequestBE.RemoveEmployee(username).then(res => {if (res == true) {
       this.alertCtrl.create(
         {
           title: 'Request Submitted',
