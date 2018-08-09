@@ -118,8 +118,8 @@ export class ViewProfilePage {
       if (res == true) {
       this.alertCtrl.create(
         {
-          title: 'Request Submitted',
-          subTitle: 'Your request was submitted to your manager',
+          title: 'Operation Done Successfully',
+          subTitle: 'This user is now not an admin',
           buttons: ['Okay']
         }
       ).present()
@@ -127,8 +127,8 @@ export class ViewProfilePage {
     } else {
       this.alertCtrl.create(
         {
-          title: 'Request Submition failed',
-          subTitle: 'Please fill request form correctly',
+          title: 'Remove failed',
+          subTitle: 'Operation Failed',
           buttons: ['Dismiss']
         }
       ).present()
@@ -138,23 +138,24 @@ export class ViewProfilePage {
   RemoveEmployee(){
     var username = this.navparams.data;
     this.RequestBE.RemoveEmployee(username).then(res => {if (res == true) {
-      this.alertCtrl.create(
-        {
-          title: 'Request Submitted',
-          subTitle: 'Your request was submitted to your manager',
-          buttons: ['Okay']
-        }
-      ).present()
-      this.navCtrl.pop();
-    } else {
-      this.alertCtrl.create(
-        {
-          title: 'Request Submition failed',
-          subTitle: 'Please fill request form correctly',
-          buttons: ['Dismiss']
-        }
-      ).present()
-    }
+      if (res == true) {
+        this.alertCtrl.create(
+          {
+            title: 'User was Removed',
+            subTitle: 'User was removed from system successfully',
+            buttons: ['Okay']
+          }
+        ).present()
+        this.navCtrl.pop();
+      } else {
+        this.alertCtrl.create(
+          {
+            title: 'Remove failed',
+            subTitle: 'Operation Failed',
+            buttons: ['Dismiss']
+          }
+        ).present()
+      }}
   });
   }
 
