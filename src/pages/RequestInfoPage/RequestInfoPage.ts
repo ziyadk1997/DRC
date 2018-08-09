@@ -67,7 +67,9 @@ export class RequestInfoPage {
         if(this.requests[0].Employeeusername == username)
           this.Flag=false;
       }
+      console.log(this.Flag);
     });
+   
   }
   AcceptRequest() {
     var username = localStorage.getItem("username");
