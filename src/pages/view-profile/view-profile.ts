@@ -15,7 +15,47 @@ export class ViewProfilePage {
   option: any;
   infos: any = {};
   userName: any;
+<<<<<<< HEAD
+  IsHr : boolean = false;
+  IsOwner :boolean =false;
+  IsAdmin : boolean = false;
+
+  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider,private RequestBE: ServicesProvider) {
+  this.SetHr();
+  }
+
+  SetHr(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsHr(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsHr=false;
+      }else{
+        this.IsHr=true;
+      }
+    });
+  }
+  SetAdmin(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsAdmin(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsAdmin=false;
+      }else{
+        this.IsAdmin=true;
+      }
+    });
+  }
+  SetOwner(){
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsOwner(username).then((res) => {
+      if(res.toString() == "false"){
+        this.IsOwner=false;
+      }else{
+        this.IsOwner=true;
+      }
+    });
+=======
   constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider,private navparams:NavParams) {
+>>>>>>> 011170751804f3e1a90f3a736b3c5adceba17ec2
   }
 
   ionViewDidLoad() {
