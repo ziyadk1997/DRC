@@ -729,13 +729,61 @@ ViewMyExpenses(username){
 }
 
 AddAdmin(username){
+  var user=JSON.stringify({
+    "username" : username
+  });
 
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "MakeAdmin", user).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
 }
 RemoveAdmin(username){
+  var user=JSON.stringify({
+    "username" : username
+  });
 
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "RemoveAdmin", user).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
 }
 RemoveEmployee(username){
-  
+  var user=JSON.stringify({
+    "username" : username
+  });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "RemoveUser", user).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
 }
 ViewMyVacations(username){
   var user=JSON.stringify({
