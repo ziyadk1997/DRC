@@ -15,12 +15,11 @@ export class ViewProfilePage {
   option: any;
   infos: any = {};
   userName: any;
-<<<<<<< HEAD
   IsHr : boolean = false;
   IsOwner :boolean =false;
   IsAdmin : boolean = false;
 
-  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider,private RequestBE: ServicesProvider) {
+  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider,private RequestBE: ServicesProvider,private navparams:NavParams) {
   this.SetHr();
   }
 
@@ -53,9 +52,6 @@ export class ViewProfilePage {
         this.IsOwner=true;
       }
     });
-=======
-  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider,private navparams:NavParams) {
->>>>>>> 011170751804f3e1a90f3a736b3c5adceba17ec2
   }
 
   ionViewDidLoad() {
@@ -85,6 +81,7 @@ export class ViewProfilePage {
   UploadImage() {
     console.log("TODO THE UPLOAD");
   }
+
   ViewMyInfo() {
     var username = this.navparams.data;
     this.servicesprovider.ViewMyInfo(username).then(res => {
