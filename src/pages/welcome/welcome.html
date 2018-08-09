@@ -59,18 +59,16 @@
       </button>
       <button id="welcome-button5" ion-button (click)="GoLoginPage()" style="background-color: transparent;color: silver;" round
         block>
-
         Logout
       </button>
-
     </div>
   </div>
-  <div *ngIf="isSearching">
-    <ion-list *ngFor="let employee of Employees">
-      <ion-item class="List">
+  <div style="background-color:transparent;" *ngIf="isSearching">
+    <ion-list style="background-color:transparent;" *ngFor="let employee of Employees">
+      <ion-item style="background-color:transparent" class="List">
           <p style="color: silver">{{employee.name}}</p>
           <p style="color: silver">{{employee.email}}</p>
-          <button ion-button clear item-end style="color: orange"(click)= "ViewDetails(employee.username)">View Info</button>
+          <button ion-button clear item-end style="color: orange;border:1px solid green"(click)= "ViewDetails(employee.username)">View Info</button>
       </ion-item>
   </ion-list>
   </div>>
