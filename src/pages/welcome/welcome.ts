@@ -116,4 +116,5 @@ export class WelcomePage {
       this.Employees=res.filter((item) => {return item.name.toLowerCase().indexOf(this.MyInput.toLowerCase()) > -1; })
       })
   }
+  
 }

@@ -770,5 +770,45 @@ GetAllEmployees(){
       });
   });
 }
+ViewMySalary(username) {
+
+
+  return new Promise((resolve, reject) => {
+    this.http.get(config.apiUrl + "ViewMySalary/"+username).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+ApplyFundRequest(username, comment,Amount,Duedate ) { 
+  var request = JSON.stringify
+    ({
+      "username": username,
+      "Amount" : Amount,
+      "comment" : comment,
+      "Duedate" : Duedate,
+    });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "ApplyFundRequest", request).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
 }
 

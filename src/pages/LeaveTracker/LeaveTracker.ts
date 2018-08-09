@@ -68,7 +68,6 @@ export class LeaveTrackerPage {
     drawChart()
     {
         var ctx = document.getElementById("myChart");
-        console.log(this.total);
         var myChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
