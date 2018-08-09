@@ -14,7 +14,7 @@ export class ViewProfile2Page {
   userName:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.infos = this.navParams.data;
-    this.userName=localStorage.getItem("username");
+    this.userName=this.infos.username;
     console.log(this.infos);
 
   }
