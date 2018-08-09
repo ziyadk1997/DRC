@@ -19,7 +19,6 @@ export class RequestInfoPage {
   constructor(public navCtrl: NavController, private navparams: NavParams, private alertCtrl: AlertController, private RequestBE: ServicesProvider) {
     this.requestid = this.navparams.data.reqId;
     this.username = localStorage.getItem("username");
-    console.log(this.requestid)
   this.SetManager();
   this.SetOwner();
   this.SetAdmin();
