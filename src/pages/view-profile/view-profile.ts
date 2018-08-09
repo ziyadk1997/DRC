@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,NavParams } from 'ionic-angular';
 import { ViewProfile2Page } from '../../pages/view-profile2/view-profile2';
 import { ViewProfile3Page } from '../../pages/view-profile3/view-profile3';
 import { ViewProfile4Page } from '../../pages/view-profile4/view-profile4';
@@ -15,7 +15,7 @@ export class ViewProfilePage {
   option: any;
   infos: any = {};
   userName: any;
-  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider) {
+  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider,private navparams:NavParams) {
   }
 
   ionViewDidLoad() {
@@ -43,11 +43,10 @@ export class ViewProfilePage {
   }
 
   UploadImage() {
-    console.log("yala ya wad ya wel3a");
+    console.log("TODO THE UPLOAD");
   }
   ViewMyInfo() {
-    var username = localStorage.getItem("username");
-
+    var username = this.navparams.data;
     this.servicesprovider.ViewMyInfo(username).then(res => {
       console.log(res);
       // var info    ={

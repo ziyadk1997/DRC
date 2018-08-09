@@ -738,4 +738,19 @@ RemoveAdmin(username){
 RemoveEmployee(username){
   
 }
+GetAllEmployees(){
+  return new Promise((resolve, reject) => {
+    this.http.get(config.apiUrl + "GetAllEmployees").timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
 }
