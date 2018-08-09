@@ -15,11 +15,49 @@ export class ViewProfilePage {
   option: any;
   infos: any = {};
   userName: any;
-  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider,private navparams:NavParams, private alertCtrl: AlertController) {
+  IsHr: boolean = false;
+  IsOwner: boolean = false;
+  IsAdmin: boolean = false;
+
+  constructor(public navCtrl: NavController, private RequestBE: ServicesProvider,private navparams:NavParams, private alertCtrl: AlertController) {
+    this.SetHr();
+    this.SetOwner();
+    this.SetAdmin();
   }
 
   ionViewDidLoad() {
     this.ViewMyInfo();
+  }
+
+  SetHr() {
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsHr(username).then((res) => {
+      if (res.toString() == "false") {
+        this.IsHr = false;
+      } else {
+        this.IsHr = true;
+      }
+    });
+  }
+  SetAdmin() {
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsAdmin(username).then((res) => {
+      if (res.toString() == "false") {
+        this.IsAdmin = false;
+      } else {
+        this.IsAdmin = true;
+      }
+    });
+  }
+  SetOwner() {
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsOwner(username).then((res) => {
+      if (res.toString() == "false") {
+        this.IsOwner = false;
+      } else {
+        this.IsOwner = true;
+      }
+    });
   }
 
   GoBack() {
@@ -48,7 +86,7 @@ export class ViewProfilePage {
 
   ViewMyInfo() {
     var username = this.navparams.data;
-    this.servicesprovider.ViewMyInfo(username).then(res => {
+    this.RequestBE.ViewMyInfo(username).then(res => {
       console.log(res);
       // var info    ={
 
@@ -69,7 +107,7 @@ export class ViewProfilePage {
   }
   MakeAdmin(){
     var username = this.navparams.data;
-    this.servicesprovider.AddAdmin(username).then(res => {
+    this.RequestBE.AddAdmin(username).then(res => {
 
       
     })
@@ -79,7 +117,7 @@ export class ViewProfilePage {
   RemoveAdmin(){}
   RemoveEmployee(){
     var username = this.navparams.data;
-    this.servicesprovider.RemoveEmployee(username).then(res => {if (res == true) {
+    this.RequestBE.RemoveEmployee(username).then(res => {if (res == true) {
       this.alertCtrl.create(
         {
           title: 'Request Submitted',
