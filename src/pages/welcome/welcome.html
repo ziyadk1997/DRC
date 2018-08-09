@@ -11,55 +11,67 @@
       <span style="color:rgb(84, 179, 243); ">Welcome</span> ... to Three2one HR application for small and medium businesses
     </h5>
   </div>
-  <div id="welcome-container1">
-    <form id="welcome-form15">
-      <ion-searchbar placeholder="Search for employees" name="" id="welcome-search1"></ion-searchbar>
-    </form>
+  <ion-searchbar [(ngModel)]="MyInput" [showCancelButton]="shouldShowCancel" (ionInput)="GetAllEmployees()" (ionCancel)="onCancel()">
+  </ion-searchbar>
+  <div *ngIf="!isSearching ">
+    <button *ngIf="!IsOwner" id="welcome-button1" class="Fn" ion-button (click)="GoToleaveTrackerPage()" block large icon-left
+      style="font-weight:600;border-radius:5px 5px 5px 5px;">
+      <ion-img width="50" align=l eft height="50" style="background-color: transparent;" src="assets/imgs/Leave.png" class="img"></ion-img>
+      <div>Leave Tracker
+        <br>
+        <span style="color: rgb(69, 129, 185); font-size: 0.6em "> You Have # Days Availabe </span>
+      </div>
+    </button>
+
+    <button id="welcome-button3" class="Fn" ion-button (click)="GoToTravelExpensePage()" block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
+      <ion-img width="50" height="50" style="background-color: transparent ;" src="assets/imgs/Travel.png" class="img"></ion-img>
+      <div>Travel Expense
+        <br>
+        <span style="color: rgb(69, 129, 185); font-size: 0.6em "> Your Travel Budget control </span>
+      </div>
+    </button>
+    <button id="welcome-button4" class="Fn" ion-button (click)="GoToFinancialPage()" block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
+      <ion-img width="50" height="50" style="background-color: transparent ;" src="assets/imgs/Financial.png" class="img"></ion-img>
+      <div>Financial
+        <br>
+        <span style="color: rgb(69, 129, 185); font-size: 0.6em "> Check Your Financial Status </span>
+      </div>
+    </button>
+    <button *ngIf="IsManager || IsOwner ||IsAdmin" id="welcome-button4" class="Fn" ion-button (click)="GoToRequestsPage()" block
+      large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
+      <ion-img width="50" height="50" style="background-color: transparent ;" src="assets/imgs/Requests.png" class="img1"></ion-img>
+      <div style="margin-left: 3%">View Requests Page
+        <br>
+        <span style="color: rgb(69, 129, 185); font-size: 0.6em "> View requests submitted to me </span>
+      </div>
+    </button>
+
+    <div align="center">
+      <br/>
+      <br/>
+      <button id="welcome-button4" ion-button (click)="GoToProfilePage()" outline style="color: rgb(223, 223, 223);background-color: rgb(21, 75, 119);"
+        block round>
+        Your Profile
+      </button>
+      <button *ngIf="IsHr ||IsAdmin" id="welcome-button7" ion-button (click)="GoToCreatePage()" outline style="color: rgb(223, 223, 223);background-color: rgb(21, 75, 119);"
+        block round>
+        Create New Profile
+      </button>
+      <button id="welcome-button5" ion-button (click)="GoLoginPage()" style="background-color: transparent;color: silver;" round
+        block>
+
+        Logout
+      </button>
+
+    </div>
   </div>
-
-  <button *ngIf="!IsOwner" id="welcome-button1" class="Fn" ion-button (click)="GoToleaveTrackerPage()" block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
-    <ion-img width="50" align=l eft height="50" style="background-color: transparent;" src="assets/imgs/Leave.png" class="img"></ion-img>
-    <div>Leave Tracker
-      <br>
-      <span style="color: rgb(69, 129, 185); font-size: 0.6em "> You Have # Days Availabe </span>
-    </div>
-  </button>
-
-  <button  id="welcome-button3" class="Fn" ion-button (click)="GoToTravelExpensePage()" block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
-    <ion-img width="50" height="50" style="background-color: transparent ;" src="assets/imgs/Travel.png" class="img"></ion-img>
-    <div>Travel Expense
-      <br>
-      <span style="color: rgb(69, 129, 185); font-size: 0.6em "> Your Travel Budget control </span>
-    </div>
-  </button>
-  <button id="welcome-button4" class="Fn" ion-button (click)="GoToFinancialPage()" block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
-    <ion-img width="50" height="50" style="background-color: transparent ;" src="assets/imgs/Financial.png" class="img"></ion-img>
-    <div>Financial
-      <br>
-      <span style="color: rgb(69, 129, 185); font-size: 0.6em "> Check Your Financial Status </span>
-    </div>
-  </button>
-  <button *ngIf="IsManager || IsOwner ||IsAdmin" id="welcome-button4" class="Fn" ion-button (click)="GoToRequestsPage()" block large icon-left style="font-weight:600;border-radius:5px 5px 5px 5px;">
-    <ion-img width="50" height="50" style="background-color: transparent ;" src="assets/imgs/Requests.png" class="img1"></ion-img>
-    <div style="margin-left: 3%">View Requests Page
-      <br>
-      <span style="color: rgb(69, 129, 185); font-size: 0.6em "> View requests submitted to me </span>
-    </div>
-  </button>
-
-  <div align="center">
-    <br/>
-    <br/>
-  <button id="welcome-button4" ion-button  (click)="GoToProfilePage()"  outline style="color: rgb(223, 223, 223);background-color: rgb(21, 75, 119);" block round>
-    Your Profile
-  </button>
-  <button *ngIf="IsHr ||IsAdmin"  id="welcome-button7"  ion-button  (click)="GoToCreatePage()"  outline style="color: rgb(223, 223, 223);background-color: rgb(21, 75, 119);" block round>
-    Create New Profile
-  </button>
-  <button id="welcome-button5" ion-button (click)="GoLoginPage()" style="background-color: transparent;color: silver;" round block >
-   
-    Logout
-  </button>
-  
-  </div>
+  <div *ngIf="isSearching">
+    <ion-list *ngFor="let employee of Employees">
+      <ion-item class="List">
+          <p style="color: silver">{{employee.name}}</p>
+          <p style="color: silver">{{employee.email}}</p>
+          <button ion-button clear item-end style="color: orange"(click)= "ViewDetails(employee.username)">View Info</button>
+      </ion-item>
+  </ion-list>
+  </div>>
 </ion-content>
