@@ -15,6 +15,7 @@ export class RequestInfoPage {
   IsOwner : boolean = false;
   IsAdmin : boolean = false;
   username : any;
+  Flag :boolean=true;
   constructor(public navCtrl: NavController, private navparams: NavParams, private alertCtrl: AlertController, private RequestBE: ServicesProvider) {
     this.requestid = this.navparams.data.reqId;
     this.username = localStorage.getItem("username");
@@ -64,6 +65,8 @@ export class RequestInfoPage {
     this.RequestBE.ViewRequestbyId(this.requestid).then((res: any) => {
       if (res != null) {
         this.requests = res;
+        if(this.requests[0].Employeeusername == username)
+          this.Flag=false;
       }
     });
   }
