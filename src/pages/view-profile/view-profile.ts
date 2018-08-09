@@ -6,7 +6,7 @@ import { ViewProfile4Page } from '../../pages/view-profile4/view-profile4';
 import { ViewProfile5Page } from '../../pages/view-profile5/view-profile5';
 import { ViewProfile6Page } from '../../pages/view-profile6/view-profile6';
 import { ServicesProvider } from '../../providers/services'
-
+import { AlertController } from 'ionic-angular';
 @Component({
   selector: 'page-view-profile',
   templateUrl: 'view-profile.html'
@@ -15,48 +15,11 @@ export class ViewProfilePage {
   option: any;
   infos: any = {};
   userName: any;
-  IsHr: boolean = false;
-  IsOwner: boolean = false;
-  IsAdmin: boolean = false;
-  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider,private navparams:NavParams,private RequestBE: ServicesProvider) {
-    this.SetHr();
-    this.SetAdmin();
-    this.SetOwner();
+  constructor(public navCtrl: NavController, private servicesprovider: ServicesProvider,private navparams:NavParams, private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     this.ViewMyInfo();
-  }
-
-  SetHr() {
-    var username = localStorage.getItem("username");
-    this.RequestBE.IsHr(username).then((res) => {
-      if (res.toString() == "false") {
-        this.IsHr = false;
-      } else {
-        this.IsHr = true;
-      }
-    });
-  }
-  SetAdmin() {
-    var username = localStorage.getItem("username");
-    this.RequestBE.IsAdmin(username).then((res) => {
-      if (res.toString() == "false") {
-        this.IsAdmin = false;
-      } else {
-        this.IsAdmin = true;
-      }
-    });
-  }
-  SetOwner() {
-    var username = localStorage.getItem("username");
-    this.RequestBE.IsOwner(username).then((res) => {
-      if (res.toString() == "false") {
-        this.IsOwner = false;
-      } else {
-        this.IsOwner = true;
-      }
-    });
   }
 
   GoBack() {
@@ -103,8 +66,38 @@ export class ViewProfilePage {
       this.infos = res;
       this.userName = username;
     })
+  }
+  MakeAdmin(){
+    var username = this.navparams.data;
+    this.servicesprovider.AddAdmin(username).then(res => {
+
+      
+    })
 
 
+  }
+  RemoveAdmin(){}
+  RemoveEmployee(){
+    var username = this.navparams.data;
+    this.servicesprovider.RemoveEmployee(username).then(res => {if (res == true) {
+      this.alertCtrl.create(
+        {
+          title: 'Request Submitted',
+          subTitle: 'Your request was submitted to your manager',
+          buttons: ['Okay']
+        }
+      ).present()
+      this.navCtrl.pop();
+    } else {
+      this.alertCtrl.create(
+        {
+          title: 'Request Submition failed',
+          subTitle: 'Please fill request form correctly',
+          buttons: ['Dismiss']
+        }
+      ).present()
+    }
+  });
   }
 
 }

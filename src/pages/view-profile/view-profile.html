@@ -43,6 +43,6 @@
 <br/><br/>
 <button id="coti" *ngIf="IsOwner" ion-button class="continue"  block round  >Make Admin</button>
 <button id="coti" *ngIf="IsOwner" ion-button class="continue"  block round  >Remove Admin</button>
-<button id="coti" *ngIf="IsHr || IsAdmin" ion-button class="continue"  block round  >Remove User</button>
+<button id="coti" *ngIf="IsHr || IsAdmin" ion-button class="continue"  block round (click)="RemoveEmployee()"  >Remove User</button>
 
 </ion-content>
