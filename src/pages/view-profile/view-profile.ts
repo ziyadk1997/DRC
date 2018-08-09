@@ -88,19 +88,6 @@ export class ViewProfilePage {
     var username = this.navparams.data;
     this.RequestBE.ViewMyInfo(username).then(res => {
       console.log(res);
-      // var info    ={
-
-      //   Name:res[0],
-      //   ppassword:res[1],
-      //   NumberOfAnnualVacations:res[2],
-      //   NumberOfCasualVacations:res[3],
-      //   Gender:res[4],
-      //   Email:res[5],
-      //   Address:res[6],
-      //   Nationality:res[7]
-
-
-      // }
       this.infos = res;
       this.userName = username;
     })
@@ -108,9 +95,25 @@ export class ViewProfilePage {
   MakeAdmin(){
     var username = this.navparams.data;
     this.RequestBE.AddAdmin(username).then(res => {
-
-      
-    })
+      if (res == true) {
+      this.alertCtrl.create(
+        {
+          title: 'Request Submitted',
+          subTitle: 'Your request was submitted to your manager',
+          buttons: ['Okay']
+        }
+      ).present()
+      this.navCtrl.pop();
+    } else {
+      this.alertCtrl.create(
+        {
+          title: 'Request Submition failed',
+          subTitle: 'Please fill request form correctly',
+          buttons: ['Dismiss']
+        }
+      ).present()
+    }
+  });
   }
   RemoveAdmin(){
     var username = this.navparams.data;
