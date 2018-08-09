@@ -21,7 +21,7 @@ export class ViewAnnualRequests {
   }
   ViewDetails(requestid: any){
     //console.log(requestid)
-    this.navCtrl.push(RequestInfoPage, { reqId: requestid });
+    this.navCtrl.push(RequestInfoPage, { reqId: requestid  });
   }
 
 }

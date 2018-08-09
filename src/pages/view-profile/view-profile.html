@@ -18,12 +18,17 @@
     <h2 align = "center"  no-border style="color: rgb(101, 101, 150)">
       {{infos.name}}
     </h2>
+    <h5 id="viewProfile-heading3" style="color:white;text-align:center;">
+      {{infos.mobile}}
+    </h5>
     <h6 align = "center" no-border style="color: white">
      {{userName}}
     </h6>
+    
     <h5 id="viewProfile-heading3" style="color:green;text-align:center;">
       {{infos.jobTitle}}
     </h5>
+   
   </ion-list>
   
 
@@ -35,13 +40,5 @@
   <button ion-button (click)="GoToAttachmets()" style="background-color: transparent;" block>Attachments</button>
 </div>>
 <br/>
-<button ion-button   outline style="color: rgb(223, 223, 223);background-color: rgb(21, 75, 119);" block round>
- Make Admin
-</button>
-<button ion-button   outline style="color: rgb(223, 223, 223);background-color: rgb(21, 75, 119);" block round>
-  Remove Admin
- </button>
- <button ion-button    outline style="color: rgb(223, 223, 223);background-color: rgb(21, 75, 119);" block round>
-  Remove User
- </button>
+
 </ion-content>
