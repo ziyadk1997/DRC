@@ -101,7 +101,6 @@ export class ServicesProvider {
       });
 
     return new Promise((resolve, reject) => {
-      console.log(request);
       this.http.post(config.apiUrl + "ApplyReciptClaimRequest", request).timeout(config.getTimeout).subscribe(res => {
         try {
           resolve(res);

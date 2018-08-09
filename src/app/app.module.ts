@@ -41,6 +41,10 @@ import {CreateProfile2} from '../pages/create-profile2/create-profile2';
 import {CreateProfile1Page} from '../pages/create-profile/create-profile';
 import {CreateProfile3} from '../pages/create-profile3/create-profile3';
 import { IonRating } from '../app/ion-rating/ion-rating';
+import {CreateProfile4} from '../pages/create-profile4/create-profile4';
+import {CreateProfile5} from '../pages/create-profile5/create-profile5';
+import {CreateProfile6} from '../pages/create-profile6/create-profile6';
+
 
 
 @NgModule({
@@ -77,7 +81,10 @@ import { IonRating } from '../app/ion-rating/ion-rating';
     CreateProfile2,
     CreateProfile1Page,
     CreateProfile3,
-    IonRating 
+    IonRating ,
+    CreateProfile4,
+    CreateProfile5,
+    CreateProfile6
     
   ],
   imports: [
@@ -124,7 +131,10 @@ import { IonRating } from '../app/ion-rating/ion-rating';
     CreateProfile2,
     CreateProfile1Page,
     CreateProfile3,
-    IonRating 
+    IonRating ,
+    CreateProfile4,
+    CreateProfile5,
+    CreateProfile6
   ],
   providers: [
     StatusBar,
