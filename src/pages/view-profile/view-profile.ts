@@ -116,8 +116,8 @@ else{
       if (res == true) {
       this.alertCtrl.create(
         {
-          title: 'Request Submitted',
-          subTitle: 'Your request was submitted to your manager',
+          title: 'Operation Done Successfully',
+          subTitle: 'This user is  not an admin',
           buttons: ['Okay']
         }
       ).present()
@@ -125,8 +125,8 @@ else{
     } else {
       this.alertCtrl.create(
         {
-          title: 'Request Submition failed',
-          subTitle: 'Please fill request form correctly',
+          title: 'Remove failed',
+          subTitle: 'Operation Failed',
           buttons: ['Dismiss']
         }
       ).present()
