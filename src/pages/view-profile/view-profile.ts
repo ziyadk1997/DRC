@@ -18,15 +18,20 @@ export class ViewProfilePage {
   IsHr: boolean = false;
   IsOwner: boolean = false;
   IsAdmin: boolean = false;
-
+  IsSameuser: boolean = false;
+ 
   constructor(public navCtrl: NavController, private RequestBE: ServicesProvider,private navparams:NavParams, private alertCtrl: AlertController) {
     this.SetHr();
     this.SetOwner();
     this.SetAdmin();
+ this.IsSame();
+  
   }
 
   ionViewDidLoad() {
+    
     this.ViewMyInfo();
+ 
   }
 
   SetHr() {
@@ -49,6 +54,19 @@ export class ViewProfilePage {
       }
     });
   }
+
+IsSame(){
+  var username = localStorage.getItem("username");
+  var vistor = this.navparams.data;
+  console.log(vistor)
+if(username == vistor){
+  this.IsSameuser=true;
+}
+else{
+  this.IsSameuser = false;
+}
+}
+
   SetOwner() {
     var username = localStorage.getItem("username");
     this.RequestBE.IsOwner(username).then((res) => {
