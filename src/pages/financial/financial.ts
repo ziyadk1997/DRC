@@ -7,10 +7,12 @@ import { ServicesProvider } from '../../providers/services';
   selector: 'page-financial',
   templateUrl: 'financial.html'
 })
+
 export class FinancialPage {
   financials :any =[];
   constructor(public navCtrl: NavController,private RequestsBE: ServicesProvider) {
   }
+  salary : any;
   GoToFundRequest(){
     this.navCtrl.push(FundPage);
   }
@@ -20,6 +22,11 @@ export class FinancialPage {
     this.RequestsBE.ViewMyTransactions(username).then((res: any) => {
       if(res!=null){
       this.financials = res;
+    }});
+    var username = localStorage.getItem("username");
+    this.RequestsBE.ViewMySalary(username).then((res: any) => {
+      if(res!=null){
+      this.salary = res;
     }});
   }
 }
