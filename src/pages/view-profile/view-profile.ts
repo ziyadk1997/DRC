@@ -58,7 +58,6 @@ export class ViewProfilePage {
 IsSame(){
   var username = localStorage.getItem("username");
   var vistor = this.navparams.data;
-  console.log(vistor)
 if(username == vistor){
   this.IsSameuser=true;
 }
@@ -116,8 +115,8 @@ else{
       if (res == true) {
       this.alertCtrl.create(
         {
-          title: 'Operation Done Successfully',
-          subTitle: 'This user is  not an admin',
+          title: 'Request Submitted',
+          subTitle: 'Your request was submitted to your manager',
           buttons: ['Okay']
         }
       ).present()
@@ -125,8 +124,8 @@ else{
     } else {
       this.alertCtrl.create(
         {
-          title: 'Remove failed',
-          subTitle: 'Operation Failed',
+          title: 'Request Submition failed',
+          subTitle: 'Please fill request form correctly',
           buttons: ['Dismiss']
         }
       ).present()
