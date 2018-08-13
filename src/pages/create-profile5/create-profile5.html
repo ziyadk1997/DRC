@@ -19,32 +19,32 @@
     <form id="createProfile-form1" >
       <ion-item  class="item" id="createProfile-input2">
         <ion-label floating></ion-label>
-        <ion-input type="text" placeholder="Language" class="input-text"></ion-input>
+        <ion-input type="text" placeholder="Language" class="input-text" [(ngModel)]="LanguageName" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <br>
       <ion-item  class="item" id="createProfile-input3">
         <ion-label floating></ion-label>
-        <ion-input type="number" placeholder="Reading" class="input-text"></ion-input>
+        <ion-input type="number" placeholder="Reading 'put range between 0 -->> 5' " class="input-text" [(ngModel)]="Reading" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <br>
       <ion-item class="item" id="createProfile-input4">
         <ion-label floating></ion-label>
-        <ion-input type="number" placeholder="Writing" class="input-text"></ion-input>
+        <ion-input type="number" placeholder="Writing 'put range between 0 -->> 5'" class="input-text" [(ngModel)]="Writing" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <br>
       <ion-item  class="item" id="createProfile-input5">
         <ion-label floating></ion-label>
-        <ion-input type="number" placeholder="Listening" class="input-text"></ion-input>
+        <ion-input type="number" placeholder="Listening 'put range between 0 -->> 5'" class="input-text" [(ngModel)]="Listening" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <br>
       <ion-item  class="item" id="createProfile-input6">
         <ion-label floating></ion-label>
-        <ion-input type="number" placeholder="Speaking" class="input-text"></ion-input>
+        <ion-input type="number" placeholder="Speaking 'put range between 0 -->> 5' " class="input-text" [(ngModel)]="Speaking" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <br>
       <ion-item  class="item" id="createProfile-input6">
         <ion-label floating></ion-label>
-        <ion-input type="text" placeholder="Add Justification" class="input-text"></ion-input>
+        <ion-input type="text" placeholder="Add Justification" class="input-text"[(ngModel)]="Justification" [ngModelOptions]="{standalone: true}"></ion-input >
       </ion-item>
     </form>
     <br>

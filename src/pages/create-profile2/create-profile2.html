@@ -16,25 +16,32 @@
         </ion-avatar>
         <ion-label style="color:grey;"> Training </ion-label>
     </div>
-    <div class="cont" align="center" [ngClass]="{'selected': selected == 2}">
+
+    <div class="cont" align="center"  (click)="Junior()"[ngClass]="{'selected': selected == 2}">
         <ion-avatar class="check" item-center>
             <img src="../assets/imgs/Junior.png">
         </ion-avatar>
         <ion-label style="color:grey;"> Junior </ion-label>
     </div>
-    <div class="cont" align="center" [ngClass]="{'selected': selected ==3}">
+
+
+    <div class="cont" align="center" (click)="Senior()"[ngClass]="{'selected': selected ==3}">
         <ion-avatar class="check" item-center>
             <img src="../assets/imgs/Senior.png">
         </ion-avatar>
         <ion-label style="color:grey;"> Senior </ion-label>
     </div>
-    <div class="cont" align="center"[ngClass]="{'selected': selected == 4}">
+
+
+    <div class="cont" align="center" (click)="TeamLead()"[ngClass]="{'selected': selected == 4}">
         <ion-avatar class="check" item-center>
             <img src="../assets/imgs/Team-Lead.png">
         </ion-avatar>
         <ion-label style="color:grey;"> Team-Lead </ion-label>
     </div>
-    <div class="cont" align="center"[ngClass]="{'selected': selected == 5}">
+
+
+    <div class="cont" align="center" (click)="Manager()"[ngClass]="{'selected': selected == 5}">
         <ion-avatar class="check" item-center>
             <img src="../assets/imgs/Manager.png">
         </ion-avatar>

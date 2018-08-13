@@ -11,6 +11,7 @@ import { employer } from '../create-profile0/create-profile0';
   templateUrl: 'create-profile2.html'
 })
 export class CreateProfile2 {
+  
   JobTitle:any;
   newUserInfo=new employer();
 
@@ -21,11 +22,29 @@ export class CreateProfile2 {
   
 
   Training(){
-    this.JobTitle="Training";
-
+    this.newUserInfo.JobTitle="Training";
     console.log(this.newUserInfo.JobTitle);
   }
+  Junior(){
+    this.newUserInfo.JobTitle="Junior";
+    console.log(this.newUserInfo.JobTitle);
+  }
+  Senior(){
+    this.newUserInfo.JobTitle="Senior";
+    console.log(this.newUserInfo.JobTitle);
+  }
+
+  TeamLead(){
+    this.newUserInfo.JobTitle="TeamLead";
+    console.log(this.newUserInfo.JobTitle);
+  }
+  Manager(){
+    this.newUserInfo.JobTitle="Manager";
+    console.log(this.newUserInfo.JobTitle);    
+  }
   GoToCreate3(){
-    this.navCtrl.push(CreateProfile3);
+    console.log(this.newUserInfo);
+
+    this.navCtrl.push(CreateProfile3 , this.newUserInfo);
   }
 }

@@ -44,8 +44,7 @@ import { IonRating } from '../app/ion-rating/ion-rating';
 import {CreateProfile4} from '../pages/create-profile4/create-profile4';
 import {CreateProfile5} from '../pages/create-profile5/create-profile5';
 import {CreateProfile6} from '../pages/create-profile6/create-profile6';
-
-
+import {FCM} from '@ionic-native/fcm';
 
 @NgModule({
   declarations: [
@@ -141,7 +140,8 @@ import {CreateProfile6} from '../pages/create-profile6/create-profile6';
     SplashScreen,
     HttpClientModule,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    ServicesProvider
+    ServicesProvider,
+    FCM
   ]
 })
 export class AppModule {}
