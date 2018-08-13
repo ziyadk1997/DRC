@@ -19,22 +19,22 @@
     <form id="createProfile-form1" >
       <ion-item  class="item" id="createProfile-input2">
         <ion-label floating></ion-label>
-        <ion-input type="text" placeholder="Skill Name" class="input-text"></ion-input>
+        <ion-input type="text" placeholder="Skill Name" class="input-text" [(ngModel)]="SkillName" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <br>
       <ion-item  class="item" id="createProfile-input3">
         <ion-label floating></ion-label>
-        <ion-input type="number" placeholder="Proficiency" class="input-text"></ion-input>
+        <ion-input type="number" placeholder="Proficiency" class="input-text" [(ngModel)]="Proficiency" [ngModelOptions]="{standalone: true}" ></ion-input>
       </ion-item>
       <br>
       <ion-item class="item" id="createProfile-input4">
         <ion-label floating></ion-label>
-        <ion-input type="number" placeholder="Interest" class="input-text"></ion-input>
+        <ion-input type="number" placeholder="Interest" class="input-text"[(ngModel)]="Interest" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <br>
       <ion-item  class="item" id="createProfile-input5">
         <ion-label floating></ion-label>
-        <ion-input type="number" placeholder="Years of Experience" class="input-text"></ion-input>
+        <ion-input type="number" placeholder="Years of Experience" class="input-text"[(ngModel)]="YearsOfExperience" [ngModelOptions]="{standalone: true}"></ion-input>
       </ion-item>
       <br>
     </form>

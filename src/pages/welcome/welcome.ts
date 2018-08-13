@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController,NavParams } from 'ionic-angular';
+import { Platform,NavController,NavParams } from 'ionic-angular';
 import { ApplyLeavePage } from '../../pages/apply-leave/apply-leave';
 import { ViewProfilePage } from '../../pages/view-profile/view-profile';
 import { LeaveTrackerPage } from '../LeaveTracker/LeaveTracker';
@@ -22,12 +22,16 @@ export class WelcomePage {
   MyInput: any = "";
   Employees: any = [];
   isSearching:boolean = false;
-  constructor(public navCtrl: NavController, private RequestBE: ServicesProvider,private navparams:NavParams) {
+  constructor(public navCtrl: NavController, private RequestBE: ServicesProvider,private navparams:NavParams ,private platform:Platform ) {
     this.SetHr();
     this.SetManager();
     this.SetOwner();
     this.SetAdmin();
   }
+
+
+
+
 
   onCancel(){
     this.isSearching=false;

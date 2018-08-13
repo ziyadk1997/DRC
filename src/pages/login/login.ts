@@ -1,23 +1,29 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
 import { WelcomePage } from '../../pages/welcome/welcome';
-import { HttpRequest, HttpResponse, HttpInterceptor, HttpHandler, HttpEvent, HttpClient } from '@angular/common/http';
 import { AlertController } from 'ionic-angular';
 import { ServicesProvider } from '../../providers/services';
+import { FCM } from '@ionic-native/fcm'
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private loginBE: ServicesProvider) {
-    
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private loginBE: ServicesProvider, private platform: Platform, private fcm: FCM) {
+
   }
   email: any;
   password: any;
 
+  ionViewDidLoad() {
+    this.fcm.onNotification().subscribe(result =>{
+      console.log(result);
+      alert(result.body);
+    });
+  }
   Login() {
-      //this.navCtrl.setRoot(WelcomePage);
-   if (this.email == null || this.password == null) {
+    //this.navCtrl.setRoot(WelcomePage);
+    if (this.email == null || this.password == null) {
       this.alertCtrl.create(
         {
           title: 'Please Enter Email and Password',
@@ -26,7 +32,7 @@ export class LoginPage {
         }
       ).present()
     } else {
-      localStorage.setItem('username',this.email.split("@")[0].toLowerCase());
+      localStorage.setItem('username', this.email.split("@")[0].toLowerCase());
       this.loginBE.doLogin(this.email, this.password).then(res => {
         if (res == true) {
           this.navCtrl.setRoot(WelcomePage);
@@ -42,7 +48,7 @@ export class LoginPage {
       });
     }
   }
-  ForgetPassword(){
- // this.push(ForgetPasswordPage);
+  ForgetPassword() {
+    // this.push(ForgetPasswordPage);
   }
 }

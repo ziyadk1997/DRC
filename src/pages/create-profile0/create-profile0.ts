@@ -134,5 +134,35 @@ export class employer {
   SocialStatus: String;
   MilitaryServices: String;
   JobTitle:string;
-  
+  Skills=[];
+  WorkExperience=[];
+  Languages=[];
+}
+export class skill{
+  SkillName:any;
+  Profeciency:any;
+  Interest:any;
+  YearsOfExperience:any;
+}
+export class  workExperience{
+  JobTitle:any;
+  CompanyName:any;
+  From:any;
+  To:any;
+  Description:any;
+  Country:any;
+  StartingSalary:any;
+  EndingSalary:any;
+  Currency:any;
+  SalaryPeriod:any;
+}
+export class Language{
+
+  LanguageName:any;
+  Reading:any;
+  Writing:any;
+  Listening:any;
+  Speaking:any;
+  Justification:any;
+
 }

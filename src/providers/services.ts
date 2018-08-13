@@ -858,5 +858,28 @@ ApplyFundRequest(username, comment,Amount,Duedate ) {
       });
   });
 }
+
+
+CreateNewUser(Employee ) { 
+  var request = JSON.stringify
+    ({
+      "Employee": Employee,
+      
+    });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "CreateNewUser", request).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
 }
 
