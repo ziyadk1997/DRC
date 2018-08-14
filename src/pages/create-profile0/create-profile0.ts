@@ -14,6 +14,10 @@ export class CreateProfilePage {
   Address: String;
   MobileNumber: String;
   Email: String;
+  Password:String;
+  EmployeeID:String;
+  NumberOfDependencies:String;
+
   newUserInfo = new employer();;
 
   MaleCheckBox: boolean = false;
@@ -116,6 +120,9 @@ export class CreateProfilePage {
     this.newUserInfo.Address=this.Address;
     this.newUserInfo.MobileNumber=this.MobileNumber;
     this.newUserInfo.Email=this.Email;
+    this.newUserInfo.Password=this.Password;
+    this.newUserInfo.EmployeeID=this.EmployeeID;
+    this.newUserInfo.NumberOfDependencies=this.NumberOfDependencies;
     console.log(this.newUserInfo);
 
     this.navCtrl.push(CreateProfile2, this.newUserInfo);
@@ -131,9 +138,12 @@ export class employer {
   Address: String;
   MobileNumber: String;
   Email: String;
+  Password:String;
+  EmployeeID:String;
   SocialStatus: String;
+  NumberOfDependencies:String;
   MilitaryServices: String;
-  JobTitle:string;
+  CareerLevel:string;
   Skills=[];
   WorkExperience=[];
   Languages=[];
