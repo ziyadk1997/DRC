@@ -11,12 +11,21 @@ export class ViewProfile3Page {
 
   infos: any = {};
   userName:any;
+  name :any;
+  isSearch : boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.infos = this.navParams.data;
     this.userName=this.infos.username;
-    console.log(this.infos);
+    this.name = localStorage.getItem("username");
+    this.isUser();
   }
   AddNewWork(){
     this.navCtrl.push(AddWorkExperiencePage);
+  }
+  isUser(){
+    if(this.name != this.userName && this.userName!=null)
+      this.isSearch =false;
+    else
+      this.isSearch = true;
   }
 }

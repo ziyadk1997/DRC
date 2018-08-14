@@ -115,8 +115,8 @@ else{
       if (res == true) {
       this.alertCtrl.create(
         {
-          title: 'Request Submitted',
-          subTitle: 'Your request was submitted to your manager',
+          title: 'Operation Done Successfully',
+          subTitle: 'This user is now  an admin',
           buttons: ['Okay']
         }
       ).present()
