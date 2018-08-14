@@ -4,6 +4,7 @@ import { CreateProfile1Page } from '../create-profile/create-profile';
 import {CreateProfile3} from '../create-profile3/create-profile3';
 import { NavParams } from 'ionic-angular';
 import { employer } from '../create-profile0/create-profile0';
+import { CreateProfile7Page } from '../create-profile7/create-profile7';
 
 
 @Component({
@@ -45,6 +46,6 @@ export class CreateProfile2 {
   GoToCreate3(){
     console.log(this.newUserInfo);
 
-    this.navCtrl.push(CreateProfile3 , this.newUserInfo);
+    this.navCtrl.push(CreateProfile7Page , this.newUserInfo);
   }
 }
