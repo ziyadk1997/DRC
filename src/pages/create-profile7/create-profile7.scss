@@ -1,0 +1,25 @@
+create-profile7-page {
+    .back{
+        background-image: url('../assets/imgs/b1.png');
+    }
+    .list{
+        font-size: 180%;
+        background-color: transparent;
+        border-color: transparent;
+    }
+    .item{
+        margin-bottom: 4%;
+        background-color: transparent;
+        width: 100%;
+        ::placeholder{
+            color: silver;
+            
+        }
+    }
+    .text{
+        border: 1% silver solid ;
+        background-color: transparent;
+        color: white;
+        
+    }
+}

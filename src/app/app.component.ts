@@ -3,6 +3,7 @@ import { Platform,Nav, MenuController } from 'ionic-angular';
 import { LoginPage } from '../pages/login/login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FCM } from '@ionic-native/fcm';
 
 
 @Component({
@@ -17,7 +18,8 @@ export class MyApp {
   constructor(
     public platform: Platform,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    public fcm :FCM
   ) {
     this.initializeApp();
     this.pages = [

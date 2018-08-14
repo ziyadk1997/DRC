@@ -28,16 +28,6 @@
   <h4 id="viewProfile2-heading9" style="color:#ffffff;font-weight:600;">
     Skills
   </h4>
-  <!-- <form id="viewProfile2-form10">
-    <ion-item id="viewProfile2-range3" >
-        <ion-rating style="color:teal"
-        [numStars]="5"
-        [readOnly]="false"
-        [value]="0" >
-      </ion-rating>
-    </ion-item>
-  </form> -->
-
   <ion-list *ngFor="let skill of infos.skills">
       <ion-item style="background-color:transparent;"class="List">
           
@@ -64,7 +54,7 @@
 
       </ion-item>
   </ion-list>
-  <button id="Add-Skill" ion-button (click)="AddNewSkill()" color="stable" round block>Add New Skill </button>
+  <button id="Add-Skill" ion-button (click)="AddNewSkill()" color="stable" round block *ngIf="isSearch">Add New Skill </button>
 
 
   

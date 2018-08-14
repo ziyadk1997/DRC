@@ -45,6 +45,7 @@ import {CreateProfile4} from '../pages/create-profile4/create-profile4';
 import {CreateProfile5} from '../pages/create-profile5/create-profile5';
 import {CreateProfile6} from '../pages/create-profile6/create-profile6';
 import {FCM} from '@ionic-native/fcm';
+import {CreateProfile7Page} from '../pages/create-profile7/create-profile7';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import {FCM} from '@ionic-native/fcm';
     IonRating ,
     CreateProfile4,
     CreateProfile5,
-    CreateProfile6
+    CreateProfile6,
+    CreateProfile7Page
     
   ],
   imports: [
@@ -133,7 +135,8 @@ import {FCM} from '@ionic-native/fcm';
     IonRating ,
     CreateProfile4,
     CreateProfile5,
-    CreateProfile6
+    CreateProfile6,
+    CreateProfile7Page
   ],
   providers: [
     StatusBar,
