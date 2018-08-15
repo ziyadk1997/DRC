@@ -13,12 +13,12 @@
                 <h4 class="Headers">Request-Date :{{request.Date}}</h4>
                 <br>
                 <br>
-                <div *ngIf='requests.length > 0 && (requests[0].name !="Receipt")' >
-                <h4 class="Headers"><span item-left> From : {{request.FromDate}} </span> <br><br> <span item-right>To : {{request.ToDate}} </span> </h4>
+                <div *ngIf='requests.length > 0 && (requests[0].name !="Receipt") && (requests[0].name !="Fund")' >
+                <h4 class="Headers" ><span item-left> From : {{request.FromDate}} </span> <br><br> <span item-right>To : {{request.ToDate}} </span> </h4>
                 </div>
-                <div *ngIf='requests.length > 0 && (requests[0].name =="Receipt")' >
-                    <h4 class="Headers"><span item-left> Amount : {{request.amount}} </span> <br><br></h4>
-                    </div>
+                <div *ngIf='requests.length > 0 &&( (requests[0].name =="Receipt") || (requests[0].name == "Fund") )' >
+                    <h4 class="Headers"><span item-left> Amount : {{request.amount}} , Currency:  {{request.currency}} </span> <br><br></h4>
+                </div>
                 <br>
                 <br>
                 <h4 class="Headers">Request-Status :{{request.Status}}</h4>

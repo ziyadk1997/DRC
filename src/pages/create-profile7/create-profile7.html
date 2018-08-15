@@ -1,36 +1,37 @@
 <ion-header>
-    <ion-navbar>
-        <ion-title>
-            Create profile
-        </ion-title>
-        <div class="_seperator-border"></div>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>
+      Create profile
+    </ion-title>
+    <div class="_seperator-border"></div>
+  </ion-navbar>
 </ion-header>
 <ion-content padding="true" class="back">
-    <h3 id="createProfile-heading1" style="color:white;">Job info:</h3>
-    <form id="createProfile-form1" class="list" >
-        <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
-            <ion-input type="text" placeholder="JobTitle"[(ngModel)]="JobTitle" [ngModelOptions]="{standalone: true}"></ion-input>
-          </ion-item>
-          <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
-            <ion-input type="number" placeholder="Salary"[(ngModel)]="Salary" [ngModelOptions]="{standalone: true}"></ion-input>
-          </ion-item>
-          <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
-            <ion-input type="number" placeholder="Allowance"[(ngModel)]="Allowance" [ngModelOptions]="{standalone: true}"></ion-input>
-          </ion-item>
-          <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
-            <ion-input type="text" placeholder="Above Manager Username"[(ngModel)]="AboveManager" [ngModelOptions]="{standalone: true}"></ion-input>
-          </ion-item>
-          <ion-item id="createProfile-input22" style="background-color: transparent;color:white">
-            <ion-input type="number" placeholder="No Of Annual Vacations"[(ngModel)]="Annual" [ngModelOptions]="{standalone: true}"></ion-input>
-          </ion-item>
-          <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
-            <ion-input type="number" placeholder="No Of Casual Vacations"[(ngModel)]="Casual" [ngModelOptions]="{standalone: true}"></ion-input>
-          </ion-item>
-        <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
-            <ion-input type="number" placeholder="No Of Dependecies"[(ngModel)]="Dependecies" [ngModelOptions]="{standalone: true}"></ion-input>
-          </ion-item>
-    </form>
+  <h3 id="createProfile-heading1" style="color:white;">Job info:</h3>
+  <form id="createProfile-form1" class="list">
+    <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
+      <ion-input type="text" placeholder="JobTitle" [(ngModel)]="JobTitle" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
+      <ion-input type="number" placeholder="Salary" [(ngModel)]="Salary" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
+      <ion-input type="number" placeholder="Allowance" [(ngModel)]="Allowance" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
+      <ion-input type="text" placeholder="Above Manager Username" [(ngModel)]="AboveManager" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item id="createProfile-input22" style="background-color: transparent;color:white">
+      <ion-input type="number" placeholder="No Of Annual Vacations" [(ngModel)]="Annual" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
+      <ion-input type="number" placeholder="No Of Casual Vacations" [(ngModel)]="Casual" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <ion-item id="createProfile-input22" style="background-color: transparent; color:white">
+      <ion-input type="number" placeholder="No Of Dependecies" [(ngModel)]="Dependecies" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+  </form>
 
-    <button ion-button round (click)="GoToCreate3()" block style="color: white ;margin-top: 20%;background-color: rgb(21, 75, 119);"> Continue</button>
+  <button ion-button round (click)="GoToCreate3()" block style="color: white ;margin-top: 20%;background-color: rgb(21, 75, 119);">
+  Continue</button>
 </ion-content>

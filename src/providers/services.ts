@@ -835,13 +835,14 @@ ViewMySalary(username) {
       });
   });
 }
-ApplyFundRequest(username, comment,Amount,Duedate ) { 
+ApplyFundRequest(username, comment,Amount,Duedate,Currency ) { 
   var request = JSON.stringify
     ({
       "username": username,
       "Amount" : Amount,
-      "comment" : comment,
+      "Comment" : comment,
       "Duedate" : Duedate,
+      "Currency" : Currency,
     });
 
   return new Promise((resolve, reject) => {
@@ -869,6 +870,27 @@ CreateNewUser(Employee ) {
 
   return new Promise((resolve, reject) => {
     this.http.post(config.apiUrl + "CreateNewUser", request).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+ApproveFundRequest(reviewerusername, requestid) {
+  var request = JSON.stringify
+    ({
+      "reviewerusername": reviewerusername,
+       "requestid" : requestid
+    });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "ApproveFundRequest", request).timeout(config.getTimeout).subscribe(res => {
       try {
         resolve(res);
       }

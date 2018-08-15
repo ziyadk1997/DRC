@@ -107,9 +107,6 @@ export class ApplyLeavePage {
       });
     }
   }
-  ApplyAnnualLeave() {
-
-  }
   Glow(id) {
     this.selected = id;
   }

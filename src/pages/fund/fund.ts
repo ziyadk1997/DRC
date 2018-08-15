@@ -13,6 +13,7 @@ export class FundPage {
   Comment: String;
   Amount:any;
   Duedate:any;
+  Currency:any;
   constructor(public navCtrl: NavController,  private alertCtrl: AlertController,private servicesprovider: ServicesProvider) {
   }
   GoBack(){
@@ -20,7 +21,7 @@ export class FundPage {
   }
   ApplyFund(){
     var username = localStorage.getItem("username");
-    this.servicesprovider.ApplyFundRequest(username, this.Comment, this.Amount, this.Duedate).then(res => {
+    this.servicesprovider.ApplyFundRequest(username, this.Comment, this.Amount, this.Duedate ,this.Currency).then(res => {
       if (res == true) {
         this.alertCtrl.create(
           {
