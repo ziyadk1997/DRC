@@ -8,7 +8,6 @@ import { CreateProfile2 } from '../create-profile2/create-profile2';
 })
 export class CreateProfilePage {
 
-
   FullName: string;
   Nationality: String;
   Address: String;
@@ -32,6 +31,7 @@ export class CreateProfilePage {
 
 
   constructor(public navCtrl: NavController) {
+    
 
 
 
@@ -115,6 +115,9 @@ export class CreateProfilePage {
   GoToProfile2() {
   //  this.newUserInfo = new employer();
     
+    this.newUserInfo.AdderUserName=localStorage.getItem("username");
+
+
     this.newUserInfo.FullName=this.FullName;
     this.newUserInfo.Nationality=this.Nationality;
     this.newUserInfo.Address=this.Address;
@@ -132,6 +135,7 @@ export class CreateProfilePage {
 
 
 export class employer {
+  AdderUserName:String;
   FullName: string;
   Gender: String;
   Nationality: String;
@@ -144,6 +148,12 @@ export class employer {
   NumberOfDependencies:String;
   MilitaryServices: String;
   CareerLevel:string;
+  JobTitle:string;
+  Salary:String;
+  Allowance:String;
+  AboveMangerUserName:String;
+  NoOfAnnualVacations:String;
+  NoOfCasualVacations:String;
   Skills=[];
   WorkExperience=[];
   Languages=[];
