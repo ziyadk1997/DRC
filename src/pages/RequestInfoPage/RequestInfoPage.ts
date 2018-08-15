@@ -67,12 +67,28 @@ export class RequestInfoPage {
         if(this.requests[0].Employeeusername == username)
           this.Flag=false;
       }
-      console.log(this.Flag);
+      
     });
    
   }
   AcceptRequest() {
     var username = localStorage.getItem("username");
+    if(this.requests[0].name == "Fund"){
+      this.RequestBE.ApproveFundRequest(username, this.requestid).then((res: any) => {
+        if (res == true) {
+          this.navCtrl.setRoot(ViewRequested);
+        } else {
+          this.alertCtrl.create(
+            {
+              title: 'Operation Failed',
+              subTitle: 'Wrong username or password',
+              buttons: ['Dismiss']
+            }
+          ).present()
+        }
+      });
+    }
+    else{
     this.RequestBE.ApproveRequest(username, this.requestid).then((res: any) => {
       if (res == true) {
         this.navCtrl.setRoot(ViewRequested);
@@ -86,7 +102,7 @@ export class RequestInfoPage {
         ).present()
       }
     });
-  }
+  }}
 
   RejectRequest() {
     var username = localStorage.getItem("username");

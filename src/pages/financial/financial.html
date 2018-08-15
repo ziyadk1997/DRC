@@ -9,23 +9,27 @@
   <form id="financial-form11">
     <ion-item class="Salary" id="financial-textarea1">
       <ion-label>
-        {{salary}}
+       Basic Salary : {{salary[0]}} 
+      </ion-label>
+    </ion-item>
+    <ion-item class="Salary" id="financial-textarea1">
+      <ion-label>
+      Allowance:  {{salary[1]}} 
       </ion-label>
     </ion-item>
     <ion-item class="Fsalary" id="financial-textarea2">
       <ion-label>
-        #Final Salary
+        Final Salary : {{total}}
       </ion-label>
     </ion-item>
   </form>
-  <h1 class="Head" id="financial-heading10" style="color:#a08989;">
+  <h1 class="Head" id="financial-heading10" style="color:orange;">
     Transactions :
   </h1>
   <ion-list *ngFor="let financial of financials">
     <ion-item class="List">
         <p style="color: silver">Date :{{financial.date}}</p>
-        <p style="color: silver">Amount: {{financial.signbit}} {{financial.amount}} {{financial.Currency}}</p>
-        <p style="color: silver">Comment:{{financial.comment}}</p>
+        <p style="color: silver">Amount:{{financial.amount}} {{financial.Currency}}</p>
     </ion-item>
 </ion-list>
 

@@ -7,30 +7,29 @@
 </ion-header>
 <ion-content class="back" padding id="page14">
   <form id="fund-form19">
-    <ion-item style="background-color: transparent; color:rgb(142, 196, 247)" id="fund-input12">
-      <ion-label>
-        Allowed :
-      </ion-label>
-      <ion-label>
-        4500
-      </ion-label>
-    </ion-item>
-    <br/>
-    <br/>
     <ion-item style="background-color: transparent; color:rgb(142, 196, 247)" id="fund-input20">
-   
-      <ion-input type="text" placeholder="Amount"[(ngModel)]="Amount" [ngModelOptions]="{standalone: true}"></ion-input>
+      <ion-input type="number" placeholder="Amount" [(ngModel)]="Amount" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
+    <ion-list >
+      <ion-item style="background-color: transparent; color:rgb(142, 196, 247)" >
+        <ion-label class="leavet">Currency</ion-label>
+        <ion-select [(ngModel)]="Currency" [ngModelOptions]="{standalone: true}" >
+          <ion-option value="EGP">EGP</ion-option>
+          <ion-option value="USD">USD</ion-option>
+          <ion-option value="GBP">GBP</ion-option>
+          <ion-option value="EUR">EUR</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
     <ion-item style=" background-color: transparent; color: rgb(142, 196, 247);">
-      <ion-label style="color:rgb(142, 196, 247);">Due Date</ion-label>
+      <ion-label style="color:silver;">Due Date</ion-label>
       <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="Duedate" [ngModelOptions]="{standalone: true}">
       </ion-datetime>
-      <ion-icon name="calendar" item-right style="color: rgb(142, 196, 247)"></ion-icon>
+      <ion-icon name="calendar" item-right style="color: silver"></ion-icon>
     </ion-item>
     <br/>
     <ion-item style="background-color: transparent; color:rgb(142, 196, 247)" id="fund-input22">
-    
-      <ion-input type="text" placeholder="Comment"[(ngModel)]="Comment" [ngModelOptions]="{standalone: true}"></ion-input>
+      <ion-input type="text" placeholder="Comment" [(ngModel)]="Comment" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
   </form>
   <br/>
