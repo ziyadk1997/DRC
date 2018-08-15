@@ -23,25 +23,25 @@ export class CreateProfile2 {
   
 
   Training(){
-    this.newUserInfo.JobTitle="Training";
-    console.log(this.newUserInfo.JobTitle);
+    this.newUserInfo.CareerLevel="Training";
+    console.log(this.newUserInfo.CareerLevel);
   }
   Junior(){
-    this.newUserInfo.JobTitle="Junior";
-    console.log(this.newUserInfo.JobTitle);
+    this.newUserInfo.CareerLevel="Junior";
+    console.log(this.newUserInfo.CareerLevel);
   }
   Senior(){
-    this.newUserInfo.JobTitle="Senior";
-    console.log(this.newUserInfo.JobTitle);
+    this.newUserInfo.CareerLevel="Senior";
+    console.log(this.newUserInfo.CareerLevel);
   }
 
   TeamLead(){
-    this.newUserInfo.JobTitle="TeamLead";
-    console.log(this.newUserInfo.JobTitle);
+    this.newUserInfo.CareerLevel="TeamLead";
+    console.log(this.newUserInfo.CareerLevel);
   }
   Manager(){
-    this.newUserInfo.JobTitle="Manager";
-    console.log(this.newUserInfo.JobTitle);    
+    this.newUserInfo.CareerLevel="Manager";
+    console.log(this.newUserInfo.CareerLevel);    
   }
   GoToCreate3(){
     console.log(this.newUserInfo);
