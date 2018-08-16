@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AddLanguagePage } from '../add-language/add-language';
 import { NavParams } from 'ionic-angular';
+import { ServicesProvider } from '../../providers/services';
 
 
 @Component({
@@ -13,14 +14,26 @@ export class ViewProfile5Page {
   userName:any;
   name :any;
   isSearch : boolean;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  IsHr :boolean;
+  constructor(public navCtrl: NavController, public navParams: NavParams ,private RequestBE : ServicesProvider) {
     this.infos = this.navParams.data;
     this.userName=this.infos.username;
     this.name = localStorage.getItem("username");
     this.isUser();
+    this.SetHr();
   }
   AddNewLanguage(){
     this.navCtrl.push(AddLanguagePage);
+  }
+  SetHr() {
+    var username = localStorage.getItem("username");
+    this.RequestBE.IsHr(username).then((res) => {
+      if (res.toString() == "false") {
+        this.IsHr = false;
+      } else {
+        this.IsHr = true;
+      }
+    });
   }
   isUser(){
     if(this.name != this.userName && this.userName!=null)
