@@ -154,6 +154,7 @@ export class employer {
   AboveMangerUserName:String;
   NoOfAnnualVacations:String;
   NoOfCasualVacations:String;
+  isHr:String;
   Skills=[];
   WorkExperience=[];
   Languages=[];

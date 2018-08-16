@@ -32,7 +32,7 @@ export class CreateProfile3 {
     this.skill.SkillName=this.SkillName;
     this.skill.Profeciency=this.Profeciency;
     this.skill.Interest=this.Interest;
-    this.YearsOfExperience=this.YearsOfExperience;
+    this.skill.YearsOfExperience=this.YearsOfExperience;
     this.newUserInfo.Skills.push(this.skill);
     console.log(this.newUserInfo);
 

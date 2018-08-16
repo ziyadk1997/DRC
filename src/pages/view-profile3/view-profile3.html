@@ -27,15 +27,25 @@
   <h4 id="viewProfile3-heading14" style="color:#ffffff;font-weight:600;">
     Work Experience
   </h4>
-  <ion-list id="viewProfile3-list3">
-    <ion-item id="viewProfile3-list-item-container5">
-      <div id="viewProfile3-markdown8" class="show-list-numbers-and-dots">
-        <p style="margin-top:0px;color:#000000;">
-          Contains a work experience
-        </p>
-      </div>
+  
+
+
+  <ion-list *ngFor="let WorkExperience of infos.WorkExperiences">
+    <ion-item style="background-color:transparent;"class="List">
+        
+        <p style="color: silver;">Job Title:<span style="color:rgb(84, 179, 243); ">{{WorkExperience.JobTitle}}</span> </p>
+        <p style="color: silver;">Company name:<span style="color:rgb(84, 179, 243); ">{{WorkExperience.CompName}}</span> </p>
+        <p style="color: silver;">From:<span style="color:rgb(84, 179, 243); ">{{WorkExperience.From}}</span> </p>
+        <p style="color: silver;">To :<span style="color:rgb(84, 179, 243); ">{{WorkExperience.To}}</span> </p>
+        <p style="color: silver;">Description:<span style="color:rgb(84, 179, 243); ">{{WorkExperience.Description}}</span> </p>
+        <p style="color: silver;">Country :<span style="color:rgb(84, 179, 243); ">{{WorkExperience.Country}}</span> </p>
+        <p style="color: silver;">Starting Salary :<span style="color:rgb(84, 179, 243); ">{{WorkExperience.StartingSalary}}</span> </p>
+        <p style="color: silver;">SEnding Salary :<span style="color:rgb(84, 179, 243); ">{{WorkExperience.EndingSalary}}</span> </p>
+        <p style="color: silver;">Currency :<span style="color:rgb(84, 179, 243); ">{{WorkExperience.Currency}}</span> </p>
+        <p style="color: silver;">Salary Period:<span style="color:rgb(84, 179, 243); ">{{WorkExperience.SalaryPeriod}}</span> </p>
+    
     </ion-item>
-  </ion-list>
+</ion-list>
   <button id="Add-Work" ion-button (click)="AddNewWork()" color="stable" round block *ngIf="isSearch">Add New Work Experience </button>
 
 </ion-content>

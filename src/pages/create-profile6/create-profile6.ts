@@ -31,7 +31,8 @@ export class CreateProfile6 {
             buttons: ['Okay']
           }
         ).present()
-        this.navCtrl.pop();
+        this.navCtrl.setRoot(WelcomePage);
+        //this.navCtrl.pop();
       } else {
         this.alertCtrl.create(
           {
@@ -40,9 +41,10 @@ export class CreateProfile6 {
             buttons: ['Dismiss']
           }
         ).present()
+        
       }
     });
-    this.navCtrl.setRoot(WelcomePage);
+  
   }
   
 }
