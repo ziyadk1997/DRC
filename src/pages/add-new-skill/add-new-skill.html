@@ -12,28 +12,29 @@
   <form id="addNewSkill-form14">
     <ion-item id="addNewSkill-input1">
       
-      <ion-input type="text" placeholder="Skill Name"></ion-input>
+      <ion-input type="text" placeholder="Skill Name" [(ngModel)]="NewSkillName" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
-    <ion-item id="addNewSkill-range6">
-        <ion-rating style="color:teal"
-        [numStars]="5"
-        [readOnly]="false"
-        [value]="3.2" >
-      </ion-rating>
-    </ion-item>
-    <ion-item id="addNewSkill-range7">
-        <ion-rating style="color:teal"
-        [numStars]="5"
-        [readOnly]="false"
-        [value]="3.2" >
-      </ion-rating>
-    </ion-item>
+   
     <ion-item id="addNewSkill-input3">
-     
-      <ion-input type="text" placeholder="Years of Experience"></ion-input>
+      <p style="color: silver;">Profeciency:</p>
+      <ion-input type="number" placeholder="Profeciency" [(ngModel)]="Profeciency" [ngModelOptions]="{standalone: true}" ></ion-input>
+    </ion-item>
+   
+    
+  
+ 
+  <ion-item id="addNewSkill-input3">
+    <p style="color: silver;">Interest:</p>
+    <ion-input type="number" placeholder="Interest" [(ngModel)]="Interest" [ngModelOptions]="{standalone: true}"></ion-input>
+  </ion-item>
+
+    
+    <ion-item id="addNewSkill-input3">
+      <p style="color: silver;">Years of Experience:</p>
+      <ion-input type="number" placeholder="Years of Experience" [(ngModel)]="YearsOfExperience" [ngModelOptions]="{standalone: true}" ></ion-input>
     </ion-item>
   </form>
-  <button id="addNewSkill-button1" ion-button color="positive" round >
+  <button id="addNewSkill-button1" ion-button color="positive" round (click)="Save()">
     Save
   </button>
   <button id="addNewSkill-button2" (click)="AddSkill()" ion-button clear round  >

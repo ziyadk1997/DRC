@@ -11,23 +11,23 @@
   </h5>
   <form id="addEducation-form16">
     <ion-item id="addEducation-input12">
-      <ion-input type="text" placeholder="School/University"></ion-input>
+      <ion-input type="text" placeholder="School/University" [(ngModel)]="SchoolOrUniversity" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <ion-item id="addEducation-input13">
-      <ion-input type="text" placeholder=" Field of Study"></ion-input>
+      <ion-input type="text" placeholder=" Field of Study" [(ngModel)]="FieldOfStudy" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <ion-item id="addEducation-input14">
-      <ion-input type="text" placeholder="Degree"></ion-input>
+      <ion-input type="text" placeholder="Degree" [(ngModel)]="Degree" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <ion-item id="addEducation-input15">
-      <ion-input type="text" placeholder="Grade"></ion-input>
+      <ion-input type="text" placeholder="Grade" [(ngModel)]="Grade" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <ion-item id="addEducation-input16">
 
-      <ion-input type="text" placeholder="Activities"></ion-input>
+      <ion-input type="text" placeholder="Activities" [(ngModel)]="Activities" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
   </form>
-  <button id="addEducation-button5" ion-button color="positive" round>
+  <button id="addEducation-button5" ion-button color="positive" round (click)="Save()">
     Save
   </button>
   <button id="addEducation-button6" ion-button (click)="AddEducation()" clear round>

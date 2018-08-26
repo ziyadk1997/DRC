@@ -11,52 +11,76 @@
   </h5>
   <form id="addWorkExperience-form15">
     <ion-item id="addWorkExperience-input4">
+        <ion-label>
+            Job Title
+          </ion-label>
      
-      <ion-input type="text" placeholder="Job Title"></ion-input>
+      <ion-input type="text"  [(ngModel)]="JobTitle" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <ion-item id="addWorkExperience-input5">
+        <ion-label>
+            Company Name
+          </ion-label>
 
-      <ion-input type="text" placeholder="Company Name"></ion-input>
+      <ion-input type="text"  [(ngModel)]="CompanyName" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <ion-item id="addWorkExperience-input6">
       <ion-label>
         From
       </ion-label>
-      <ion-input type="date" placeholder=""></ion-input>
+      <ion-input type="date" placeholder="" [(ngModel)]="From" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <ion-item id="addWorkExperience-input7">
       <ion-label>
         To
       </ion-label>
-      <ion-input type="date" placeholder=""></ion-input>
+      <ion-input type="date" placeholder="" [(ngModel)]="To" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
-    <ion-item id="addWorkExperience-toggle1">
+    <!-- <ion-item id="addWorkExperience-toggle1">
       <ion-label>
         I currently work there
       </ion-label>
       <ion-toggle color="positive" checked="false"></ion-toggle>
-    </ion-item>
+    </ion-item> -->
+
     <ion-item id="addWorkExperience-input8">
+        <ion-label>
+            Description
+          </ion-label>
     
-      <ion-input type="text" placeholder="Description"></ion-input>
+      <ion-input type="text"  [(ngModel)]="Description" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
+
+
     <ion-item id="addWorkExperience-input9">
+        <ion-label>
+            Country
+          </ion-label>
    
-      <ion-input type="text" placeholder="Country"></ion-input>
+      <ion-input type="text"  [(ngModel)]="Country" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
+
+
     <ion-item id="addWorkExperience-input10">
-     
-      <ion-input type="text" placeholder=" Starting Salary"></ion-input>
+        <ion-label>
+            Starting Salary
+          </ion-label>
+      <ion-input type="text"  [(ngModel)]="StartingSalary" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
+
+
     <ion-item id="addWorkExperience-input11">
+        <ion-label>
+            End Salary
+          </ion-label>
     
-      <ion-input type="text" placeholder="End Salary"></ion-input>
+      <ion-input type="text"  [(ngModel)]="EndSalary" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <ion-item id="addWorkExperience-select5">
       <ion-label>
         Currency
       </ion-label>
-      <ion-select name="">
+      <ion-select name="" [(ngModel)]="JobTitle" [ngModelOptions]="{standalone: true}">
         <ion-option>
           $
         </ion-option>
@@ -81,13 +105,13 @@
       <ion-label>
         Salary Period
       </ion-label>
-      <ion-select name=""></ion-select>
+      <ion-input type="text"  [(ngModel)]="SalaryPeriod" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
-    <button id="addWorkExperience-button3" ion-button color="positive" round>
+    <button id="addWorkExperience-button3" ion-button color="positive" round (click)="Save()">
       Save
     </button>
-    <button id="addWorkExperience-button4" ion-button (click)="AddNewWork()" clear round>
+    <!-- <button id="addWorkExperience-button4" ion-button (click)="AddNewWork()" clear round>
       Add Another
-    </button>
+    </button> -->
   </form>
 </ion-content>

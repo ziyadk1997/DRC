@@ -24,7 +24,7 @@ export class ViewProfile3Page {
     this.SetHr();
   }
   AddNewWork(){
-    this.navCtrl.push(AddWorkExperiencePage);
+    this.navCtrl.push(AddWorkExperiencePage,this.infos);
   }
   SetHr() {
     var username = localStorage.getItem("username");

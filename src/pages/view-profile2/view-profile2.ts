@@ -25,7 +25,7 @@ export class ViewProfile2Page {
 
   }
   AddNewSkill() {
-    this.navCtrl.push(AddNewSkillPage);
+    this.navCtrl.push(AddNewSkillPage,this.infos);
   }
   SetHr() {
     var username = localStorage.getItem("username");

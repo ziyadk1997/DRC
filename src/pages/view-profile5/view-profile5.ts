@@ -23,7 +23,7 @@ export class ViewProfile5Page {
     this.SetHr();
   }
   AddNewLanguage(){
-    this.navCtrl.push(AddLanguagePage);
+    this.navCtrl.push(AddLanguagePage,this.infos);
   }
   SetHr() {
     var username = localStorage.getItem("username");

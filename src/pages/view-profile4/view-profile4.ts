@@ -23,7 +23,7 @@ export class ViewProfile4Page {
     this.SetHr();
   }
   AddNewEducation(){
-    this.navCtrl.push(AddEducationPage);
+    this.navCtrl.push(AddEducationPage,this.infos);
   }
   isUser(){
     if(this.name != this.userName && this.userName!=null)

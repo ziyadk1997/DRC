@@ -903,5 +903,89 @@ ApproveFundRequest(reviewerusername, requestid) {
       });
   });
 }
+
+
+
+AddNewSkill(userName ,NewSkillName,Profeciency,Interest,YearsOfExperience ) { 
+  var request = JSON.stringify
+    ({
+     "userName" :userName,
+      "NewSkillName":NewSkillName,
+     "Profeciency": Profeciency,
+      "Interest": Interest,
+      "YearsOfExperience":YearsOfExperience 
+      
+    });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "AddNewSkill", request).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+
+AddNewEducation(userName, SchoolOrUniversity,FieldOfStudy,Degree,Grade,Activities){ 
+  var request = JSON.stringify
+    ({
+     "userName" :userName,
+      "SchoolOrUniversity":SchoolOrUniversity,
+     "FieldOfStudy": FieldOfStudy,
+      "Degree": Degree,
+      "Grade":Grade ,
+      "Activities":Activities
+    });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "AddNewEducation", request).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+
+AddNewLanguage(userName, LanguageName,Reading,Writing,Listening,Speaking,Justification){ 
+  var request = JSON.stringify
+    ({
+     "userName" :userName,
+     "LanguageName":LanguageName,
+     "Reading":Reading,
+     "Writing":Writing,
+     "Listening":Listening,
+     "Speaking":Speaking,
+     "Justification":Justification
+    });
+
+  return new Promise((resolve, reject) => {
+    this.http.post(config.apiUrl + "AddNewLanguage", request).timeout(config.getTimeout).subscribe(res => {
+      try {
+        resolve(res);
+      }
+      catch (e) {
+        reject(false);
+      }
+    },
+      error => {
+        reject(error);
+      });
+  });
+}
+
+
+
 }
 
