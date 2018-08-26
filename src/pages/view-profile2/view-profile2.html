@@ -47,14 +47,9 @@
              [value]=skill.interest >
            </ion-rating>
            <p style="color: silver;">Years of experience: <span style="color:rgb(84, 179, 243); ">{{skill.yearsOfExprince}}</span></p>
-
-
-
-
-
       </ion-item>
   </ion-list>
-  <button id="Add-Skill" ion-button (click)="AddNewSkill()" color="stable" round block *ngIf="isSearch || IsHr">Add New Skill </button>
+  <button id="Add-Skill" ion-button (click)="AddNewSkill()" color="stable" round block *ngIf="IsHr">Add New Skill </button>
 
 
   
